@@ -1,0 +1,1965 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+/* Estilos gerais */
+.container, .content, .egestor, .assina {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Nav */
+nav {
+    width: 100%;
+    height: 100px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.divNav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+ul li {
+    margin-left: 30px; 
+    list-style: none;
+    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    color: #3D3D3D;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+ul li:hover {
+    border-radius: 50px; 
+    transition: background-color 0.3s, color 0.3s; 
+    background-color: #1574A8;
+    color: #fff;
+    padding: 6px 20px;
+}
+
+li .menu {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    width: 287px;
+    height: 76px;
+    margin-left: 8px;
+}
+
+.nav-item {
+    color: #3D3D3D;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 15px;
+    padding: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+nav .sidebar {
+    position: fixed;
+    top: 0;
+    right: -20px;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar li:hover {
+    border-radius: 50px; 
+    transition: background-color 0.3s, color 0.3s; 
+    background-color: #1574A8;
+    color: #fff;
+    padding: 6px 10px;
+    margin-left: 0;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* Seções */
+.slogan {
+    background-color: #1574A8;
+    color: white;
+    text-align: center;
+    padding: 40px 15px;
+}
+
+.slogan .sloganTitle {
+    font-size: 54px;
+    font-weight: 500;
+    color: white;
+}
+
+.slogan .hr {
+    width: 65%;
+    margin: 0 auto;
+}
+
+/* Primeira seção */
+#section-1 {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.title, .title-2, .title-3, .titleKapti {
+    font-size: 44px;
+    color: #1C244B;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+img {
+    margin-left: -28px;
+    margin-bottom: -7px;
+}
+
+.description-1, .description-3, .subheading, .advantages {
+    font-size: 22px;
+    color: rgba(50, 74, 109, 0.80);
+    margin-bottom: 20px;
+    margin-left: 5%;
+    text-align: left;
+    gap: 40px;
+}
+
+.description-2 {
+    font-size: 22px;
+    color: rgba(50, 74, 109, 0.80);
+    margin-bottom: 20px;
+    margin-left: 8%;
+    text-align: left;
+    gap: 40px;
+}
+
+.subheading {
+    font-size: 32px;
+    color: #1C244B;
+}
+
+/* Segunda seção */
+#section-2 {
+    background-color: #e5e5e5;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 32px;
+    color: #1C244B;
+    margin-bottom: 20px;
+    margin-left: 12%;
+}
+
+.subtitle-2 {
+    font-size: 32px;
+    color: #1C244B;
+    margin-bottom: 20px;
+    margin-left: 8%;
+}
+
+/* Kapti */
+.containerKapti {
+    background: #EEEEEE;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.subtitleKapti {
+    font-size: 32px;
+    color: #1C244B;
+    margin-bottom: 20px;
+    margin-left: 5%;
+}
+
+.descriptionKapti {
+    font-size: 22px;
+    color: rgba(50, 74, 109, 0.80);
+    margin-bottom: 20px;
+    margin-left: 16%;
+    text-align: left;
+}
+
+.icon1Kapti, .icon2Kapti, .icon3Kapti, .icon4Kapti, .icon5Kapti {
+    width: 40px;
+    margin: 10px;
+}
+
+/* Sobre nós */
+#sobreNos {
+    width: 100%;
+    background: #1574A8;
+    padding: 45px 249px 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.titleSobreNos {
+    color: white;
+    font-size: 58px;
+    margin-bottom: 20px;
+}
+
+.descriptionSobreNos {
+    color: white;
+    font-size: 28px;
+    line-height: 28px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between rows */
+    padding: 20px;
+    box-sizing: border-box;
+    background: white;
+}
+
+.button a {
+    color: #fff; 
+    text-decoration: none; 
+}
+
+.button a:visited {
+    color: #fff; 
+    text-decoration: none; 
+}
+
+.row {
+    display: flex;
+    gap: 20px; 
+}
+
+.box {
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.title {
+    color: #1C244B;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 36px;
+    word-wrap: break-word;
+}
+
+.description {
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+    word-wrap: break-word;
+    margin-top: 10px;
+    margin-left: -5px;
+}
+
+.button-wrapper {
+    margin-top: 20px;
+    margin-left: -80%;
+}
+
+.button {
+    width: 130px;
+    height: 40px;
+    background: #FABF3A;
+    border-radius: 6px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 40px;
+    word-wrap: break-word;
+    margin: 0 auto;
+}
+
+/* Carroussel */
+.testimonial-carousel {
+    background-color: #FABF3A;
+    height: 400px;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    position: relative; 
+}
+
+.carousel-container {
+    position: relative;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial {
+    min-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.testimonial p {
+    font-size: 18px;
+    color: #333;
+    align-items: center;
+}
+
+.testimonial h3 {
+    font-size: 20px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.testimonial-carousel .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-carousel .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Botões de navegação */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: transparent;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Garante que os botões fiquem acima dos outros elementos */
+}
+
+button.prev {
+    left: -60px;
+    z-index: 10;
+}
+
+button.next {
+    right: -60px;
+    z-index: 10;
+}
+
+/* Ícones */
+.icon, .icon-2, .icon-3 {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Formulário */
+.containerForm {
+    width: 100%;
+    min-height: 100%; 
+    position: relative;
+    background: white;
+    padding: 20px; 
+}
+
+.box {
+    max-width: 1000px; 
+    margin: 0 auto;
+    position: relative;
+}
+
+.form-container {
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 24px;
+    background: white;
+    border-radius: 8px;
+    border: 1px #D9D9D9 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch; /* Ajusta os itens para preencher a largura disponível */
+    gap: 24px;
+    position: relative;
+}
+
+.form-group {
+    width: 100%; 
+    height: auto; 
+    display: flex;
+    margin-top: 5px;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mensagem-group {
+    height: auto;
+}
+
+.label {
+    width: 100%;
+    color: #1E1E1E;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 22.4px;
+}
+
+input, textarea {
+    width: 100%; 
+    padding: 12px 16px;
+    background: white;
+    border-radius: 8px;
+    border: 1px #D9D9D9 solid;
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    color: #333;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px; /* Define uma altura mínima para a área de texto */
+}
+
+.button-container {
+    width: 100%; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    gap: 16px;
+}
+
+.button a {
+    text-decoration: none;
+}
+
+.submit-button {
+    flex: 1;
+    height: 40px;
+    background: #1574A8;
+    border-radius: 8px;
+    border: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; 
+    cursor: pointer; 
+    transition: background 0.3s; 
+}
+
+.submit-button:hover {
+    background: #105a8c;
+}
+
+.button-text {
+    color: #F5F5F5;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+}
+
+#titleForm {
+    color: #1C244B;
+    font-size: 26px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 36px;
+    margin-top: 14px;
+    text-align: center; 
+}
+
+
+/* MAP */
+.main-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70vh; /* Ajuste a altura conforme necessário */
+    align-items: center;
+}
+
+.map-container {
+    flex: 1;
+    position: relative;
+}
+
+.map-image {
+    width: 700px;
+    height: 400px;
+    margin-left: 115px;
+    display: block;
+}
+
+.map-container, .info-container {
+    margin: 60px;
+    padding: 0;
+}
+
+.map-container {
+    width: 800px;
+    height: 320px;
+    margin-bottom: 100px;
+}
+
+.iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.info-container {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    margin-right: 150px;
+    margin-top: 20px;
+    background: white;
+}
+
+.info-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-bottom: 12px;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+
+/* Estilos do Modal */
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1D79AB;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-button:hover {
+    background-color: #155f8b;
+}
+
+
+
+/* Botao Scroll*/
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+} 
+
+#scrollToTop img {
+    width: 50px;
+    height: auto; 
+    display: block; 
+}
+
+#scrollToTop:hover img {
+    opacity: 0.8; 
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    position: static;
+    background: #1D79AB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    justify-content: center; 
+}
+
+footer .copyright {
+    color: #fff;
+    font-size: 24px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    line-height: 36px;
+    word-wrap: break-word;
+}
+
+/* Responsividade */
+@media (max-width: 320px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    
+    .slogan .sloganTitle {
+        font-size: 16px;
+    }
+
+    .slogan .hr {
+        width: 90%;
+    }
+
+    #section-1, #section-2, #section-3, #section-3 .sobreNos {
+        font-size: 16px;
+    }
+
+    img {
+        margin-left: -32px;
+        margin-bottom: -15px;
+    }
+
+    .title, .title-2, .title-3, .titleKapti {
+        font-size: 32px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .subtitle, .subtitle-2, .subtitleKapti {
+        font-size: 18px;
+        font-weight: 500;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: 5%;
+    }
+
+    .description-1, .description-3, .subheading, .advantages {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 5%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-2 {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .descriptionKapti {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .box {
+        padding: 15px; 
+        text-align: center;
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .description {
+        font-size: 14px; 
+        line-height: 24px;
+        margin-left: 0; 
+        text-align: left; 
+    }
+
+    .button-wrapper {
+        margin-left: 0; 
+        display: flex;
+        justify-content: center; 
+    }
+
+    .button {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .testimonial-carousel {
+        padding: 10px;
+    }
+
+    .testimonial p{
+        max-width: 60%;
+        font-size: 14px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 18px; 
+    }
+
+    .testimonial .img {
+        margin-left: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    .carousel-container {
+        padding: 0 10px; 
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .map-container, .info-container {
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .info-container {
+        margin-top: 20px;
+    }
+
+    .info-image {
+        width: 200px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .iframe {
+        height: 300px; 
+        margin-left: 0;
+    }
+
+    footer .copyright {
+        font-size: 12px;
+    }
+    
+}
+
+@media (min-width: 321px) and (max-width: 376px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    
+    .slogan .sloganTitle {
+        font-size: 16px;
+    }
+
+    .slogan .hr {
+        width: 90%;
+    }
+
+    #section-1, #section-2, #section-3, #section-3 .sobreNos {
+        font-size: 16px;
+    }
+
+    img {
+        margin-left: -32px;
+        margin-bottom: -15px;
+    }
+
+    .title, .title-2, .title-3, .titleKapti {
+        font-size: 32px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .subtitle, .subtitle-2, .subtitleKapti {
+        font-size: 18px;
+        font-weight: 500;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: 5%;
+    }
+
+    .description-1, .description-3, .subheading, .advantages {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 5%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-2 {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .descriptionKapti {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .box {
+        padding: 15px; 
+        text-align: center;
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .description {
+        font-size: 14px; 
+        line-height: 24px;
+        margin-left: 0; 
+        text-align: left; 
+    }
+
+    .button-wrapper {
+        margin-left: 0; 
+        display: flex;
+        justify-content: center; 
+    }
+
+    .button {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .testimonial-carousel {
+        padding: 10px;
+    }
+
+    .testimonial p{
+        max-width: 60%;
+        font-size: 14px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 18px; 
+    }
+
+    .testimonial .img {
+        margin-left: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    .carousel-container {
+        padding: 0 10px; 
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .map-container, .info-container {
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .info-container {
+        margin-top: 20px;
+    }
+
+    .info-image {
+        width: 200px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .iframe {
+        height: 300px; 
+        margin-left: 0;
+    }
+
+    footer .copyright {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 377px) and (max-width: 420px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    
+    .slogan .sloganTitle {
+        font-size: 20px;
+    }
+
+    .slogan .hr {
+        width: 90%;
+    }
+
+    #section-1, #section-2, #section-3, #section-3 .sobreNos {
+        font-size: 16px;
+    }
+
+    img {
+        margin-left: -32px;
+        margin-bottom: -15px;
+    }
+
+    .title, .title-2, .title-3, .titleKapti {
+        font-size: 32px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .subtitle, .subtitle-2, .subtitleKapti {
+        font-size: 18px;
+        font-weight: 500;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: 5%;
+    }
+
+    .description-1, .description-3, .subheading, .advantages {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 5%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-2 {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .descriptionKapti {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .box {
+        padding: 15px; 
+        text-align: center;
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .description {
+        font-size: 14px; 
+        line-height: 24px;
+        margin-left: 0; 
+        text-align: left; 
+    }
+
+    .button-wrapper {
+        margin-left: 0; 
+        display: flex;
+        justify-content: center; 
+    }
+
+    .button {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .testimonial-carousel {
+        padding: 10px;
+    }
+
+    .testimonial p{
+        max-width: 60%;
+        font-size: 14px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 18px; 
+    }
+
+    .testimonial .img {
+        margin-left: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    .carousel-container {
+        padding: 0 10px; 
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .map-container, .info-container {
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .info-container {
+        margin-top: 20px;
+    }
+
+    .info-image {
+        width: 200px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .iframe {
+        height: 300px; 
+        margin-left: 0;
+    }
+
+    footer .copyright {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 551px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    
+    .slogan .sloganTitle {
+        font-size: 22px;
+    }
+
+    .slogan .hr {
+        width: 80%;
+    }
+
+    #section-1, #section-2, #section-3, #section-3 .sobreNos {
+        font-size: 16px;
+    }
+
+    img {
+        margin-left: -32px;
+        margin-bottom: -15px;
+    }
+
+    .title, .title-2, .title-3, .titleKapti {
+        font-size: 32px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .subtitle, .subtitle-2, .subtitleKapti {
+        font-size: 18px;
+        font-weight: 500;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: 5%;
+    }
+
+    .description-1, .description-3, .subheading, .advantages {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 5%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-2 {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .descriptionKapti {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .box {
+        padding: 15px; 
+        text-align: center;
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .description {
+        font-size: 14px; 
+        line-height: 24px;
+        margin-left: 0; 
+        text-align: left; 
+    }
+
+    .button-wrapper {
+        margin-left: 0; 
+        display: flex;
+        justify-content: center; 
+    }
+
+    .button {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .testimonial-carousel {
+        padding: 10px;
+    }
+
+    .testimonial {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .testimonial p{
+        max-width: 80%;
+        font-size: 14px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 18px; 
+    }
+
+    .testimonial .img {
+        margin: 5px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .carousel-container {
+        padding: 0; 
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .map-container, .info-container {
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .info-container {
+        margin-top: 20px;
+    }
+
+    .contact-info {
+        word-spacing: -1px;
+    }
+
+    .info-image {
+        width: 200px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .iframe {
+        height: 300px; 
+        margin-left: 0;
+    }
+
+    footer .copyright {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 861px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    
+    .slogan .sloganTitle {
+        font-size: 30px;
+    }
+
+    .slogan .hr {
+        width: 75%;
+    }
+
+    #section-1, #section-2, #section-3, #section-3 .sobreNos {
+        font-size: 18px;
+    }
+
+    img {
+        margin-left: -32px;
+        margin-bottom: -15px;
+    }
+
+    .title, .title-2, .title-3, .titleKapti {
+        font-size: 32px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .subtitle, .subtitle-2, .subtitleKapti {
+        font-size: 20px;
+        font-weight: 500;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: 5%;
+    }
+
+    .description-1, .description-3, .subheading, .advantages {
+        font-size: 18px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 5%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-2 {
+        font-size: 18px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .descriptionKapti {
+        font-size: 18px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .box {
+        padding: 15px; 
+        text-align: center;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    .description {
+        font-size: 18px; 
+        line-height: 24px;
+        margin-left: 0; 
+        text-align: left; 
+    }
+
+    .button-wrapper {
+        margin-left: 0; 
+        display: flex;
+        justify-content: center; 
+    }
+
+    .button {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .testimonial-carousel {
+        padding: 10px;
+    }
+
+    .testimonial p{
+        max-width: 80%;
+        font-size: 20px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 20px; 
+    }
+
+    .testimonial .img {
+        margin: 6px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .carousel-container {
+        padding: 0; 
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .map-container, .info-container {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .map-container {
+        width: 800px;
+        height: 300px;
+    }
+
+    .info-container {
+        margin-top: 20px;
+    }
+
+    .info-image {
+        width: 200px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .iframe {
+        height: 300px; 
+        margin-left: 0;
+    }
+
+    footer .copyright {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 861px) and (max-width: 1280px) {
+    /* .hideOnMobile {
+        display: none;
+    } */
+
+    nav {
+        width: 100%;
+        height: 100px;
+        background: white;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        position: relative;
+    }
+    
+    .divNav {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    
+    ul {
+        display: flex;
+        font-size: 18px;
+        list-style: none;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+    
+    ul li {
+        margin-left: 10px; 
+        list-style: none;
+        font-size: 18px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        color: #3D3D3D;
+        line-height: 35px;
+        cursor: pointer;
+    }
+    
+    ul li:hover {
+        border-radius: 50px; 
+        transition: background-color 0.3s, color 0.3s; 
+        background-color: #1574A8;
+        color: #fff;
+        padding: 2px 10px;
+    }
+    
+    li .menu {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .logo {
+        width: 250px;
+        height: 76px;
+        margin-left: 8px;
+    }
+    
+    .nav-item {
+        color: #3D3D3D;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 15px;
+        padding: 10px;
+    }
+    
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    
+    .slogan .sloganTitle {
+        font-size: 38px;
+    }
+
+    .slogan .hr {
+        width: 90%;
+    }
+
+    #section-1, #section-2, #section-3, #section-3 .sobreNos {
+        font-size: 22px;
+    }
+
+    img {
+        margin: 15px;
+    }
+
+    .title, .title-2, .title-3, .titleKapti {
+        font-size: 38px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .subtitle, .subtitle-2, .subtitleKapti {
+        font-size: 30px;
+        font-weight: 500;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: 5%;
+    }
+
+    .description-1, .description-3, .subheading, .advantages {
+        font-size: 22px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 5%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-2 {
+        font-size: 22px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .descriptionKapti {
+        font-size: 22px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 18px;
+    }
+
+    /* .container {
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .box {
+        padding: 15px; 
+        text-align: center;
+    }
+
+    .title {
+        font-size: 30px;
+        line-height: 28px;
+    }
+
+    .description {
+        font-size: 22px; 
+        line-height: 22px;
+        margin-left: 0; 
+        text-align: left; 
+    }
+
+    .button-wrapper {
+        margin-left: 0; 
+        display: flex;
+        justify-content: center; 
+    }
+
+    .button {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .testimonial-carousel {
+        padding: 10px;
+    }
+
+    .testimonial p{
+        max-width: 60%;
+        font-size: 14px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 18px; 
+    }
+
+    .testimonial .img {
+        margin-left: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    .carousel-container {
+        padding: 0 10px; 
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    footer .copyright {
+        font-size: 12px;
+    } */
+
+    .main-container {
+        height: auto; 
+    }
+
+    .map-container, .info-container {
+        margin: 20px;
+        padding: 0;
+    }
+
+    .map-container {
+        width: 800px;
+        height: 300px;
+    }
+
+    .info-container {
+        margin: 0;
+    }
+
+    .info-image {
+        width: 180px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .iframe {
+        height: 300px; 
+        margin-left: 0;
+    }
+}
+
