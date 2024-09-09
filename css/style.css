@@ -7,10 +7,11 @@
 
 body {
     font-family: Montserrat, sans-serif;
+    text-align: justify;
 }
 
 /* Estilos gerais */
-.container, .content, .egestor, .assina {
+.container, .content, .egestor, .assina, .kapti, .descriptionSobreNos {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -154,7 +155,22 @@ nav .sidebar {
     background-color: #fff;
     padding: 50px 20px;
     text-align: left;
-    margin-left: 5%;
+}
+
+.assina, #contentSys, .egestor, .kapti {
+    max-width: 80%;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+.assina {
+    max-width: 76%;
+    margin-left: 10%;
+}
+
+.kapti {
+    max-width: 78%;
+    margin-left: 8%;
 }
 
 .title, .title-2, .title-3, .titleKapti {
@@ -164,75 +180,88 @@ nav .sidebar {
     text-align: center;
 }
 
+.egestor .title-3 {
+    text-align: center;
+    margin-left: 12%;
+}
+
+.egestor .subtitle {
+    text-align: center;
+    margin-left: 12%;
+}
+
 img {
     margin-left: -28px;
     margin-bottom: -7px;
 }
 
-.description-1, .description-3, .subheading, .advantages {
-    font-size: 22px;
+.description-1, .description-3, .advantages {
+    font-size: 20px;
     color: rgba(50, 74, 109, 0.80);
     margin-bottom: 20px;
-    margin-left: 5%;
-    text-align: left;
+    /* margin-left: 7%; */
+    text-align: justify;
+    line-height: 1.8;
     gap: 40px;
 }
 
 .description-2 {
-    font-size: 22px;
+    font-size: 20px;
     color: rgba(50, 74, 109, 0.80);
     margin-bottom: 20px;
-    margin-left: 8%;
-    text-align: left;
+    margin-left: 2%;
+    text-align: justify;
+    line-height: 1.8;
     gap: 40px;
 }
 
-.subheading {
-    font-size: 32px;
-    color: #1C244B;
+.description-3 {
+    margin-left: 6%;
 }
 
-/* Segunda seção */
-#section-2 {
+.egestor {
+    margin-left: 5.2%;
+}
+
+#section-2, #section-4 {
     background-color: #e5e5e5;
     padding: 50px 20px;
     text-align: center;
 }
 
 .subtitle {
-    font-size: 32px;
+    font-size: 26px;
+    text-align: center;
     color: #1C244B;
     margin-bottom: 20px;
-    margin-left: 12%;
 }
 
 .subtitle-2 {
-    font-size: 32px;
+    font-size: 26px;
+    text-align: center;
     color: #1C244B;
     margin-bottom: 20px;
-    margin-left: 8%;
 }
+
+
 
 /* Kapti */
-.containerKapti {
-    background: #EEEEEE;
-    padding: 50px 20px;
-    text-align: center;
-}
 
 .subtitleKapti {
-    font-size: 32px;
+    font-size: 26px;
     color: #1C244B;
     margin-bottom: 20px;
+    text-align: center;
     margin-left: 5%;
 }
 
 .descriptionKapti {
-    font-size: 22px;
+    font-size: 20px;
     color: rgba(50, 74, 109, 0.80);
     margin-bottom: 20px;
-    margin-left: 16%;
-    text-align: left;
+    margin-left: 2%;
+    line-height: 1.8;
+    text-align: justify;
 }
 
 .icon1Kapti, .icon2Kapti, .icon3Kapti, .icon4Kapti, .icon5Kapti {
@@ -248,6 +277,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 1.6;
     text-align: left;
 }
 
@@ -295,14 +325,14 @@ img {
     padding: 20px;
 }
 
-.title {
+/* .title {
     color: #1C244B;
     font-size: 30px;
     font-weight: 700;
     text-align: left;
     line-height: 36px;
     word-wrap: break-word;
-}
+} */
 
 .description {
     color: rgba(0, 0, 0, 0.80);
@@ -721,6 +751,11 @@ footer .copyright {
         width: 200px;
         height: 50px;
     }
+
+    .egestor {
+        margin: 0 auto;
+        max-width: 80%;
+    }
     
     .slogan .sloganTitle {
         font-size: 16px;
@@ -731,7 +766,8 @@ footer .copyright {
     }
 
     #section-1, #section-2, #section-3, #section-3 .sobreNos {
-        font-size: 16px;
+        max-width: 100%;
+        font-size: 14px;
     }
 
     img {
@@ -740,7 +776,8 @@ footer .copyright {
     }
 
     .title, .title-2, .title-3, .titleKapti {
-        font-size: 32px;
+        margin-top: -10%;
+        font-size: 22px;
         color: #1C244B;
         margin-bottom: 20px;
         text-align: center;
@@ -748,13 +785,18 @@ footer .copyright {
 
     .subtitle, .subtitle-2, .subtitleKapti {
         font-size: 18px;
+        text-align: justify;
         font-weight: 500;
         color: #1C244B;
         margin-bottom: 20px;
         margin-left: 5%;
     }
 
-    .description-1, .description-3, .subheading, .advantages {
+    /* .egestor .subtitle {
+        text-align: left;
+    } */
+
+    .description-1, .advantages {
         font-size: 16px;
         color: rgba(50, 74, 109, 0.80);
         margin-bottom: 20px;
@@ -768,6 +810,15 @@ footer .copyright {
         color: rgba(50, 74, 109, 0.80);
         margin-bottom: 20px;
         margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-3 {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 10%;
         text-align: left;
         gap: 40px;
     }
@@ -787,7 +838,7 @@ footer .copyright {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: left;
+        text-align: justify;
     }
     
     .titleSobreNos {
@@ -800,6 +851,27 @@ footer .copyright {
         color: white;
         font-size: 18px;
         line-height: 18px;
+    }
+
+    .box-support, .box-training, .box-systems, .box-accessibility {
+        padding: 15px;
+        text-align: justify;
+    }
+
+    .box-support .title {
+        margin-top: 6%;
+    }
+
+    .box-training .title {
+        margin-top: 3%;
+    }
+
+    .box-systems .title {
+        margin-top: 3%;
+    }
+
+    .box-accessibility .title {
+        margin-top: 3%;
     }
 
     .container {
@@ -825,7 +897,7 @@ footer .copyright {
         font-size: 14px; 
         line-height: 24px;
         margin-left: 0; 
-        text-align: left; 
+        text-align: justify; 
     }
 
     .button-wrapper {
@@ -901,7 +973,6 @@ footer .copyright {
     footer .copyright {
         font-size: 12px;
     }
-    
 }
 
 @media (min-width: 321px) and (max-width: 376px) {
@@ -915,6 +986,11 @@ footer .copyright {
         width: 200px;
         height: 50px;
     }
+
+    .egestor {
+        margin: 0 auto;
+        max-width: 80%;
+    }
     
     .slogan .sloganTitle {
         font-size: 16px;
@@ -925,7 +1001,8 @@ footer .copyright {
     }
 
     #section-1, #section-2, #section-3, #section-3 .sobreNos {
-        font-size: 16px;
+        max-width: 100%;
+        font-size: 14px;
     }
 
     img {
@@ -934,7 +1011,8 @@ footer .copyright {
     }
 
     .title, .title-2, .title-3, .titleKapti {
-        font-size: 32px;
+        margin-top: -10%;
+        font-size: 22px;
         color: #1C244B;
         margin-bottom: 20px;
         text-align: center;
@@ -942,13 +1020,18 @@ footer .copyright {
 
     .subtitle, .subtitle-2, .subtitleKapti {
         font-size: 18px;
+        text-align: justify;
         font-weight: 500;
         color: #1C244B;
         margin-bottom: 20px;
         margin-left: 5%;
     }
 
-    .description-1, .description-3, .subheading, .advantages {
+    /* .egestor .subtitle {
+        text-align: left;
+    } */
+
+    .description-1, .advantages {
         font-size: 16px;
         color: rgba(50, 74, 109, 0.80);
         margin-bottom: 20px;
@@ -962,6 +1045,15 @@ footer .copyright {
         color: rgba(50, 74, 109, 0.80);
         margin-bottom: 20px;
         margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-3 {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 10%;
         text-align: left;
         gap: 40px;
     }
@@ -981,7 +1073,7 @@ footer .copyright {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: left;
+        text-align: justify;
     }
     
     .titleSobreNos {
@@ -994,6 +1086,32 @@ footer .copyright {
         color: white;
         font-size: 18px;
         line-height: 18px;
+    }
+
+    .row {
+        max-width: 80%;
+        margin-left: 10%;
+    }
+
+    .box-support, .box-training, .box-systems, .box-accessibility {
+        padding: 15px;
+        text-align: justify;
+    }
+
+    .box-support .title {
+        margin-top: 6%;
+    }
+
+    .box-training .title {
+        margin-top: 3%;
+    }
+
+    .box-systems .title {
+        margin-top: 3%;
+    }
+
+    .box-accessibility .title {
+        margin-top: 3%;
     }
 
     .container {
@@ -1019,7 +1137,7 @@ footer .copyright {
         font-size: 14px; 
         line-height: 24px;
         margin-left: 0; 
-        text-align: left; 
+        text-align: justify; 
     }
 
     .button-wrapper {
@@ -1108,9 +1226,14 @@ footer .copyright {
         width: 200px;
         height: 50px;
     }
+
+    .egestor {
+        margin: 0 auto;
+        max-width: 80%;
+    }
     
     .slogan .sloganTitle {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .slogan .hr {
@@ -1118,7 +1241,8 @@ footer .copyright {
     }
 
     #section-1, #section-2, #section-3, #section-3 .sobreNos {
-        font-size: 16px;
+        max-width: 100%;
+        font-size: 14px;
     }
 
     img {
@@ -1127,7 +1251,8 @@ footer .copyright {
     }
 
     .title, .title-2, .title-3, .titleKapti {
-        font-size: 32px;
+        margin-top: -10%;
+        font-size: 22px;
         color: #1C244B;
         margin-bottom: 20px;
         text-align: center;
@@ -1135,13 +1260,18 @@ footer .copyright {
 
     .subtitle, .subtitle-2, .subtitleKapti {
         font-size: 18px;
+        text-align: justify;
         font-weight: 500;
         color: #1C244B;
         margin-bottom: 20px;
         margin-left: 5%;
     }
 
-    .description-1, .description-3, .subheading, .advantages {
+    /* .egestor .subtitle {
+        text-align: left;
+    } */
+
+    .description-1, .advantages {
         font-size: 16px;
         color: rgba(50, 74, 109, 0.80);
         margin-bottom: 20px;
@@ -1155,6 +1285,15 @@ footer .copyright {
         color: rgba(50, 74, 109, 0.80);
         margin-bottom: 20px;
         margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-3 {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 10%;
         text-align: left;
         gap: 40px;
     }
@@ -1174,7 +1313,7 @@ footer .copyright {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: left;
+        text-align: justify;
     }
     
     .titleSobreNos {
@@ -1187,6 +1326,32 @@ footer .copyright {
         color: white;
         font-size: 18px;
         line-height: 18px;
+    }
+
+    .row {
+        max-width: 80%;
+        margin-left: 10%;
+    }
+
+    .box-support, .box-training, .box-systems, .box-accessibility {
+        padding: 15px;
+        text-align: justify;
+    }
+
+    .box-support .title {
+        margin-top: 6%;
+    }
+
+    .box-training .title {
+        margin-top: 3%;
+    }
+
+    .box-systems .title {
+        margin-top: 3%;
+    }
+
+    .box-accessibility .title {
+        margin-top: 3%;
     }
 
     .container {
@@ -1212,7 +1377,7 @@ footer .copyright {
         font-size: 14px; 
         line-height: 24px;
         margin-left: 0; 
-        text-align: left; 
+        text-align: justify; 
     }
 
     .button-wrapper {
@@ -1334,6 +1499,18 @@ footer .copyright {
         margin-left: 5%;
     }
 
+    .egestor {
+        margin-left: 12%;
+    }
+
+    .egestor .title-3 {
+        margin-left: 4%;
+    }
+
+    .egestor .subtitle {
+        margin-left: 4%;
+    }
+
     .description-1, .description-3, .subheading, .advantages {
         font-size: 16px;
         color: rgba(50, 74, 109, 0.80);
@@ -1380,6 +1557,28 @@ footer .copyright {
         color: white;
         font-size: 18px;
         line-height: 18px;
+    }
+
+    .box-support, .box-training, .box-systems, .box-accessibility {
+        padding: 15px;
+        margin-left: 5%;
+        text-align: justify;
+    }
+
+    .box-support .title {
+        margin-top: 6%;
+    }
+
+    .box-training .title {
+        margin-top: 3%;
+    }
+
+    .box-systems .title {
+        margin-top: 3%;
+    }
+
+    .box-accessibility .title {
+        margin-top: 3%;
     }
 
     .container {
@@ -1492,7 +1691,7 @@ footer .copyright {
     }
 }
 
-@media (min-width: 551px) and (max-width: 861px) {
+@media (min-width: 551px) and (max-width: 800px) {
     .hideOnMobile {
         display: none;
     }
@@ -1505,15 +1704,15 @@ footer .copyright {
     }
     
     .slogan .sloganTitle {
-        font-size: 30px;
+        font-size: 22px;
     }
 
     .slogan .hr {
-        width: 75%;
+        width: 80%;
     }
 
     #section-1, #section-2, #section-3, #section-3 .sobreNos {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     img {
@@ -1533,7 +1732,19 @@ footer .copyright {
         font-weight: 500;
         color: #1C244B;
         margin-bottom: 20px;
-        margin-left: 5%;
+        margin-left: 2%;
+    }
+
+    .egestor {
+        margin-left: 12%;
+    }
+
+    .egestor .title-3 {
+        margin-left: 4%;
+    }
+
+    .egestor .subtitle {
+        margin-left: 4%;
     }
 
     .description-1, .description-3, .subheading, .advantages {
@@ -1541,7 +1752,7 @@ footer .copyright {
         color: rgba(50, 74, 109, 0.80);
         margin-bottom: 20px;
         margin-left: 5%;
-        text-align: left;
+        text-align: justify;
         gap: 40px;
     }
 
@@ -1559,7 +1770,7 @@ footer .copyright {
         color: rgba(50, 74, 109, 0.80);
         margin-bottom: 20px;
         margin-left: 8%;
-        text-align: left;
+        text-align: justify;
     }
 
     #sobreNos {
@@ -1569,19 +1780,41 @@ footer .copyright {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: left;
+        text-align: justify;
     }
     
     .titleSobreNos {
         color: white;
-        font-size: 32px;
+        font-size: 28px;
         margin-bottom: 20px;
     }
     
     .descriptionSobreNos {
         color: white;
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .box-support, .box-training, .box-systems, .box-accessibility {
+        padding: 15px;
+        margin-left: 5%;
+        text-align: justify;
+    }
+
+    .box-support .title {
+        margin-top: 6%;
+    }
+
+    .box-training .title {
+        margin-top: 3%;
+    }
+
+    .box-systems .title {
+        margin-top: 3%;
+    }
+
+    .box-accessibility .title {
+        margin-top: 3%;
     }
 
     .container {
@@ -1599,15 +1832,15 @@ footer .copyright {
     }
 
     .title {
-        font-size: 28px;
+        font-size: 24px;
         line-height: 28px;
     }
 
     .description {
         font-size: 18px; 
-        line-height: 24px;
+        line-height: 1.6;
         margin-left: 0; 
-        text-align: left; 
+        text-align: justify; 
     }
 
     .button-wrapper {
@@ -1625,9 +1858,14 @@ footer .copyright {
         padding: 10px;
     }
 
+    .testimonial {
+        max-width: 100%;
+        padding: 0;
+    }
+
     .testimonial p{
         max-width: 80%;
-        font-size: 20px;
+        font-size: 18px;
         text-wrap: wrap;
         word-wrap: break-word;
         overflow-wrap: break-word;
@@ -1637,11 +1875,11 @@ footer .copyright {
     }
 
     .testimonial h3 {
-        font-size: 20px; 
+        font-size: 18px; 
     }
 
     .testimonial .img {
-        margin: 6px;
+        margin: 5px;
         width: 18px;
         height: 18px;
     }
@@ -1660,18 +1898,17 @@ footer .copyright {
     }
 
     .map-container, .info-container {
-        width: 90%;
+        width: 80%;
         margin: 0;
         padding: 0;
     }
 
-    .map-container {
-        width: 800px;
-        height: 300px;
-    }
-
     .info-container {
         margin-top: 20px;
+    }
+
+    .contact-info {
+        word-spacing: -1px;
     }
 
     .info-image {
@@ -1686,9 +1923,246 @@ footer .copyright {
     }
 
     footer .copyright {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
+
+@media (min-width: 801px) and (max-width: 861px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    
+    .slogan .sloganTitle {
+        font-size: 22px;
+    }
+
+    .slogan .hr {
+        width: 80%;
+    }
+
+    #section-1, #section-2, #section-3, #section-3 .sobreNos {
+        font-size: 16px;
+    }
+
+    img {
+        margin-left: -32px;
+        margin-bottom: -15px;
+    }
+
+    .title, .title-2, .title-3, .titleKapti {
+        font-size: 32px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .subtitle, .subtitle-2, .subtitleKapti {
+        font-size: 20px;
+        font-weight: 500;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: 2%;
+    }
+
+    .egestor {
+        margin-left: 12%;
+    }
+
+    .egestor .title-3 {
+        margin-left: 4%;
+    }
+
+    .egestor .subtitle {
+        margin-left: 4%;
+    }
+
+    .description-1, .description-3, .subheading, .advantages {
+        font-size: 18px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 5%;
+        text-align: justify;
+        gap: 40px;
+    }
+
+    .description-2 {
+        font-size: 18px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .descriptionKapti {
+        font-size: 18px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: justify;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .box-support, .box-training, .box-systems, .box-accessibility {
+        padding: 15px;
+        margin-left: 5%;
+        text-align: justify;
+    }
+
+    .box-support .title {
+        margin-top: 6%;
+    }
+
+    .box-training .title {
+        margin-top: 3%;
+    }
+
+    .box-systems .title {
+        margin-top: 3%;
+    }
+
+    .box-accessibility .title {
+        margin-top: 3%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .box {
+        padding: 15px; 
+        text-align: center;
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .description {
+        font-size: 18px; 
+        line-height: 1.6;
+        margin-left: 0; 
+        text-align: justify; 
+    }
+
+    .button-wrapper {
+        margin-left: 0; 
+        display: flex;
+        justify-content: center; 
+    }
+
+    .button {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .testimonial-carousel {
+        padding: 10px;
+    }
+
+    .testimonial {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .testimonial p{
+        max-width: 80%;
+        font-size: 18px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 18px; 
+    }
+
+    .testimonial .img {
+        margin: 5px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .carousel-container {
+        padding: 0; 
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .map-container, .info-container {
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .info-container {
+        margin-top: 20px;
+    }
+
+    .contact-info {
+        word-spacing: -1px;
+    }
+
+    .info-image {
+        width: 200px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .iframe {
+        height: 300px; 
+        margin-left: 0;
+    }
+
+    footer .copyright {
+        font-size: 16px;
+    }
+}
+
 
 @media (min-width: 861px) and (max-width: 1280px) {
     /* .hideOnMobile {
