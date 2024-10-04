@@ -84,33 +84,42 @@ function validateMessageField(field) {
     return true;
 }
 
-document.getElementById('openModal').addEventListener('click', function() {
-    const nameField = document.getElementById('name');
-    const surnameField = document.getElementById('surname');
-    const emailField = document.getElementById('email');
-    const messageField = document.getElementById('message');
+document.addEventListener('DOMContentLoaded', function() {
+    const confirmationModal = document.getElementById('confirmationModal');
+    const closeModal = document.getElementById('closeModal');
+    const cancelSend = document.getElementById('cancelSend');
+    const confirmSend = document.getElementById('confirmSend');
+    const openModal = document.getElementById('openModal'); // Certifique-se de que você tem um botão para abrir o modal
 
-    const isNameValid = validateField(nameField, /^[a-zA-ZÀ-ÿ\s]+$/, 'O nome completo não pode conter números ou caracteres especiais.');
-    const isSurnameValid = validateField(surnameField, /^[a-zA-ZÀ-ÿ\s]+$/, 'O sobrenome não pode conter números ou caracteres especiais.');
-    const isEmailValid = validateField(emailField, /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Digite um email válido.');
-    const isMessageValid = validateMessageField(messageField);
+    openModal.addEventListener('click', function() {
+        const nameField = document.getElementById('name');
+        const surnameField = document.getElementById('surname');
+        const emailField = document.getElementById('email');
+        const messageField = document.getElementById('message');
 
-    if (isNameValid && isSurnameValid && isEmailValid && isMessageValid) {
-        confirmationModal.style.display = 'block';
-    }
+        const isNameValid = validateField(nameField, /^[a-zA-ZÀ-ÿ\s]+$/, 'O nome completo não pode conter números ou caracteres especiais.');
+        const isSurnameValid = validateField(surnameField, /^[a-zA-ZÀ-ÿ\s]+$/, 'O sobrenome não pode conter números ou caracteres especiais.');
+        const isEmailValid = validateField(emailField, /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Digite um email válido.');
+        const isMessageValid = validateMessageField(messageField);
+
+        if (isNameValid && isSurnameValid && isEmailValid && isMessageValid) {
+            confirmationModal.style.display = 'block';
+        }
+    });
+
+    closeModal.addEventListener('click', function() {
+        confirmationModal.style.display = 'none';
+    });
+
+    cancelSend.addEventListener('click', function() {
+        confirmationModal.style.display = 'none';
+    });
+
+    confirmSend.addEventListener('click', function() {
+        form.submit(); // Certifique-se de que a variável 'form' está definida corretamente
+    });
 });
 
-closeModal.addEventListener('click', function() {
-    confirmationModal.style.display = 'none';
-});
-
-cancelSend.addEventListener('click', function() {
-    confirmationModal.style.display = 'none';
-});
-
-confirmSend.addEventListener('click', function() {
-    form.submit();
-});
 
 /* Modal de teste grátis (após 5 segundos) */
 const freeTrialModal = document.getElementById('freeTrialModal');

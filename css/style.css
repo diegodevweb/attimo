@@ -672,7 +672,7 @@ textarea {
 
 /* Estilos do Modal */
 .modal {
-    display: none; /* Esconde o modal por padrão */
+    display: none; 
     position: fixed;
     z-index: 1;
     left: 0;
@@ -708,7 +708,7 @@ textarea {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #1D79AB;
+    background-color: #1575a8;
     color: #fff;
     cursor: pointer;
 }
@@ -748,28 +748,16 @@ textarea {
     text-decoration: none;
 }
 
+.modal-content h2 {
+    color: #3D3D3D;
+}
+
 .close-button {
     float: right;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
 }
-
-.modal-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.modal-button:hover {
-    background-color: #0056b3;
-}
-
-
 
 /* Botao Scroll*/
 #scrollToTop {

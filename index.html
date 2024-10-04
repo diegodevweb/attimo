@@ -309,15 +309,13 @@
                     <textarea id="message" name="message" placeholder="Insira aqui sua mensagem" required></textarea>
                 </div>
                 <div class="button-container">
-                    <button type="submit" class="submit-button">
+                    <button type="button" id="openModal" class="submit-button">
                         <div class="button-text">Enviar</div>
                     </button>
                 </div>
             </form>
         </div>
-    </div>
-    
-    
+    </div> 
     
     <div class="main-container">
         <div class="map-container">
@@ -343,7 +341,7 @@
         <div class="modal-content">
             <span class="close-button" id="closeModal">&times;</span>
             <h2>Confirmar envio</h2>
-            <p>Tem certeza que deseja enviar este e-mail?</p>
+            <p>Enviar este e-mail?</p>
             <button id="confirmSend" class="modal-button">Sim, enviar</button>
             <button id="cancelSend" class="modal-button">Cancelar</button>
         </div>
