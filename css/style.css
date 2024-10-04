@@ -11,7 +11,7 @@ body {
 }
 
 /* Estilos gerais */
-.container, .content, .egestor, .assina, .kapti, .descriptionSobreNos {
+.container, .content, .erp, .assina, .kapti, .descriptionSobreNos, .section-pdv {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -151,13 +151,13 @@ nav .sidebar {
 }
 
 /* Primeira seção */
-#section-1 {
+#section-1, #section-4 {
     background-color: #fff;
     padding: 50px 20px;
-    text-align: left;
+    text-align: justify;
 }
 
-.assina, #contentSys, .egestor, .kapti {
+.assina, #contentSys, .erp, .kapti {
     max-width: 80%;
     line-height: 1.6;
     margin: 0 auto;
@@ -173,19 +173,24 @@ nav .sidebar {
     margin-left: 8%;
 }
 
-.title, .title-2, .title-3, .titleKapti {
+#pdv {
+    max-width: 70%;
+    margin-left: 11%;
+}
+
+.title-assinador, .title-2, .title-3, .titleKapti {
     font-size: 44px;
     color: #1C244B;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.egestor .title-3 {
+.erp .title-3 {
     text-align: center;
     margin-left: 12%;
 }
 
-.egestor .subtitle {
+.erp .subtitle {
     text-align: center;
     margin-left: 12%;
 }
@@ -195,8 +200,9 @@ img {
     margin-bottom: -7px;
 }
 
-.description-1, .description-3, .advantages {
+.description, .description-2, .description-1, .description-3, .subheading, .advantages {
     font-size: 20px;
+    /* max-width: 700px; */
     color: rgba(50, 74, 109, 0.80);
     margin-bottom: 20px;
     /* margin-left: 7%; */
@@ -205,25 +211,27 @@ img {
     gap: 40px;
 }
 
+description-1 {
+    margin-left: 2.2%;
+}
+
 .description-2 {
-    font-size: 20px;
-    color: rgba(50, 74, 109, 0.80);
-    margin-bottom: 20px;
-    margin-left: 2%;
-    text-align: justify;
-    line-height: 1.8;
-    gap: 40px;
+    margin-left: 3%;
 }
 
 .description-3 {
-    margin-left: 6%;
+    margin-left: 7%;
 }
 
-.egestor {
+.descriptionKapti {
+    margin-left: 2%;
+}
+
+.erp {
     margin-left: 5.2%;
 }
 
-#section-2, #section-4 {
+#section-2, #section-3 {
     background-color: #e5e5e5;
     padding: 50px 20px;
     text-align: center;
@@ -278,7 +286,7 @@ img {
     flex-direction: column;
     align-items: center;
     line-height: 1.6;
-    text-align: left;
+    text-align: justify;
 }
 
 .titleSobreNos {
@@ -293,62 +301,60 @@ img {
     line-height: 28px;
 }
 
-/* Container */
+/* Suporte personalizado, etc */
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between rows */
-    padding: 20px;
-    box-sizing: border-box;
-    background: white;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
 }
 
-.button a {
-    color: #fff; 
-    text-decoration: none; 
+.item {
+    display: flex; 
+    align-items: center; 
+    background: #fff;
+    margin: 10px 0; 
+    padding: 10px;
 }
 
-.button a:visited {
-    color: #fff; 
-    text-decoration: none; 
+.image-container {
+    max-width: 800px;
+    width: 630px;
+    height: 320px; 
+    overflow: hidden; /* Para esconder qualquer parte da imagem que exceda o contêiner */
+    border-radius: 8px;
+    margin-right: 50px; 
 }
 
-.row {
-    display: flex;
-    gap: 20px; 
+.image-container img {
+    width: 100%;
+    height: 100%; 
+    border-radius: 8px;
+    object-fit: cover; 
 }
 
-.box {
-    flex: 1;
-    min-width: 0;
-    box-sizing: border-box;
-    padding: 20px;
-}
-
-/* .title {
+h3 {
     color: #1C244B;
     font-size: 30px;
-    font-weight: 700;
-    text-align: left;
-    line-height: 36px;
-    word-wrap: break-word;
-} */
+    margin-bottom: 10px;
+}
 
-.description {
+p {
+    margin: 0; /* Remove margens padrão do parágrafo */
+    padding: 0; /* Remove preenchimento padrão do parágrafo */
+    max-width: 400px; /* Largura máxima para o texto */
+    line-height: 1.2; /* Altura da linha para melhor legibilidade */
     color: rgba(0, 0, 0, 0.80);
     font-size: 22px;
+    font-family: Montserrat;
     font-weight: 400;
     line-height: 30px;
-    word-wrap: break-word;
-    margin-top: 10px;
-    margin-left: -5px;
+    word-wrap: break-word
 }
 
 .button-wrapper {
-    margin-top: 20px;
-    margin-left: -80%;
+    margin: auto;
+    margin-top: 30px;
 }
-
 .button {
     width: 130px;
     height: 40px;
@@ -357,16 +363,22 @@ img {
     text-align: center;
     color: white;
     font-size: 15px;
+    font-family: Montserrat, sans-serif;
     font-weight: 500;
     line-height: 40px;
-    word-wrap: break-word;
-    margin: 0 auto;
 }
+
+.button:hover {
+    background-color: #ffda84;
+    cursor: pointer;
+}
+
 
 /* Carroussel */
 .testimonial-carousel {
+    margin-top: 50px;
     background-color: #FABF3A;
-    height: 400px;
+    height: 450px;
     padding: 40px 0;
     display: flex;
     justify-content: center;
@@ -376,8 +388,8 @@ img {
 .carousel-container {
     position: relative;
     align-items: center;
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     max-width: 600px;
     overflow: hidden;
     border-radius: 10px;
@@ -576,18 +588,18 @@ textarea {
     font-family: Inter, sans-serif;
     font-weight: 400;
     line-height: 36px;
-    margin-top: 14px;
+    margin-top: 44px;
     text-align: center; 
 }
 
 
 /* MAP */
 .main-container {
-    margin-top: 100px;
+    margin-top: -70px;
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 70vh; /* Ajuste a altura conforme necessário */
+    height: 70vh; 
     align-items: center;
 }
 
@@ -611,7 +623,7 @@ textarea {
 .map-container {
     width: 800px;
     height: 320px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .iframe {
@@ -641,7 +653,20 @@ textarea {
     color: black;
     font-size: 16px;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 22px;
+}
+
+.instagram-link {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.instagram-link img {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
 }
 
 
@@ -692,6 +717,58 @@ textarea {
     background-color: #155f8b;
 }
 
+/* Modal de teste gratis */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    text-align: center;
+}
+
+.modal-content .button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal-content a {
+    text-decoration: none;
+}
+
+.close-button {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-button:hover {
+    background-color: #0056b3;
+}
+
 
 
 /* Botao Scroll*/
@@ -739,1432 +816,29 @@ footer .copyright {
     word-wrap: break-word;
 }
 
+/* whatsapp */
+.whatsapp-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 150px;
+    right: 80px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-button i {
+    margin-top: 16px;
+} 
+
 /* Responsividade */
-@media (max-width: 320px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-btn {
-        display: block;
-    }
-    .logo {
-        width: 200px;
-        height: 50px;
-    }
-
-    .egestor {
-        margin: 0 auto;
-        max-width: 80%;
-    }
-    
-    .slogan .sloganTitle {
-        font-size: 16px;
-    }
-
-    .slogan .hr {
-        width: 90%;
-    }
-
-    #section-1, #section-2, #section-3, #section-3 .sobreNos {
-        max-width: 100%;
-        font-size: 14px;
-    }
-
-    img {
-        margin-left: -32px;
-        margin-bottom: -15px;
-    }
-
-    .title, .title-2, .title-3, .titleKapti {
-        margin-top: -10%;
-        font-size: 22px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 18px;
-        text-align: justify;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    /* .egestor .subtitle {
-        text-align: left;
-    } */
-
-    .description-1, .advantages {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-3 {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 10%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-    }
-
-    #sobreNos {
-        width: 100%;
-        background: #1574A8;
-        padding: 15px 50px 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    
-    .titleSobreNos {
-        color: white;
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-    
-    .descriptionSobreNos {
-        color: white;
-        font-size: 18px;
-        line-height: 18px;
-    }
-
-    .box-support, .box-training, .box-systems, .box-accessibility {
-        padding: 15px;
-        text-align: justify;
-    }
-
-    .box-support .title {
-        margin-top: 6%;
-    }
-
-    .box-training .title {
-        margin-top: 3%;
-    }
-
-    .box-systems .title {
-        margin-top: 3%;
-    }
-
-    .box-accessibility .title {
-        margin-top: 3%;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .row {
-        flex-direction: column; 
-        gap: 15px; 
-    }
-
-    .box {
-        padding: 15px; 
-        text-align: center;
-    }
-
-    .title {
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .description {
-        font-size: 14px; 
-        line-height: 24px;
-        margin-left: 0; 
-        text-align: justify; 
-    }
-
-    .button-wrapper {
-        margin-left: 0; 
-        display: flex;
-        justify-content: center; 
-    }
-
-    .button {
-        width: 100%;
-        max-width: 150px;
-    }
-
-    .testimonial-carousel {
-        padding: 10px;
-    }
-
-    .testimonial p{
-        max-width: 60%;
-        font-size: 14px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
-    }
-
-    .testimonial h3 {
-        font-size: 18px; 
-    }
-
-    .testimonial .img {
-        margin-left: 0;
-        width: 18px;
-        height: 18px;
-    }
-
-    .carousel-container {
-        padding: 0 10px; 
-    }
-
-    #titleForm {
-        font-size: 18px;
-    }
-
-    .main-container {
-        flex-direction: column;
-        height: auto; 
-    }
-
-    .map-container, .info-container {
-        width: 80%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .info-container {
-        margin-top: 20px;
-    }
-
-    .info-image {
-        width: 200px;
-        height: 50px;
-        margin: auto;
-    }
-
-    .iframe {
-        height: 300px; 
-        margin-left: 0;
-    }
-
-    footer .copyright {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 321px) and (max-width: 376px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-btn {
-        display: block;
-    }
-    .logo {
-        width: 200px;
-        height: 50px;
-    }
-
-    .egestor {
-        margin: 0 auto;
-        max-width: 80%;
-    }
-    
-    .slogan .sloganTitle {
-        font-size: 16px;
-    }
-
-    .slogan .hr {
-        width: 90%;
-    }
-
-    #section-1, #section-2, #section-3, #section-3 .sobreNos {
-        max-width: 100%;
-        font-size: 14px;
-    }
-
-    img {
-        margin-left: -32px;
-        margin-bottom: -15px;
-    }
-
-    .title, .title-2, .title-3, .titleKapti {
-        margin-top: -10%;
-        font-size: 22px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 18px;
-        text-align: justify;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    /* .egestor .subtitle {
-        text-align: left;
-    } */
-
-    .description-1, .advantages {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-3 {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 10%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-    }
-
-    #sobreNos {
-        width: 100%;
-        background: #1574A8;
-        padding: 15px 50px 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    
-    .titleSobreNos {
-        color: white;
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-    
-    .descriptionSobreNos {
-        color: white;
-        font-size: 18px;
-        line-height: 18px;
-    }
-
-    .row {
-        max-width: 80%;
-        margin-left: 10%;
-    }
-
-    .box-support, .box-training, .box-systems, .box-accessibility {
-        padding: 15px;
-        text-align: justify;
-    }
-
-    .box-support .title {
-        margin-top: 6%;
-    }
-
-    .box-training .title {
-        margin-top: 3%;
-    }
-
-    .box-systems .title {
-        margin-top: 3%;
-    }
-
-    .box-accessibility .title {
-        margin-top: 3%;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .row {
-        flex-direction: column; 
-        gap: 15px; 
-    }
-
-    .box {
-        padding: 15px; 
-        text-align: center;
-    }
-
-    .title {
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .description {
-        font-size: 14px; 
-        line-height: 24px;
-        margin-left: 0; 
-        text-align: justify; 
-    }
-
-    .button-wrapper {
-        margin-left: 0; 
-        display: flex;
-        justify-content: center; 
-    }
-
-    .button {
-        width: 100%;
-        max-width: 150px;
-    }
-
-    .testimonial-carousel {
-        padding: 10px;
-    }
-
-    .testimonial p{
-        max-width: 60%;
-        font-size: 14px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
-    }
-
-    .testimonial h3 {
-        font-size: 18px; 
-    }
-
-    .testimonial .img {
-        margin-left: 0;
-        width: 18px;
-        height: 18px;
-    }
-
-    .carousel-container {
-        padding: 0 10px; 
-    }
-
-    #titleForm {
-        font-size: 18px;
-    }
-
-    .main-container {
-        flex-direction: column;
-        height: auto; 
-    }
-
-    .map-container, .info-container {
-        width: 80%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .info-container {
-        margin-top: 20px;
-    }
-
-    .info-image {
-        width: 200px;
-        height: 50px;
-        margin: auto;
-    }
-
-    .iframe {
-        height: 300px; 
-        margin-left: 0;
-    }
-
-    footer .copyright {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 377px) and (max-width: 420px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-btn {
-        display: block;
-    }
-    .logo {
-        width: 200px;
-        height: 50px;
-    }
-
-    .egestor {
-        margin: 0 auto;
-        max-width: 80%;
-    }
-    
-    .slogan .sloganTitle {
-        font-size: 16px;
-    }
-
-    .slogan .hr {
-        width: 90%;
-    }
-
-    #section-1, #section-2, #section-3, #section-3 .sobreNos {
-        max-width: 100%;
-        font-size: 14px;
-    }
-
-    img {
-        margin-left: -32px;
-        margin-bottom: -15px;
-    }
-
-    .title, .title-2, .title-3, .titleKapti {
-        margin-top: -10%;
-        font-size: 22px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 18px;
-        text-align: justify;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    /* .egestor .subtitle {
-        text-align: left;
-    } */
-
-    .description-1, .advantages {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-3 {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 10%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-    }
-
-    #sobreNos {
-        width: 100%;
-        background: #1574A8;
-        padding: 15px 50px 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    
-    .titleSobreNos {
-        color: white;
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-    
-    .descriptionSobreNos {
-        color: white;
-        font-size: 18px;
-        line-height: 18px;
-    }
-
-    .row {
-        max-width: 80%;
-        margin-left: 10%;
-    }
-
-    .box-support, .box-training, .box-systems, .box-accessibility {
-        padding: 15px;
-        text-align: justify;
-    }
-
-    .box-support .title {
-        margin-top: 6%;
-    }
-
-    .box-training .title {
-        margin-top: 3%;
-    }
-
-    .box-systems .title {
-        margin-top: 3%;
-    }
-
-    .box-accessibility .title {
-        margin-top: 3%;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .row {
-        flex-direction: column; 
-        gap: 15px; 
-    }
-
-    .box {
-        padding: 15px; 
-        text-align: center;
-    }
-
-    .title {
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .description {
-        font-size: 14px; 
-        line-height: 24px;
-        margin-left: 0; 
-        text-align: justify; 
-    }
-
-    .button-wrapper {
-        margin-left: 0; 
-        display: flex;
-        justify-content: center; 
-    }
-
-    .button {
-        width: 100%;
-        max-width: 150px;
-    }
-
-    .testimonial-carousel {
-        padding: 10px;
-    }
-
-    .testimonial p{
-        max-width: 60%;
-        font-size: 14px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
-    }
-
-    .testimonial h3 {
-        font-size: 18px; 
-    }
-
-    .testimonial .img {
-        margin-left: 0;
-        width: 18px;
-        height: 18px;
-    }
-
-    .carousel-container {
-        padding: 0 10px; 
-    }
-
-    #titleForm {
-        font-size: 18px;
-    }
-
-    .main-container {
-        flex-direction: column;
-        height: auto; 
-    }
-
-    .map-container, .info-container {
-        width: 80%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .info-container {
-        margin-top: 20px;
-    }
-
-    .info-image {
-        width: 200px;
-        height: 50px;
-        margin: auto;
-    }
-
-    .iframe {
-        height: 300px; 
-        margin-left: 0;
-    }
-
-    footer .copyright {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 420px) and (max-width: 551px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-btn {
-        display: block;
-    }
-    .logo {
-        width: 200px;
-        height: 50px;
-    }
-    
-    .slogan .sloganTitle {
-        font-size: 22px;
-    }
-
-    .slogan .hr {
-        width: 80%;
-    }
-
-    #section-1, #section-2, #section-3, #section-3 .sobreNos {
-        font-size: 16px;
-    }
-
-    img {
-        margin-left: -32px;
-        margin-bottom: -15px;
-    }
-
-    .title, .title-2, .title-3, .titleKapti {
-        font-size: 32px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 18px;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    .egestor {
-        margin-left: 12%;
-    }
-
-    .egestor .title-3 {
-        margin-left: 4%;
-    }
-
-    .egestor .subtitle {
-        margin-left: 4%;
-    }
-
-    .description-1, .description-3, .subheading, .advantages {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 16px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-    }
-
-    #sobreNos {
-        width: 100%;
-        background: #1574A8;
-        padding: 15px 50px 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: left;
-    }
-    
-    .titleSobreNos {
-        color: white;
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-    
-    .descriptionSobreNos {
-        color: white;
-        font-size: 18px;
-        line-height: 18px;
-    }
-
-    .box-support, .box-training, .box-systems, .box-accessibility {
-        padding: 15px;
-        margin-left: 5%;
-        text-align: justify;
-    }
-
-    .box-support .title {
-        margin-top: 6%;
-    }
-
-    .box-training .title {
-        margin-top: 3%;
-    }
-
-    .box-systems .title {
-        margin-top: 3%;
-    }
-
-    .box-accessibility .title {
-        margin-top: 3%;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .row {
-        flex-direction: column; 
-        gap: 15px; 
-    }
-
-    .box {
-        padding: 15px; 
-        text-align: center;
-    }
-
-    .title {
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .description {
-        font-size: 14px; 
-        line-height: 24px;
-        margin-left: 0; 
-        text-align: left; 
-    }
-
-    .button-wrapper {
-        margin-left: 0; 
-        display: flex;
-        justify-content: center; 
-    }
-
-    .button {
-        width: 100%;
-        max-width: 150px;
-    }
-
-    .testimonial-carousel {
-        padding: 10px;
-    }
-
-    .testimonial {
-        max-width: 100%;
-        padding: 0;
-    }
-
-    .testimonial p{
-        max-width: 80%;
-        font-size: 14px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
-    }
-
-    .testimonial h3 {
-        font-size: 18px; 
-    }
-
-    .testimonial .img {
-        margin: 5px;
-        width: 18px;
-        height: 18px;
-    }
-
-    .carousel-container {
-        padding: 0; 
-    }
-
-    #titleForm {
-        font-size: 18px;
-    }
-
-    .main-container {
-        flex-direction: column;
-        height: auto; 
-    }
-
-    .map-container, .info-container {
-        width: 80%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .info-container {
-        margin-top: 20px;
-    }
-
-    .contact-info {
-        word-spacing: -1px;
-    }
-
-    .info-image {
-        width: 200px;
-        height: 50px;
-        margin: auto;
-    }
-
-    .iframe {
-        height: 300px; 
-        margin-left: 0;
-    }
-
-    footer .copyright {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 551px) and (max-width: 800px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-btn {
-        display: block;
-    }
-    .logo {
-        width: 200px;
-        height: 50px;
-    }
-    
-    .slogan .sloganTitle {
-        font-size: 22px;
-    }
-
-    .slogan .hr {
-        width: 80%;
-    }
-
-    #section-1, #section-2, #section-3, #section-3 .sobreNos {
-        font-size: 16px;
-    }
-
-    img {
-        margin-left: -32px;
-        margin-bottom: -15px;
-    }
-
-    .title, .title-2, .title-3, .titleKapti {
-        font-size: 32px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 20px;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 2%;
-    }
-
-    .egestor {
-        margin-left: 12%;
-    }
-
-    .egestor .title-3 {
-        margin-left: 4%;
-    }
-
-    .egestor .subtitle {
-        margin-left: 4%;
-    }
-
-    .description-1, .description-3, .subheading, .advantages {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: justify;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: justify;
-    }
-
-    #sobreNos {
-        width: 100%;
-        background: #1574A8;
-        padding: 15px 50px 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    
-    .titleSobreNos {
-        color: white;
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-    
-    .descriptionSobreNos {
-        color: white;
-        font-size: 20px;
-        line-height: 1.2;
-    }
-
-    .box-support, .box-training, .box-systems, .box-accessibility {
-        padding: 15px;
-        margin-left: 5%;
-        text-align: justify;
-    }
-
-    .box-support .title {
-        margin-top: 6%;
-    }
-
-    .box-training .title {
-        margin-top: 3%;
-    }
-
-    .box-systems .title {
-        margin-top: 3%;
-    }
-
-    .box-accessibility .title {
-        margin-top: 3%;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .row {
-        flex-direction: column; 
-        gap: 15px; 
-    }
-
-    .box {
-        padding: 15px; 
-        text-align: center;
-    }
-
-    .title {
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .description {
-        font-size: 18px; 
-        line-height: 1.6;
-        margin-left: 0; 
-        text-align: justify; 
-    }
-
-    .button-wrapper {
-        margin-left: 0; 
-        display: flex;
-        justify-content: center; 
-    }
-
-    .button {
-        width: 100%;
-        max-width: 150px;
-    }
-
-    .testimonial-carousel {
-        padding: 10px;
-    }
-
-    .testimonial {
-        max-width: 100%;
-        padding: 0;
-    }
-
-    .testimonial p{
-        max-width: 80%;
-        font-size: 18px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
-    }
-
-    .testimonial h3 {
-        font-size: 18px; 
-    }
-
-    .testimonial .img {
-        margin: 5px;
-        width: 18px;
-        height: 18px;
-    }
-
-    .carousel-container {
-        padding: 0; 
-    }
-
-    #titleForm {
-        font-size: 18px;
-    }
-
-    .main-container {
-        flex-direction: column;
-        height: auto; 
-    }
-
-    .map-container, .info-container {
-        width: 80%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .info-container {
-        margin-top: 20px;
-    }
-
-    .contact-info {
-        word-spacing: -1px;
-    }
-
-    .info-image {
-        width: 200px;
-        height: 50px;
-        margin: auto;
-    }
-
-    .iframe {
-        height: 300px; 
-        margin-left: 0;
-    }
-
-    footer .copyright {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 801px) and (max-width: 861px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-btn {
-        display: block;
-    }
-    .logo {
-        width: 200px;
-        height: 50px;
-    }
-    
-    .slogan .sloganTitle {
-        font-size: 22px;
-    }
-
-    .slogan .hr {
-        width: 80%;
-    }
-
-    #section-1, #section-2, #section-3, #section-3 .sobreNos {
-        font-size: 16px;
-    }
-
-    img {
-        margin-left: -32px;
-        margin-bottom: -15px;
-    }
-
-    .title, .title-2, .title-3, .titleKapti {
-        font-size: 32px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 20px;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 2%;
-    }
-
-    .egestor {
-        margin-left: 12%;
-    }
-
-    .egestor .title-3 {
-        margin-left: 4%;
-    }
-
-    .egestor .subtitle {
-        margin-left: 4%;
-    }
-
-    .description-1, .description-3, .subheading, .advantages {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: justify;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: justify;
-    }
-
-    #sobreNos {
-        width: 100%;
-        background: #1574A8;
-        padding: 15px 50px 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    
-    .titleSobreNos {
-        color: white;
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-    
-    .descriptionSobreNos {
-        color: white;
-        font-size: 20px;
-        line-height: 1.2;
-    }
-
-    .box-support, .box-training, .box-systems, .box-accessibility {
-        padding: 15px;
-        margin-left: 5%;
-        text-align: justify;
-    }
-
-    .box-support .title {
-        margin-top: 6%;
-    }
-
-    .box-training .title {
-        margin-top: 3%;
-    }
-
-    .box-systems .title {
-        margin-top: 3%;
-    }
-
-    .box-accessibility .title {
-        margin-top: 3%;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .row {
-        flex-direction: column; 
-        gap: 15px; 
-    }
-
-    .box {
-        padding: 15px; 
-        text-align: center;
-    }
-
-    .title {
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .description {
-        font-size: 18px; 
-        line-height: 1.6;
-        margin-left: 0; 
-        text-align: justify; 
-    }
-
-    .button-wrapper {
-        margin-left: 0; 
-        display: flex;
-        justify-content: center; 
-    }
-
-    .button {
-        width: 100%;
-        max-width: 150px;
-    }
-
-    .testimonial-carousel {
-        padding: 10px;
-    }
-
-    .testimonial {
-        max-width: 100%;
-        padding: 0;
-    }
-
-    .testimonial p{
-        max-width: 80%;
-        font-size: 18px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
-    }
-
-    .testimonial h3 {
-        font-size: 18px; 
-    }
-
-    .testimonial .img {
-        margin: 5px;
-        width: 18px;
-        height: 18px;
-    }
-
-    .carousel-container {
-        padding: 0; 
-    }
-
-    #titleForm {
-        font-size: 18px;
-    }
-
-    .main-container {
-        flex-direction: column;
-        height: auto; 
-    }
-
-    .map-container, .info-container {
-        width: 80%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .info-container {
-        margin-top: 20px;
-    }
-
-    .contact-info {
-        word-spacing: -1px;
-    }
-
-    .info-image {
-        width: 200px;
-        height: 50px;
-        margin: auto;
-    }
-
-    .iframe {
-        height: 300px; 
-        margin-left: 0;
-    }
-
-    footer .copyright {
-        font-size: 16px;
-    }
-}
-
-
-@media (min-width: 861px) and (max-width: 1280px) {
+@media (min-width: 1002px) and (max-width: 1572px) {
     /* .hideOnMobile {
         display: none;
     } */
@@ -2205,7 +879,7 @@ footer .copyright {
         font-family: Montserrat, sans-serif;
         font-weight: 600;
         color: #3D3D3D;
-        line-height: 35px;
+        line-height: 22px;
         cursor: pointer;
     }
     
@@ -2255,11 +929,21 @@ footer .copyright {
     }
     
     .slogan .sloganTitle {
-        font-size: 38px;
+        font-size: 52px;
     }
 
     .slogan .hr {
-        width: 90%;
+        width: 70%;
+    }
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 11%;
+    }
+
+    .erp {
+        max-width: 70%;
+        margin-left: 11%;
     }
 
     #section-1, #section-2, #section-3, #section-3 .sobreNos {
@@ -2267,7 +951,8 @@ footer .copyright {
     }
 
     img {
-        margin: 15px;
+        /* margin: 15px; */
+        margin-top: 20px;
     }
 
     .title, .title-2, .title-3, .titleKapti {
@@ -2324,16 +1009,1015 @@ footer .copyright {
     .titleSobreNos {
         color: white;
         font-size: 38px;
-        margin-bottom: 20px;
+        margin: 0 auto;
     }
     
     .descriptionSobreNos {
         color: white;
         font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .box-support {
+        font-size: 18px;
+    }
+
+    .main-container {
+        height: auto; 
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .map-container, .info-container {
+        margin: 20px;
+        padding: 0;
+    }
+
+    .map-container {
+        width: 800px;
+        height: 300px;
+    }
+
+    .info-container {
+        margin: 0;
+    }
+
+    .info-image {
+        width: 180px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .iframe {
+        height: 300px; 
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 862px) and (max-width: 1001px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .slogan .sloganTitle {
+        font-size: 40px;
+    }
+
+    .slogan .hr {
+        width: 95%;
+    }
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin: 0 auto;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item div {
+        margin-top: 30px;
+    }
+    
+    .image-container {
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .map-container {
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    .info-container {
+        margin: 0;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 861px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .slogan .sloganTitle {
+        font-size: 40px;
+    }
+
+    .slogan .hr {
+        width: 95%;
+    }
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin: 0 auto;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item div {
+        margin-top: 30px;
+    }
+    
+    .image-container {
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .map-container {
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    .info-container {
+        margin: 0;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .slogan .sloganTitle {
+        font-size: 40px;
+    }
+
+    .slogan .hr {
+        width: 95%;
+    }
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin: 0 auto;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item div {
+        margin-top: 30px;
+    }
+    
+    .image-container {
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .map-container {
+        margin: 0;
+        margin-top: 80px;
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 700px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .slogan .sloganTitle {
+        font-size: 30px;
+    }
+
+    .slogan .hr {
+        width: 95%;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin: 0 auto;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
+    }
+
+    .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item div {
+        margin-top: 30px;
+    }
+    
+    .image-container {
+        max-width: 550px;
+        width: 530px;
+        height: 300px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .map-container {
+        margin: 0;
+        margin-top: 80px;
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 550px) {
+    
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .logo {
+        width: 190px;
+        height: 46px;
+        margin-left: 8px;
+    }
+
+    .slogan .sloganTitle {
+        font-size: 22px;
+    }
+
+    .slogan .hr {
+        width: 92%;
+    }
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 15%;
+    }
+
+    .title, .title-2, .title-3, .titleKapti, .title-assinador {
+        font-size: 28px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .subtitle, .subtitle-2, .subtitleKapti {
+        font-size: 22px;
+        font-weight: 500;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: 5%;
+    }
+
+    .description-1, .description-3, .subheading, .advantages {
+        font-size: 18px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 5%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-2 {
+        font-size: 18px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .descriptionKapti {
+        font-size: 18px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin: 0 auto;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item > div > p {
+        margin-top: 30px;
+        width: 250px;
+    }
+
+    .item > div > h3 {
+        margin-top: 30px;
+        width: 250px;
+    }
+
+    .item > div > .button-wrapper > .button {
+        margin: auto;
+        margin-top: 12px;
+    }
+    
+    .image-container {
+        max-width: 380px;
+        width: 330px;
+        height: 300px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .map-container {
+        margin: 0;
+        margin-top: 80px;
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    footer .copyright{
+        font-size: 20px;
+    }
+    
+}
+
+@media (min-width: 377px) and (max-width: 420px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    
+    .slogan .sloganTitle {
+        font-size: 16px;
+    }
+
+    .slogan .hr {
+        width: 95%;
+    }
+
+    #section-1, #section-2, #section-3, #section-3 .sobreNos, #section-4 {
+        max-width: 100%;
+    }
+
+    #contentSys {
+        max-width: 70%;
+        margin-left: 15%;
+    }
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 20%;
+    }
+
+    img {
+        margin-left: -32px;
+        margin-bottom: -15px;
+    }
+
+    .title-assinador, .title-3, .titleKapti {
+        margin-top: -10%;
+        font-size: 22px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .title-2 {
+        font-size: 22px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: -25px;
+        text-align: center;
+    }
+
+    .subtitle, .subtitle-2, .subtitleKapti {
+        font-size: 18px;
+        text-align: left;
+        font-weight: 500;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: 5%;
+    }
+    
+    .description, .description-2, .description-1, .description-3, .subheading, .advantages, .descriptionKapti {
+        font-size: 16px;
+        /* max-width: 700px; */
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        /* margin-left: 7%; */
+        text-align: left;
+        line-height: 1.8;
+        gap: 40px;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 18px;
         line-height: 18px;
     }
 
-    /* .container {
+   /* Suporte personalizado, etc */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+   .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item > div {
+        margin-top: 30px;
+    }
+
+    .item > div > p {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .item > div > h3 {
+        font-size: 28px;
+        text-align: justify;
+        width: 250px;
+    }
+
+    .image-container {
+        max-width: 315px;
+        width: 315px;
+        height: 280px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+        margin-left: 8px;
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .button-wrapper .button {
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+   
+    /* Depoimentos */
+
+    .testimonial-carousel {
+        padding: 10px;
+    }
+
+    .testimonial p{
+        max-width: 60%;
+        font-size: 18px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 22px; 
+    }
+
+    .testimonial .img {
+        margin-left: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    .carousel-container {
+        padding: 0 10px; 
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .info-container {
+        width: 80%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .instagram-link {
+        display: flex;
+        font-size: 18px;
+        margin-top: 6px;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .info-container {
+        margin-top: 20px;
+    }  
+
+    .map-container {
+        display: none;
+    }
+
+    .info-image {
+        width: 200px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .iframe {
+        height: 300px; 
+        margin-left: 0;
+    }
+
+    footer .copyright {
+        font-size: 12px;
+    }
+
+    .whatsapp-button {
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 1px 1px 2px #888;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+    
+    .whatsapp-button i {
+        margin-top: 16px;
+    }
+    
+    #scrollToTop {
+        position: fixed;
+        bottom: 20px;
+        border: none;
+        background-color: transparent;
+        z-index: 1000;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .item {
+        width: 48%; 
+    }
+    
+}
+
+/* @media (min-width: 321px) and (max-width: 376px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+
+    .erp {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+    
+    .slogan .sloganTitle {
+        font-size: 16px;
+    }
+
+    .slogan .hr {
+        width: 90%;
+    }
+
+    #section-1, #section-2, #section-3, #section-3 .sobreNos {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    img {
+        margin-left: -32px;
+        margin-bottom: -15px;
+    }
+
+    .title, .title-2, .title-3, .titleKapti {
+        margin-top: -10%;
+        font-size: 22px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .subtitle, .subtitle-2, .subtitleKapti {
+        font-size: 18px;
+        text-align: justify;
+        font-weight: 500;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: 5%;
+    }
+
+    .description-1, .advantages {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 5%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-2 {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .description-3 {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 10%;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .descriptionKapti {
+        font-size: 16px;
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        margin-left: 8%;
+        text-align: left;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .row {
+        max-width: 80%;
+        margin-left: 10%;
+    }
+
+    .box-support, .box-training, .box-systems, .box-accessibility {
+        padding: 15px;
+        text-align: justify;
+    }
+
+    .box-support .title {
+        margin-top: 6%;
+    }
+
+    .box-training .title {
+        margin-top: 3%;
+    }
+
+    .box-systems .title {
+        margin-top: 3%;
+    }
+
+    .box-accessibility .title {
+        margin-top: 3%;
+    }
+
+    .container {
         padding: 10px;
     }
 
@@ -2348,15 +2032,15 @@ footer .copyright {
     }
 
     .title {
-        font-size: 30px;
+        font-size: 24px;
         line-height: 28px;
     }
 
     .description {
-        font-size: 22px; 
-        line-height: 22px;
+        font-size: 14px; 
+        line-height: 24px;
         margin-left: 0; 
-        text-align: left; 
+        text-align: justify; 
     }
 
     .button-wrapper {
@@ -2403,30 +2087,23 @@ footer .copyright {
         font-size: 18px;
     }
 
-    footer .copyright {
-        font-size: 12px;
-    } */
-
     .main-container {
+        flex-direction: column;
         height: auto; 
     }
 
     .map-container, .info-container {
-        margin: 20px;
+        width: 80%;
+        margin: 0;
         padding: 0;
     }
 
-    .map-container {
-        width: 800px;
-        height: 300px;
-    }
-
     .info-container {
-        margin: 0;
+        margin-top: 20px;
     }
 
     .info-image {
-        width: 180px;
+        width: 200px;
         height: 50px;
         margin: auto;
     }
@@ -2435,5 +2112,281 @@ footer .copyright {
         height: 300px; 
         margin-left: 0;
     }
+
+    footer .copyright {
+        font-size: 12px;
+    }
+} */
+
+@media (max-width: 376px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    
+    .slogan .sloganTitle {
+        font-size: 16px;
+    }
+
+    .slogan .hr {
+        width: 95%;
+    }
+
+    #section-1, #section-2, #section-3, #section-3 .sobreNos, #section-4 {
+        max-width: 100%;
+    }
+
+    #contentSys {
+        max-width: 70%;
+        margin-left: 15%;
+    }
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 20%;
+    }
+
+    img {
+        margin-left: -32px;
+        margin-bottom: -15px;
+    }
+
+    .title-assinador, .title-3, .titleKapti {
+        margin-top: -10%;
+        font-size: 22px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .title-2 {
+        font-size: 22px;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: -25px;
+        text-align: center;
+    }
+
+    .subtitle, .subtitle-2, .subtitleKapti {
+        font-size: 16px;
+        text-align: justify;
+        font-weight: 500;
+        color: #1C244B;
+        margin-bottom: 20px;
+        margin-left: 5%;
+    }
+    
+    .description, .description-2, .description-1, .description-3, .subheading, .advantages, .descriptionKapti {
+        font-size: 12px;
+        /* max-width: 700px; */
+        color: rgba(50, 74, 109, 0.80);
+        margin-bottom: 20px;
+        /* margin-left: 7%; */
+        text-align: left;
+        line-height: 1.8;
+        gap: 40px;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+   /* Suporte personalizado, etc */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+   .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item div {
+        margin-top: 30px;
+    }
+
+    .item > div > p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .item > div > h3 {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .image-container {
+        max-width: 250px;
+        width: 250px;
+        height: 180px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+        margin-left: 8px;
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+   
+    /* Depoimentos */
+
+    .testimonial-carousel {
+        padding: 10px;
+    }
+
+    .testimonial p{
+        max-width: 60%;
+        font-size: 14px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 18px; 
+    }
+
+    .testimonial .img {
+        margin-left: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    .carousel-container {
+        padding: 0 10px; 
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .info-container {
+        width: 80%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .instagram-link {
+        display: flex;
+        font-size: 18px;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .info-container {
+        margin-top: 20px;
+    }  
+
+    .map-container {
+        display: none;
+    }
+
+    .info-image {
+        width: 200px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .iframe {
+        height: 300px; 
+        margin-left: 0;
+    }
+
+    footer .copyright {
+        font-size: 12px;
+    }
+
+    .whatsapp-button {
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 1px 1px 2px #888;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+    
+    .whatsapp-button i {
+        margin-top: 16px;
+    }
+    
+    #scrollToTop {
+        position: fixed;
+        bottom: 20px;
+        border: none;
+        background-color: transparent;
+        z-index: 1000;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .item {
+        width: 48%; /* Dois itens por linha */
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
 

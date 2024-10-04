@@ -39,7 +39,7 @@ function hideSidebar() {
     sidebar.style.display = 'none';
 }
 
-// btn scroll to top
+// Botão "scroll to top"
 const scrollToTop = document.getElementById('scrollToTop');
 
 scrollToTop.addEventListener('click', () => {
@@ -57,81 +57,84 @@ window.addEventListener('scroll', () => {
     }
 });
 
-/* Formulario */ 
-
-// Validar nome
-document.getElementById('name').addEventListener('blur', function(e) {
-    const nameField = e.target;
-    
-    if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(nameField.value)) {
-        this.setCustomValidity('O nome completo não pode conter números ou caracteres especiais.');
-        this.reportValidity();
-        this.onfocus();
-    }
-    nameField.setCustomValidity('');
-});
-
-// Validar sobrenome
-document.getElementById('surname').addEventListener('blur', function(e) {
-    const surnameField = e.target;
-    
-    if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(surnameField.value)) {
-        this.setCustomValidity('O sobrenome não pode conter números ou caracteres especiais.');
-        this.reportValidity();
-        this.onfocus();
-    }
-    surnameField.setCustomValidity('');
-});
-
-// Validar email
-document.getElementById('email').addEventListener('blur', function(e) {
-    const emailField = e.target;
-    
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
-        this.setCustomValidity('Digite um email válido.');
-        this.reportValidity();
-        this.onfocus();
-    }
-    emailField.setCustomValidity('');
-});
-
+// Validação de formulário e modal de confirmação
 const form = document.getElementById('myForm');
+const confirmationModal = document.getElementById('confirmationModal');
+const closeModal = document.getElementById('closeModal');
+const confirmSend = document.getElementById('confirmSend');
+const cancelSend = document.getElementById('cancelSend');
 
-form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const formData = new FormData(this);
-
-    const data = await fetch('form.php', {
-        method: 'POST',
-        body: formData
-    });
-        
-});
-
-function enviarFormulario() {
-    //
+function validateField(field, regex, errorMessage) {
+    if (!regex.test(field.value)) {
+        field.setCustomValidity(errorMessage);
+        field.reportValidity(); // Exibe a mensagem de erro
+        return false;
+    }
+    field.setCustomValidity('');
+    return true;
 }
 
-/* Modal */
+function validateMessageField(field) {
+    if (field.value.trim() === '') {
+        field.setCustomValidity('A mensagem não pode estar em branco.');
+        field.reportValidity();
+        return false;
+    }
+    field.setCustomValidity('');
+    return true;
+}
 
-// Abre o modal ao clicar em "Enviar"
-document.getElementById('openModal').addEventListener('click', function (event) {
-    event.preventDefault(); // Impede o envio do formulário
-    document.getElementById('confirmationModal').style.display = 'block'; // Mostra o modal
+document.getElementById('openModal').addEventListener('click', function() {
+    const nameField = document.getElementById('name');
+    const surnameField = document.getElementById('surname');
+    const emailField = document.getElementById('email');
+    const messageField = document.getElementById('message');
+
+    const isNameValid = validateField(nameField, /^[a-zA-ZÀ-ÿ\s]+$/, 'O nome completo não pode conter números ou caracteres especiais.');
+    const isSurnameValid = validateField(surnameField, /^[a-zA-ZÀ-ÿ\s]+$/, 'O sobrenome não pode conter números ou caracteres especiais.');
+    const isEmailValid = validateField(emailField, /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Digite um email válido.');
+    const isMessageValid = validateMessageField(messageField);
+
+    if (isNameValid && isSurnameValid && isEmailValid && isMessageValid) {
+        confirmationModal.style.display = 'block';
+    }
 });
 
-// Fecha o modal ao clicar no "X"
-document.getElementById('closeModal').addEventListener('click', function () {
-    document.getElementById('confirmationModal').style.display = 'none'; // Fecha o modal
+closeModal.addEventListener('click', function() {
+    confirmationModal.style.display = 'none';
 });
 
-// Fecha o modal ao clicar em "Cancelar"
-document.getElementById('cancelSend').addEventListener('click', function () {
-    document.getElementById('confirmationModal').style.display = 'none'; // Fecha o modal ao cancelar
+cancelSend.addEventListener('click', function() {
+    confirmationModal.style.display = 'none';
 });
 
-// Envia o formulário ao clicar em "Sim, enviar"
-document.getElementById('confirmSend').addEventListener('click', function () {
-    document.getElementById('confirmationModal').style.display = 'none'; // Fecha o modal
-    document.getElementById('myForm').submit(); // Envia o formulário
+confirmSend.addEventListener('click', function() {
+    form.submit();
+});
+
+/* Modal de teste grátis (após 5 segundos) */
+const freeTrialModal = document.getElementById('freeTrialModal');
+const closeFreeTrialModal = document.getElementById('closeFreeTrialModal');
+
+let modalClosed = false;
+
+// Mostrar o modal após 5 segundos
+setTimeout(() => {
+    if (!modalClosed) {
+        freeTrialModal.style.display = 'block';
+    }
+}, 5000);
+
+// Fechar o modal ao clicar no "X"
+closeFreeTrialModal.addEventListener('click', () => {
+    freeTrialModal.style.display = 'none';
+    modalClosed = true;
+});
+
+// Fechar o modal ao clicar fora da área de conteúdo
+window.addEventListener('click', (event) => {
+    if (event.target === freeTrialModal) {
+        freeTrialModal.style.display = 'none';
+        modalClosed = true;
+    }
 });
