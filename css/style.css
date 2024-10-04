@@ -2359,6 +2359,29 @@ footer .copyright {
         font-size: 12px;
     }
 
+    .freeTrialModal {
+        margin-top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        border-radius: 10px;
+        width: 250px;
+        height: 130px;
+        margin-top: 350px;
+        text-align: center;
+        font-size: 12px;
+        padding: 5%;
+    }
+
+    .freeTrialModal > a {
+        margin-top: 15px;
+    }
+
     .whatsapp-button {
         background-color: #25d366;
         color: #FFF;
