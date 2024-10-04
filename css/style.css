@@ -1429,6 +1429,17 @@ footer .copyright {
         margin: 0;
         margin-right: 20px;
     }
+
+    .whatsapp-button {
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        margin-right: -30px;
+        text-align: center;
+        box-shadow: 1px 1px 2px #888;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
 }
 
 @media (min-width: 420px) and (max-width: 550px) {
@@ -1589,6 +1600,17 @@ footer .copyright {
         flex-direction: column;
         margin: 0;
         margin-right: 20px;
+    }
+
+    .whatsapp-button {
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        margin-right: -30px;
+        text-align: center;
+        box-shadow: 1px 1px 2px #888;
+        z-index: 1000;
+        transition: all 0.3s ease;
     }
 
     #titleForm {
@@ -1842,6 +1864,7 @@ footer .copyright {
         background-color: #25d366;
         color: #FFF;
         border-radius: 50px;
+        margin-right: -30px;
         text-align: center;
         box-shadow: 1px 1px 2px #888;
         z-index: 1000;
@@ -2340,6 +2363,7 @@ footer .copyright {
         background-color: #25d366;
         color: #FFF;
         border-radius: 50px;
+        margin-right: -30px;
         text-align: center;
         box-shadow: 1px 1px 2px #888;
         z-index: 1000;
