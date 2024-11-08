@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Auto slide every 5 seconds
     setInterval(() => {
         showSlide(index + 1);
-    }, 5000);
+    }, 7000);
 });
 
 /* Menu hamburguer */
@@ -36,8 +36,18 @@ function showSidebar() {
 
 function hideSidebar() {
     const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'none';
+    sidebar.style.display = 'none';    
 }
+
+document.addEventListener('click', function(event) {
+    const sidebar = document.querySelector('.sidebar');
+    const nav = document.querySelector('nav');
+    
+    // Verifica se o clique foi fora da nav e da sidebar
+    if (!nav.contains(event.target)) {
+        hideSidebar();  // Fecha o menu se clicar fora
+    }
+});
 
 // Botão "scroll to top"
 const scrollToTop = document.getElementById('scrollToTop');
