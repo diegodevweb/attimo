@@ -94,14 +94,19 @@ function validateMessageField(field) {
     return true;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('myForm');
     const confirmationModal = document.getElementById('confirmationModal');
+    const successModal = document.getElementById('successModal');  // Modal de sucesso
     const closeModal = document.getElementById('closeModal');
-    const cancelSend = document.getElementById('cancelSend');
     const confirmSend = document.getElementById('confirmSend');
-    const openModal = document.getElementById('openModal'); // Certifique-se de que você tem um botão para abrir o modal
+    const cancelSend = document.getElementById('cancelSend');
+    const successClose = successModal.querySelector('.close');  // Fechar modal de sucesso
 
-    openModal.addEventListener('click', function() {
+    // Impede o envio do formulário para mostrar o modal
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();  // Previne o envio padrão para evitar o redirecionamento
+
         const nameField = document.getElementById('name');
         const surnameField = document.getElementById('surname');
         const emailField = document.getElementById('email');
@@ -113,22 +118,119 @@ document.addEventListener('DOMContentLoaded', function() {
         const isMessageValid = validateMessageField(messageField);
 
         if (isNameValid && isSurnameValid && isEmailValid && isMessageValid) {
+            // Exibe o modal de confirmação
             confirmationModal.style.display = 'block';
         }
     });
 
-    closeModal.addEventListener('click', function() {
+    // Fecha o modal de confirmação
+    closeModal.addEventListener('click', function () {
         confirmationModal.style.display = 'none';
     });
 
-    cancelSend.addEventListener('click', function() {
+    cancelSend.addEventListener('click', function () {
         confirmationModal.style.display = 'none';
     });
 
-    confirmSend.addEventListener('click', function() {
-        form.submit(); // Certifique-se de que a variável 'form' está definida corretamente
+    // Envia o formulário via AJAX após a confirmação
+    confirmSend.addEventListener('click', function () {
+        // Envia via FormSubmit AJAX
+        const formData = new FormData(form);
+        fetch('https://formsubmit.co/ajax/diego.devwebb@gmail.com', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())  // Processa a resposta em JSON
+        .then(data => {
+            if (data.success === "true") {
+                // Exibe o modal de sucesso
+                successModal.style.display = 'block';
+                confirmationModal.style.display = 'none';  // Fecha o modal de confirmação
+            } else {
+                alert('Erro ao enviar a mensagem.');
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao enviar:', error);
+            alert('Erro ao enviar a mensagem. Tente novamente.');
+        });
+
+        // Fecha o modal de confirmação
+        confirmationModal.style.display = 'none';
     });
+
+    // Fecha o modal de sucesso
+    successClose.addEventListener('click', () => {
+        successModal.style.display = 'none';
+        // Opcional: redireciona para a página inicial (se necessário)
+        window.location.href = '/'; // Descomente se quiser redirecionar para a página inicial
+    });
+
 });
+
+// Funções de validação
+function validateField(field, regex, errorMessage) {
+    if (!regex.test(field.value)) {
+        field.setCustomValidity(errorMessage);
+        field.reportValidity();
+        return false;
+    }
+    field.setCustomValidity('');
+    return true;
+}
+
+function validateMessageField(field) {
+    if (field.value.trim() === '') {
+        field.setCustomValidity('A mensagem não pode estar em branco.');
+        field.reportValidity();
+        return false;
+    }
+    field.setCustomValidity('');
+    return true;
+}
+
+
+// Funções de validação
+function validateField(field, regex, errorMessage) {
+    if (!regex.test(field.value)) {
+        field.setCustomValidity(errorMessage);
+        field.reportValidity();
+        return false;
+    }
+    field.setCustomValidity('');
+    return true;
+}
+
+function validateMessageField(field) {
+    if (field.value.trim() === '') {
+        field.setCustomValidity('A mensagem não pode estar em branco.');
+        field.reportValidity();
+        return false;
+    }
+    field.setCustomValidity('');
+    return true;
+}
+
+
+function validateField(field, regex, errorMessage) {
+    if (!regex.test(field.value)) {
+        field.setCustomValidity(errorMessage);
+        field.reportValidity();
+        return false;
+    }
+    field.setCustomValidity('');
+    return true;
+}
+
+function validateMessageField(field) {
+    if (field.value.trim() === '') {
+        field.setCustomValidity('A mensagem não pode estar em branco.');
+        field.reportValidity();
+        return false;
+    }
+    field.setCustomValidity('');
+    return true;
+}
 
 
 /* Modal de teste grátis (após 5 segundos) */
@@ -139,9 +241,7 @@ let modalClosed = false;
 
 // Mostrar o modal após 5 segundos
 setTimeout(() => {
-    if (!modalClosed) {
-        freeTrialModal.style.display = 'block';
-    }
+    freeTrialModal.style.display = 'block';
 }, 5000);
 
 // Fechar o modal ao clicar no "X"
@@ -157,3 +257,4 @@ window.addEventListener('click', (event) => {
         modalClosed = true;
     }
 });
+

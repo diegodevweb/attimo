@@ -322,7 +322,7 @@
 
     <div class="containerForm">
         <div class="form-container">
-            <form id="myForm" method="post" action="https://formsubmit.co/ajax/diego.devwebb@gmail.com" data-form="formsubmit">
+            <form id="myForm" method="post" action="form.php">
                 <div class="form-group">
                     <label for="name">Nome</label>
                     <input type="text" id="name" name="name" placeholder="Nome" required>
@@ -340,33 +340,13 @@
                     <textarea id="message" name="message" placeholder="Insira aqui sua mensagem" required></textarea>
                 </div>
                 <div class="button-container">
-                    <button type="submit" id="submitBtn" class="submit-button">
+                    <button type="button" id="openModal" class="submit-button">
                         <div class="button-text">Enviar</div>
                     </button>
                 </div>
             </form>
         </div>
-    </div>
-
-    <!-- Modal de confirmação -->
-    <div id="confirmationModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" id="closeModal">&times;</span>
-            <h2>Confirmar envio</h2>
-            <p>Enviar este e-mail?</p>
-            <button id="confirmSend" class="modal-button">Sim, enviar</button>
-            <button id="cancelSend" class="modal-button">Cancelar</button>
-        </div>
-    </div>
-    
-    <!-- Modal de Sucesso -->
-    <div id="successModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <p>Email enviado com sucesso!</p>
-        </div>
-    </div>
-    
+    </div> 
     
     <div class="main-container">
         <div class="map-container">

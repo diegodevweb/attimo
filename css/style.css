@@ -1642,6 +1642,28 @@ footer .copyright {
         transition: all 0.3s ease;
     }
 
+    .testimonial p{
+        max-width: 35%;
+        width: 35%;
+        font-size: 16px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 22px; 
+    }
+
+    .testimonial .img {
+        margin-left: 0;
+        width: 18px;
+        height: 18px;
+    }
+
     #titleForm {
         font-size: 18px;
     }
@@ -1819,8 +1841,9 @@ footer .copyright {
     }
 
     .testimonial p{
-        max-width: 60%;
-        font-size: 18px;
+        max-width: 35%;
+        width: 35%;
+        font-size: 16px;
         text-wrap: wrap;
         word-wrap: break-word;
         overflow-wrap: break-word;
@@ -2324,7 +2347,7 @@ footer .copyright {
     }
 
     .testimonial p{
-        max-width: 60%;
+        max-width: 30%;
         font-size: 14px;
         text-wrap: wrap;
         word-wrap: break-word;
