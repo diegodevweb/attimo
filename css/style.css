@@ -57,7 +57,18 @@ ul li {
     cursor: pointer;
 }
 
-ul li:hover {
+.menu-teste {
+    background-color: #FABF3A; 
+    padding:10px; border-radius:8px; 
+    color: #fff; 
+    text-decoration: none;
+}
+
+.menu-teste:hover {
+    padding: 12px 18px;
+}
+
+ul li:not(:has(.menu-teste)):hover {
     border-radius: 50px; 
     transition: background-color 0.3s, color 0.3s; 
     background-color: #1574A8;
@@ -69,6 +80,45 @@ li .menu {
     text-decoration: none;
     color: inherit;
     font-size: 20px;
+}
+
+.buttons-container {
+    ddisplay: flex;
+    gap: 20px;
+    justify-content: flex-start;  /* Alinha à esquerda */
+    margin-top: -80px;
+    /* Se precisar ajustar a posição horizontal, use margin-left */
+    margin-left: -500px;
+}
+
+.menu-teste-slogan {
+    background-color: #FABF3A;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 3%;
+}
+
+.menu-teste-slogan:hover {
+    background-color: #FABF3A;
+    padding: 13px 23px;
+}
+
+.fale-conosco {
+    background-color: #1574A8;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.fale-conosco:hover {
+    background-color: #1574A8;
+    padding: 13px 23px;
 }
 
 .logo {
@@ -137,26 +187,54 @@ nav .sidebar {
     background-color: #1574A8;
     color: white;
     text-align: center;
-    padding: 40px 15px;
+    padding: 120px;
 }
 
 .slogan .sloganTitle {
-    font-size: 54px;
+    font-size: 32px;
     font-weight: 500;
     color: white;
+    float: left;
+    margin-left: 22%;
+    position: relative;
+
+}
+
+.slogan-img img {
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-left: -120px;
 }
 
 .slogan .hr {
-    width: 65%;
+    width: 100%;
     margin: 0 auto;
+    margin-top: 10px;
+    color: #fff;
 }
 
+
 /* Primeira seção */
-#section-1, #section-4 {
+#section-1 {
     background-color: #fff;
     padding: 50px 20px;
     text-align: justify;
 }
+
+#section-4 {
+    background-color: #e5e5e5;
+    padding: 50px 20px;
+    text-align: justify;
+}
+
+#section-pdv {
+    background-color: #e5e5e5;
+    padding: 50px 20px;
+    text-align: justify;
+}
+
 
 .assina, #contentSys, .erp, .kapti {
     max-width: 80%;
@@ -233,7 +311,7 @@ description-1 {
 }
 
 #section-2, #section-3 {
-    background-color: #e5e5e5;
+    background-color: #fff;
     padding: 50px 20px;
     text-align: center;
 }
@@ -873,7 +951,7 @@ footer .copyright {
         gap: 20px;
     }
     
-    ul li:hover {
+    ul li:not(:last-child):hover {
         border-radius: 50px; 
         transition: background-color 0.3s, color 0.3s; 
         background-color: #1574A8;
@@ -882,6 +960,7 @@ footer .copyright {
     }
     
     li .menu {
+        background-color: #FABF3A;
         text-decoration: none;
         color: inherit;
         gap: 20px;
@@ -925,6 +1004,7 @@ footer .copyright {
 
     .slogan .hr {
         width: 70%;
+        color: #fff;
     }
 
     #pdv {
@@ -1063,6 +1143,7 @@ footer .copyright {
 
     .slogan .hr {
         width: 95%;
+        color: #fff;
     }
 
     ul {
@@ -1160,6 +1241,7 @@ footer .copyright {
 
     .slogan .hr {
         width: 95%;
+        color: #fff;
     }
 
     #pdv {
@@ -1256,6 +1338,7 @@ footer .copyright {
 
     .slogan .hr {
         width: 95%;
+        color: #fff;
     }
 
     ul {
@@ -1363,6 +1446,7 @@ footer .copyright {
 
     .slogan .hr {
         width: 95%;
+        color: #fff;
     }
 
     ul {
@@ -1493,6 +1577,7 @@ footer .copyright {
 
     .slogan .hr {
         width: 92%;
+        color: #fff;
     }
 
     #pdv {
@@ -1697,6 +1782,7 @@ footer .copyright {
 
     .slogan .hr {
         width: 95%;
+        color: #fff;
     }
 
     #section-1, #section-2, #section-3, #section-3 .sobreNos, #section-4 {
@@ -2208,7 +2294,8 @@ footer .copyright {
     }
 
     .slogan .hr {
-        width: 95%;
+        width: 120%;
+        color: #fff;
     }
 
     #section-1, #section-2, #section-3, #section-3 .sobreNos, #section-4 {
