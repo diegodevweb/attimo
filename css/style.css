@@ -233,6 +233,7 @@ nav .sidebar {
     background-color: #e5e5e5;
     padding: 50px 20px;
     text-align: justify;
+    display: flex;
 }
 
 
@@ -257,11 +258,19 @@ nav .sidebar {
     margin-left: 11%;
 }
 
-.title-assinador, .title-2, .title-3, .titleKapti {
+.title-assinador, .title-3, .titleKapti {
     font-size: 44px;
     color: #1C244B;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.title-2 {
+    font-size: 32px;
+}
+
+.subtitle-2 {
+    font-size: 20px;
 }
 
 .erp .title-3 {
@@ -296,6 +305,7 @@ description-1 {
 
 .description-2 {
     margin-left: 3%;
+    font-size: 16px;
 }
 
 .description-3 {
@@ -314,6 +324,39 @@ description-1 {
     background-color: #fff;
     padding: 50px 20px;
     text-align: center;
+}
+
+.flex-container, .flex-container-pdv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description-container {
+    width: 50%;
+    font-size: 16px;
+    margin-right: -60px;
+}
+
+.img-section2 {
+    width: 20%;
+    margin-left: -10%;
+}
+
+.img-section2 img {
+    max-width: 300%; /* ajuste o tamanho de acordo com as suas necessidades */
+    height: auto; /* mantém a proporção da imagem */
+}
+
+.img-pdv-2 {
+    width: 20%;
+    margin-right: 15%;
+}
+
+.img-pdv-2 img {
+    max-width: 300%; /* ajuste o tamanho de acordo com as suas necessidades */
+    height: auto;
 }
 
 .subtitle {
@@ -2562,6 +2605,130 @@ footer .copyright {
         width: 48%; /* Dois itens por linha */
     }
 }
+
+@media (max-width: 1125px) {
+    .flex-container, .flex-container-pdv {
+        flex-direction: column !important;
+    }
+
+    .description-container {
+        width: 100% !important;
+    }
+
+    .img-section2 {
+        width: 30%;
+        margin-left: -48%; 
+        order: 2;
+    }
+
+    .img-pdv-2 {
+        width: 34%;
+        margin-left: -40%; 
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .description-container {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .img-section2, .img-pdv-2 {
+        max-width: 40%; 
+        margin-left: -60%; 
+        order: 2; 
+    }
+}
+
+@media (max-width: 691px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .description-container {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .img-section2, .img-pdv-2 {
+        max-width: 35%; /* Garante que a imagem não ultrapasse o contêiner */
+        margin-left: -55%; /* Centraliza a imagem e adiciona espaço acima */
+        order: 2; /* Coloca a imagem abaixo do texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .title-2 {
+        font-size: 24px;
+    }
+
+    .subtitle-2 {
+        font-size: 18px;
+    }
+
+    .description-2 {
+        font-size: 14px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .description-container {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .img-section2 {
+        max-width: 50%; /* Garante que a imagem não ultrapasse o contêiner */
+        margin-left: -50%; /* Centraliza a imagem e adiciona espaço acima */
+        order: 2; /* Coloca a imagem abaixo do texto */
+    }
+
+    .img-pdv-2 {
+        max-width: 50%; /* Garante que a imagem não ultrapasse o contêiner */
+        margin-left: -50%; /* Centraliza a imagem e adiciona espaço acima */
+        order: 2;
+    }
+}
+
+@media (max-width: 420px) {
+    .title-2 {
+        font-size: 24px;
+    }
+
+    .subtitle-2 {
+        font-size: 18px;
+    }
+
+    .description-2 {
+        font-size: 14px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .description-container {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .img-section2 {
+        display: none;
+        max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+        margin-left: -20%; /* Centraliza a imagem e adiciona espaço acima */
+        order: 2; /* Coloca a imagem abaixo do texto */
+    }
+}
+
+
+
 
 
 
