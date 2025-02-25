@@ -186,35 +186,48 @@ nav .sidebar {
 .slogan {
     background-color: #1574A8;
     color: white;
-    text-align: center;
     padding: 120px;
-}
-
-.slogan .sloganTitle {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .slogan-content {
+    width: 50%;
+    margin-left: 20%;
+  }
+  
+  .slogan .sloganTitle {
     font-size: 32px;
     font-weight: 500;
     color: white;
-    float: left;
-    margin-left: 15%;
     position: relative;
-
-}
-
-.slogan-img img {
-    width: 35%;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 8px;
-    margin-left: -120px;
-    flex-wrap: wrap;
-}
-
-.slogan .hr {
+  }
+  
+  .buttons-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 33%;
+  }
+  
+  .slogan-img {
+    width: 55%;
+    margin-right: 10%;
+  }
+  
+  .slogan-img img {
     width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .slogan .hr {
+    width: 60%;
     margin: 0 auto;
     margin-top: 10px;
+    margin-right: 80%;
     color: #fff;
-}
+  }
 
 
 /* Primeira seção */
@@ -247,6 +260,7 @@ nav .sidebar {
 .assina {
     max-width: 76%;
     margin-left: 10%;
+    display: flex;
 }
 
 .kapti {
@@ -261,15 +275,20 @@ nav .sidebar {
 
 #pdv {
     max-width: 70%;
-    margin-left: 11%;
+    margin-left: 5%;
 }
 
 .background {
-    margin-right: 25%
+    margin-right: 40%;
+    width: 60%;
+}
+
+.background-1 {
+    margin-right: 1%
 }
 
 .title-assinador, .title-3, .titleKapti {
-    font-size: 44px;
+    font-size: 32px;
     color: #1C244B;
     margin-bottom: 20px;
     text-align: center;
@@ -277,6 +296,10 @@ nav .sidebar {
 
 .titleKapti {
     margin-left: -18%;
+}
+
+.title-assinador {
+    margin-left: 20%;
 }
 
 .title-2 {
@@ -288,16 +311,16 @@ nav .sidebar {
     font-size: 20px;
 }
 
+.title-pdv {
+    font-size: 32px;
+    text-align: center;
+    margin-left: 95%;
+}
+
 .erp .title-3 {
     text-align: center;
     margin-left: 12%;
     font-size: 32px;
-}
-
-.subtitle {
-    text-align: center;
-    margin-left: 12%;
-    font-size: 20px;
 }
 
 img {
@@ -305,7 +328,7 @@ img {
     margin-bottom: -7px;
 }
 
-.description, .description-2, .description-1, .description-3, .subheading, .advantages {
+.description, .description-2, .description-1, .description-3, .subheading, .description-pdv, .advantages {
     font-size: 20px;
     /* max-width: 700px; */
     color: rgba(50, 74, 109, 0.80);
@@ -316,28 +339,36 @@ img {
     gap: 40px;
 }
 
-description-1 {
-    margin-left: 2.2%;
+.description-1, .advantages {
+    margin-left: -25%;
+    font-size: 16px;
+    width: 180%;
 }
 
 .description-2 {
     margin-left: 3%;
-    font-size: 16px;
+    font-size: 18px;
+}
+
+.description-pdv {
+    font-size: 18px;
+    width: 180%;
+    margin-left: 22%;
 }
 
 .description-3 {
     margin-left: 7%;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .descriptionKapti {
     margin-left: 2%;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .erp {
     margin-left: 5.2%;
-    font-size: 16px;
+    font-size: 18px;
     width: 50%;
 }
 
@@ -365,25 +396,36 @@ description-1 {
     font-size: 16px;
 }
 
+.img-section1 img{
+    width: 80%;
+    margin-left: -12%;
+    margin-top: 10%;
+    border-radius: 8px;
+}
+
 .img-section2 {
     width: 20%;
     margin-left: -10%;
+    border-radius: 8px;
 }
 
 .img-section2 img {
     max-width: 300%; /* ajuste o tamanho de acordo com as suas necessidades */
     height: auto; /* mantém a proporção da imagem */
+    border-radius: 8px;
 }
 
 .img-pdv-2 {
-    width: 25%;
-    margin-right: 12%;
-    
+    width: 45%;
+    margin-right: 3%;
+    margin-left: 10%;
+    border-radius: 8px;
 }
 
 .img-pdv-2 img {
-    max-width: 300%; /* ajuste o tamanho de acordo com as suas necessidades */
+    max-width: 400%; /* ajuste o tamanho de acordo com as suas necessidades */
     height: auto;
+    border-radius: 8px;
 }
 
 .zoom-image-pdv, .zoom-image-nfe {
@@ -394,6 +436,7 @@ description-1 {
 
 .img-section4 {
     margin-top: 30%;
+    border-radius: 8px;
     /* width: 500px; */
 }
 
@@ -447,11 +490,17 @@ description-1 {
     margin-bottom: 100px;
 }
 
+.zoom-image-assinador:hover {
+    transform: scale(1.2); 
+    cursor: zoom-in; 
+}
+
 .subtitle {
-    font-size: 26px;
-    text-align: center;
     color: #1C244B;
+    text-align: center;
+    margin-left: 12%;
     margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .subtitle-2 {
@@ -461,7 +510,14 @@ description-1 {
     margin-bottom: 20px;
 }
 
-
+.subtitle-assinador {
+    color: #1C244B;
+    text-align: center;
+    margin-left: -15%;
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 150%;
+}
 
 /* Kapti */
 
@@ -1157,7 +1213,7 @@ footer .copyright {
         margin-top: 20px;
     }
 
-    .title, .title-2, .title-3, .titleKapti {
+    .title, .title-2, .title-3, .titleKapti, .title-pdv {
         font-size: 38px;
         color: #1C244B;
         margin-bottom: 20px;
