@@ -4410,7 +4410,7 @@ footer .copyright {
     }
     
     .image-container {
-        max-width: 550px;
+        max-width: 90%;
         width: 630px;
         height: 320px; 
         overflow: hidden; 
@@ -4623,10 +4623,10 @@ footer .copyright {
 
     .slogan .sloganTitle {
         font-size: 20px;
-        margin-left: -32%;
+        margin-left: -25%;
         order: 1;
         margin-top: 15px;
-        width: 350px;
+        width: 220px;
     }
 
     .sloganTitle br {
@@ -4634,9 +4634,9 @@ footer .copyright {
       }
 
     .slogan .hr {
-        width: 320px;
+        width: 80%;
         margin: 0 auto;
-        margin-left: 0%; 
+        margin-left: -5%; 
         color: #fff;
         order: 2;
     }
@@ -4649,12 +4649,13 @@ footer .copyright {
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -30%;
-        width: 300px;
+        margin-left: -85%;
+        width: 280px;
         font-size: 12px;
         order: 4;
         text-align: center;
     }
+
 
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
@@ -4748,7 +4749,7 @@ footer .copyright {
 
     .description-2 {
         width: 110%;
-        margin-left: -10%;
+        margin-left: -15%;
     }
 
     .description-3 {
@@ -4808,7 +4809,7 @@ footer .copyright {
 
     .subtitle-2 {
         font-size: 22px;
-        margin-left: -8%;
+        margin-left: -25%;
         width: 300px;
     }
     
@@ -4823,7 +4824,7 @@ footer .copyright {
     .subtitleKapti {
         font-size: 18px;
         margin-left: -8%;
-        width: 420px;
+        width: 300px;
     }
 
     .descriptionKapti {
@@ -4903,23 +4904,23 @@ footer .copyright {
     }
 
     .image-container {
-        max-width: 100%;
-        width: 100%;
-        height: 320px; 
+        max-width: 380px;
+        width: 330px;
+        height: 300px; 
         overflow: hidden; 
         border-radius: 8px;
         margin:auto
-      }
-      
-      .image-container img {
+    }
+    
+    .image-container img {
         width: 100%;
         height: 100%; 
         border-radius: 8px;
         object-fit: cover; 
-      }
+    }
 }
 
-@media (min-width: 350px) and (max-width: 450px) {
+@media (min-width: 420px) and (max-width: 450px) {
     
     .hideOnMobile {
         display: none;
@@ -4936,7 +4937,7 @@ footer .copyright {
 
     .slogan .sloganTitle {
         font-size: 20px;
-        margin-left: -100%;
+        margin-left: -25%;
         order: 1;
         margin-top: 15px;
         width: 220px;
@@ -4954,13 +4955,13 @@ footer .copyright {
         width: 300px;
         height: auto;
         border-radius: 8px;
-        margin-left: -152%;
+        margin-left: -45%;
     }
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -190%;
+        margin-left: -85%;
         width: 280px;
         font-size: 12px;
         order: 4;
@@ -4970,6 +4971,7 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
+    
     #pdv {
         max-width: 70%;
         margin-left: 13%;
@@ -5069,7 +5071,7 @@ footer .copyright {
     }
 
     .description-1, .advantages {
-        width: 120%;
+        width: 110%;
         margin-left: 2%;
     }
 
@@ -5078,29 +5080,29 @@ footer .copyright {
     }
 
     .title-assinador {
-        margin-left: 3%;
+        margin-left: 5%;
     }
 
     .subtitle-assinador {
         width: 200px;
-        margin-left: 0%;
+        margin-left: 15%;
     }
 
     .img-pdv-2 {
-        width: 60%;
-        margin-left: -42%; 
+        width: 55%;
+        margin-left: -50%; 
         order: 2;
     }
 
     .img-erp img {
-        width: 280%;
-        margin-left: -10px;
+        width: 240%;
+        margin-left: 10px;
         height: auto;
     }
 
     .img-section2 {
-        width: 55%;
-        margin-right: 43%; 
+        width: 50%;
+        margin-right: 48%; 
         margin-top: 10px;
         order: 2;
     }
@@ -5129,12 +5131,12 @@ footer .copyright {
     }
 
     .titleKapti {
-        margin-left: 3%;
+        margin-left: 8%;
     }
 
     .subtitleKapti {
         font-size: 18px;
-        margin-left: -8%;
+        margin-left: 12%;
         width: 200px;
     }
 
@@ -5161,16 +5163,456 @@ footer .copyright {
     }
 
     .img-section4 img {
-        width: 165%;
-        margin-left: -35%;
+        width: 155%;
+        margin-left: -25%;
         margin-top: -30%;
         border-radius: 8px;
     }
 
     .img-section1 img {
-        width: 160%;
+        width: 140%;
         margin-top: 3%;
+        margin-left: -20%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
+    }
+
+    .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .logo {
+        width: 190px;
+        height: 46px;
+        margin-left: 8px;
+    }
+
+    .main-container {
+        margin-top: 50px;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        align-items: center;
+    }
+
+    .map-container {
+        width: 80%;
+        height: 100%;
+    }
+
+    .image-container {
+        max-width: 100%;
+        width: 100%;
+        height: 320px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+      }
+      
+      .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+      }
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin: 0 auto;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item > div > p {
+        margin-top: 30px;
+        width: 250px;
+    }
+
+    .item > div > h3 {
+        margin-top: 30px;
+        width: 250px;
+    }
+
+    .item > div > .button-wrapper > .button {
+        margin: auto;
+        margin-top: 12px;
+    }
+    
+    .image-container {
+        max-width: 380px;
+        width: 330px;
+        height: 300px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .map-container {
+        margin: 0;
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    .whatsapp-button {
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        margin-right: -30px;
+        text-align: center;
+        box-shadow: 1px 1px 2px #888;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    .testimonial p{
+        max-width: 35%;
+        width: 35%;
+        font-size: 16px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 22px; 
+    }
+
+    .testimonial .img {
+        margin-left: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    footer .copyright{
+        font-size: 18px;
+    }
+
+    .image-container {
+        width: 80%;
+        height: 80%;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    
+}
+
+@media (min-width: 370px) and (max-width: 420px) {
+    
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .slogan {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .slogan .sloganTitle {
+        font-size: 20px;
         margin-left: -25%;
+        order: 1;
+        margin-top: 15px;
+        width: 220px;
+    }
+
+    .slogan .hr {
+        width: 80%;
+        margin: 0 auto;
+        margin-left: -5%; 
+        color: #fff;
+        order: 2;
+    }
+    
+    .slogan-img img {
+        width: 250px;
+        height: auto;
+        border-radius: 8px;
+        margin-left: -20%;
+    }
+
+    .buttons-container {
+        margin-top: 20px;
+        display: flex;
+        margin-left: -85%;
+        width: 280px;
+        font-size: 12px;
+        order: 4;
+        text-align: center;
+    }
+
+    .menu-teste-slogan, .fale-conosco {
+        width: 160px;
+    }
+    
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
+    }
+
+    ul {
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin: 0 auto;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item div {
+        margin-top: 30px;
+    }
+    
+    .image-container {
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .map-container {
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    .info-container {
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .description-container {
+        width: 70% !important;
+    }
+
+    .description-pdv {
+        width: 180%;
+        margin-left: 10%;
+    }
+
+    .description-2 {
+        width: 150%;
+        margin-left: -30%;
+    }
+
+    .description-3 {
+        width: 90%;
+        margin-left: 10%;
+        font-size: 16px;
+    }
+
+    .description-1, .advantages {
+        width: 110%;
+        margin-left: 2%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: 5%;
+    }
+
+    .subtitle-assinador {
+        width: 200px;
+        margin-left: 15%;
+    }
+
+    .img-pdv-2 {
+        width: 55%;
+        margin-left: -50%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 240%;
+        margin-left: 10px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 50%;
+        margin-right: 48%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -10%;
+    }
+
+    .erp .title-3 {
+        margin-left: 10%;
+    }
+
+    .subtitle {
+        width: 200px;
+        margin-left: 8%;
+    }
+
+    .subtitle-2 {
+        font-size: 18px;
+        margin-left: -15%;
+        width: 200px;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: 8%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: 12%;
+        width: 200px;
+    }
+
+    .descriptionKapti {
+        width: 110%;
+        font-size: 16px;
+        margin-left: 2%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 60%;
+        margin-left: -60%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 155%;
+        margin-left: -25%;
+        margin-top: -30%;
+        border-radius: 8px;
+    }
+
+    .img-section1 img {
+        width: 140%;
+        margin-top: 3%;
+        margin-left: -20%;
     }
 
     .zoom-image-assinador:nth-child(2) {
@@ -5350,6 +5792,438 @@ footer .copyright {
     }
     
 }
+
+@media (min-width: 350px) and (max-width: 370px) {
+    
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .slogan {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .slogan .sloganTitle {
+        font-size: 20px;
+        margin-left: -70%;
+        order: 1;
+        margin-top: 15px;
+        width: 220px;
+    }
+
+    .slogan .hr {
+        width: 80%;
+        margin: 0 auto;
+        margin-left: -5%; 
+        color: #fff;
+        order: 2;
+    }
+    
+    .slogan-img img {
+        width: 250px;
+        height: auto;
+        border-radius: 8px;
+        margin-left: -105%;
+    }
+
+    .buttons-container {
+        margin-top: 20px;
+        display: flex;
+        margin-left: -160%;
+        width: 250px;
+        font-size: 12px;
+        order: 4;
+        text-align: center;
+    }
+
+    .menu-teste-slogan, .fale-conosco {
+        width: 160px;
+    }
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
+    }
+
+    ul {
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin: 0 auto;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item div {
+        margin-top: 30px;
+    }
+    
+    .image-container {
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .map-container {
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    .info-container {
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .description-container {
+        width: 70% !important;
+    }
+
+    .description-pdv {
+        width: 180%;
+        margin-left: 10%;
+    }
+
+    .description-2 {
+        width: 150%;
+        margin-left: -30%;
+    }
+
+    .description-3 {
+        width: 90%;
+        margin-left: 10%;
+        font-size: 16px;
+    }
+
+    .description-1, .advantages {
+        width: 120%;
+        margin-left: 2%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: 3%;
+    }
+
+    .subtitle-assinador {
+        width: 200px;
+        margin-left: 0%;
+    }
+
+    .img-pdv-2 {
+        width: 60%;
+        margin-left: -42%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 280%;
+        margin-left: -10px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 55%;
+        margin-right: 43%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -10%;
+    }
+
+    .erp .title-3 {
+        margin-left: 10%;
+    }
+
+    .subtitle {
+        width: 200px;
+        margin-left: 8%;
+    }
+
+    .subtitle-2 {
+        font-size: 18px;
+        margin-left: -15%;
+        width: 200px;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: 8%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: 2%;
+        width: 200px;
+    }
+
+    .descriptionKapti {
+        width: 110%;
+        font-size: 16px;
+        margin-left: 2%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 60%;
+        margin-left: -60%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 165%;
+        margin-left: -30%;
+        margin-top: -30%;
+        border-radius: 8px;
+    }
+
+    .img-section1 img {
+        width: 160%;
+        margin-top: 3%;
+        margin-left: -30%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
+    }
+
+    .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .logo {
+        width: 190px;
+        height: 46px;
+        margin-left: 8px;
+    }
+
+    .main-container {
+        margin-top: 50px;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        align-items: center;
+    }
+
+    .map-container {
+        width: 80%;
+        height: 100%;
+    }
+
+    .image-container {
+        max-width: 100%;
+        width: 100%;
+        height: 320px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+      }
+      
+      .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+      }
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin: 0 auto;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item > div > p {
+        margin-top: 30px;
+        width: 250px;
+    }
+
+    .item > div > h3 {
+        margin-top: 30px;
+        width: 250px;
+    }
+
+    .item > div > .button-wrapper > .button {
+        margin: auto;
+        margin-top: 12px;
+    }
+    
+    .image-container {
+        max-width: 380px;
+        width: 330px;
+        height: 300px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .map-container {
+        margin: 0;
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    .whatsapp-button {
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        margin-right: -30px;
+        text-align: center;
+        box-shadow: 1px 1px 2px #888;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    .testimonial p{
+        max-width: 35%;
+        width: 35%;
+        font-size: 16px;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .testimonial h3 {
+        font-size: 22px; 
+    }
+
+    .testimonial .img {
+        margin-left: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    #titleForm {
+        font-size: 18px;
+    }
+
+    footer .copyright{
+        font-size: 18px;
+    }
+    
+} 
 
 
 
