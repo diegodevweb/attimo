@@ -439,13 +439,12 @@ img {
 
 .img-section4 {
     margin-top: 30%;
-    border-radius: 8px;
-    /* width: 500px; */
 }
 
 .img-section4 img{
     width: 128%;
     margin-left: 8%;
+    border-radius: 8px;
 }
 
 .descriptionKapti {
@@ -487,6 +486,7 @@ img {
     width: 500px;
     margin-left: 130px;
     height: auto;
+    border-radius: 8px;
 }
 
 .img-erp-attimo {
@@ -1501,11 +1501,12 @@ footer .copyright {
 
     .slogan .sloganTitle {
         font-size: 30px;
-        margin-left: -25%;
+        margin-left: -28%;
     }
 
     .slogan .hr {
-        width: 50%;
+        max-width: 90%;
+        width: 40%;
         color: #fff;
     }
 
@@ -1524,10 +1525,6 @@ footer .copyright {
         margin-right: 2%;
     }
 
-    /* .flex-container, .flex-container-pdv, .erp {
-        flex-direction: column !important;
-    } */
-
     .description-container {
         width: 70% !important;
     }
@@ -1538,11 +1535,11 @@ footer .copyright {
 
     .description-pdv {
         width: 80%;
-        margin-left: 20%;
+        margin-left: 15%;
     }
 
     .title-pdv {
-        margin-left: 55%;
+        margin-left: 16%;
     }
 
     #pdv {
@@ -1550,8 +1547,9 @@ footer .copyright {
     }
 
     .img-pdv-2 {
-        width: 25%;
-        margin-left: -25%; 
+        width: 22%;
+        margin-left: -40%; 
+        margin-right: 5%; 
         order: 2;
     }
 
@@ -1562,9 +1560,9 @@ footer .copyright {
     }
 
     .img-section2 {
-        width: 26%;
-        margin-right: 25%; 
-        margin-top: -340px;
+        width: 22%;
+        margin-right: 22%; 
+        margin-top: -250px;
         order: 2;
     }
 
@@ -1575,42 +1573,44 @@ footer .copyright {
     }
 
     .title-2 {
-        margin-left: -25%;
+        margin-left: -28%;
     }
 
     .subtitle-2 {
         font-size: 22px;
-        margin-left: -25%;
+        margin-left: -28%;
     }
     
     .description-2 {
-        width: 70%;
+        width: 63%;
     }
 
     .description-3 {
-        width: 100%;
+        width: 108%;
     }
 
-    .containerKapti {
-        margin-left: -18%;
+    .kapti {
+        margin-left: 10%;
     }
 
     .titleKapti {
-        margin-left: -35%;
+        margin-left: -28%;
     }
 
     .subtitleKapti {
-        font-size: 16px;
-        margin-left: -35%;
+        font-size: 18px;
+        margin-left: -28%;
     }
 
     .descriptionKapti {
-        width: 60%;
+        width: 80%;
+        font-size: 18px;
+        margin-left: -2%;
     }
 
     .erp {
-        width: 120%;
-        margin-left: 8%;
+        width: 130%;
+        margin-left: 7%;
         font-size: 16px;
     }
 
@@ -1620,15 +1620,24 @@ footer .copyright {
         margin-top: -250px;
     }
 
-    /* .zoom-image-nfe {
-        width: 260%;
-        margin-left: 0;
-    } */
+    .zoom-image-assinador {
+        width: 110%;
+    }
 
-    
+    .img-section4 img {
+        width: 120%;
+        margin-left: 0%;
+        margin-top: -55%;
+    }
+}
 
-    .img-section4 {
-        width: 60%;
+@media (min-width: 988px) and (max-width: 1193px) {
+    .slogan .hr {
+      width: 45%; /* ajuste a largura para 60% */
+    }
+
+    .buttons-container {
+        margin-left: -58%;
     }
 }
 
@@ -1646,10 +1655,258 @@ footer .copyright {
         margin-left: -35%;
     }
 
-    .slogan .hr {
+    .buttons-container {
+        margin-top: 20px;
+        display: flex;
+        /* justify-content: center; */
+        margin-left: -68%;
+        width: 350px;
+        font-size: 12px;
+    }
+
+    .slogan-img {
         width: 50%;
+        margin-left: -90%;
+        margin-right: 2%;
+    }
+
+    .slogan .hr {
+        max-width: 50%;
         color: #fff;
     }
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
+    }
+
+    ul {
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+    #sobreNos {
+        width: 100%;
+        background: #1574A8;
+        padding: 15px 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin: 0 auto;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item div {
+        margin-top: 30px;
+    }
+    
+    .image-container {
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .map-container {
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    .info-container {
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .description-container {
+        width: 70% !important;
+    }
+
+    .description-pdv {
+        width: 110%;
+        margin-left: 32%;
+    }
+
+    .description-2 {
+        width: 80%;
+    }
+
+    .description-3 {
+        width: 60%;
+        margin-left: 22%;
+    }
+
+    .description-1, .advantages {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: -3%;
+    }
+
+    .subtitle-assinador {
+        width: 350px;
+        margin-left: 20%;
+    }
+
+    .img-pdv-2 {
+        width: 28%;
+        margin-left: -30%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 25%;
+        margin-right: 34%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -20%;
+    }
+
+    .erp .title-3 {
+        margin-left: 6%;
+    }
+
+    .subtitle {
+        width: 500px;
+        margin-left: 10%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: -20%;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: -3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: 15%;
+        width: 410px;
+    }
+
+    .descriptionKapti {
+        width: 62%;
+        font-size: 18px;
+        margin-left: 20%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 38%;
+        margin-left: -27%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: -55%;
+    }
+
+    .img-section1 img {
+        width: 68%;
+        margin-left: 15%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 815px) and (max-width: 895px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    /* .slogan .sloganTitle {
+        font-size: 30px;
+        margin-left: -35%;
+    } */
 
     .buttons-container {
         margin-top: 20px;
@@ -1666,6 +1923,11 @@ footer .copyright {
         margin-right: 2%;
     }
 
+    /* .slogan .hr {
+        max-width: 50%;
+        color: #fff;
+    } */
+
     #pdv {
         max-width: 70%;
         margin-left: 13%;
@@ -1743,9 +2005,7 @@ footer .copyright {
         margin: 0;
         margin-right: 20px;
     }
-}
 
-@media (min-width: 815px) and (max-width: 895px) {
     .hideOnMobile {
         display: none;
     }
@@ -1754,39 +2014,195 @@ footer .copyright {
         display: block;
     }
 
+    .description-container {
+        width: 70% !important;
+    }
+
+    .description-pdv {
+        width: 110%;
+        margin-left: 32%;
+    }
+
+    .description-2 {
+        width: 80%;
+    }
+
+    .description-3 {
+        width: 60%;
+        margin-left: 22%;
+    }
+
+    .description-1, .advantages {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: -3%;
+    }
+
+    .subtitle-assinador {
+        width: 350px;
+        margin-left: 20%;
+    }
+
+    .img-pdv-2 {
+        width: 28%;
+        margin-left: -30%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 25%;
+        margin-right: 34%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -20%;
+    }
+
+    .erp .title-3 {
+        margin-left: 4%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 20%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: -20%;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: -3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: 15%;
+        width: 410px;
+    }
+
+    .descriptionKapti {
+        width: 62%;
+        font-size: 18px;
+        margin-left: 20%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 38%;
+        margin-left: -27%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: -55%;
+    }
+
+    .img-section1 img {
+        width: 68%;
+        margin-left: 15%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
+    }
+
     .slogan .sloganTitle {
-        font-size: 30px;
-        margin-left: -52%;
+        font-size: 25px;
+        margin-left: -35%;
     }
 
     .slogan .hr {
-        width: 55%;
-        color: #fff;
+        width: 53%; /* ajuste a largura para 60% */
+      }
+  
+    .buttons-container {
+        margin-left: -72%;
     }
+}
+
+@media (min-width: 800px) and (max-width: 860px) {
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    /* .slogan .sloganTitle {
+        font-size: 30px;
+        margin-left: -35%;
+    } */
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
         /* justify-content: center; */
-        margin-left: -88%;
+        margin-left: -68%;
         width: 350px;
         font-size: 12px;
     }
 
     .slogan-img {
         width: 50%;
-        margin-left: -70%;
-        margin-right: -8%;
+        margin-left: -90%;
+        margin-right: 2%;
+    }
+
+    /* .slogan .hr {
+        max-width: 50%;
+        color: #fff;
+    } */
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
     }
 
     ul {
         justify-content: space-evenly;
         gap: 20px;
-    }
-
-    #pdv {
-        max-width: 70%;
-        margin-left: 13%;
     }
 
     #sobreNos {
@@ -1847,29 +2263,16 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    .main-container {
-        display: flex;
-        flex-direction: column;
-
-    }
-
     .map-container {
         margin: 0;
-        margin-top: 80px;
-        width: 80%;
         margin-left: 20px;
     }
 
     .info-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
         margin: 0;
         margin-right: 20px;
     }
-}
 
-@media (min-width: 725px) and (max-width: 815px) {
     .hideOnMobile {
         display: none;
     }
@@ -1878,47 +2281,194 @@ footer .copyright {
         display: block;
     }
 
-    .slogan {
-        display: flex;
+    .description-container {
+        width: 70% !important;
+    }
+
+    .description-pdv {
+        width: 110%;
+        margin-left: 32%;
+    }
+
+    .description-2 {
+        width: 80%;
+    }
+
+    .description-3 {
+        width: 60%;
+        margin-left: 22%;
+    }
+
+    .description-1, .advantages {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: -3%;
+    }
+
+    .subtitle-assinador {
+        width: 350px;
+        margin-left: 20%;
+    }
+
+    .img-pdv-2 {
+        width: 28%;
+        margin-left: -30%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 25%;
+        margin-right: 34%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -20%;
+    }
+
+    .erp .title-3 {
+        margin-left: 4%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 20%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: -20%;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: -3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: 15%;
+        width: 410px;
+    }
+
+    .descriptionKapti {
+        width: 62%;
+        font-size: 18px;
+        margin-left: 20%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 38%;
+        margin-left: -27%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: -55%;
+    }
+
+    .img-section1 img {
+        width: 68%;
+        margin-left: 15%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
         flex-direction: column-reverse;
     }
 
     .slogan .sloganTitle {
-        font-size: 20px;
-        margin-left: 3%;
-        order: 1;
-        margin-top: 15px;
-        width: 450px;
+        font-size: 25px;
+        margin-left: -35%;
     }
 
-    .sloganTitle br {
-        display: none;
-      }
+    .slogan .sloganTitle {
+        font-size: 25px;
+        margin-left: -35%;
+    }
 
     .slogan .hr {
-        width: 72%;
-        color: #fff;
-        order: 2;
+        width: 53%; /* ajuste a largura para 60% */
     }
+  
+    .buttons-container {
+        margin-left: -75%;
+    }
+}
+
+@media (min-width: 741px) and (max-width: 824px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    /* .slogan .sloganTitle {
+        font-size: 30px;
+        margin-left: -35%;
+    } */
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -38%;
-        width: 450px;
+        /* justify-content: center; */
+        margin-left: -68%;
+        width: 350px;
         font-size: 12px;
-        order: 4;
-        text-align: center;
-    }
-
-    .menu-teste-slogan, .fale-conosco {
-        width: 160px;
     }
 
     .slogan-img {
-        width: 75%;
-        margin-left: 18%;
-        order: 3;
+        width: 50%;
+        margin-left: -90%;
+        margin-right: 2%;
+    }
+
+    /* .slogan .hr {
+        max-width: 50%;
+        color: #fff;
+    } */
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
     }
 
     ul {
@@ -1951,11 +2501,6 @@ footer .copyright {
         max-width: 80%;
     }
 
-    #pdv {
-        max-width: 70%;
-        margin-left: 13%;
-    }
-
     .item {
         display: flex; 
         align-items: center; 
@@ -1971,8 +2516,8 @@ footer .copyright {
     
     .image-container {
         max-width: 550px;
-        width: 530px;
-        height: 300px; 
+        width: 630px;
+        height: 320px; 
         overflow: hidden; 
         border-radius: 8px;
         margin:auto
@@ -1989,40 +2534,16 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    .main-container {
-        display: flex;
-        flex-direction: column;
-
-    }
-
     .map-container {
         margin: 0;
-        margin-top: 80px;
-        width: 80%;
         margin-left: 20px;
     }
 
     .info-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
         margin: 0;
         margin-right: 20px;
     }
 
-    .whatsapp-button {
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        margin-right: -30px;
-        text-align: center;
-        box-shadow: 1px 1px 2px #888;
-        z-index: 1000;
-        transition: all 0.3s ease;
-    }
-}
-
-@media (min-width: 740px) and (max-width: 800px) {
     .hideOnMobile {
         display: none;
     }
@@ -2031,47 +2552,193 @@ footer .copyright {
         display: block;
     }
 
-    .slogan {
-        display: flex;
+    .description-container {
+        width: 70% !important;
+    }
+
+    .description-pdv {
+        width: 110%;
+        margin-left: 32%;
+    }
+
+    .description-2 {
+        width: 80%;
+    }
+
+    .description-3 {
+        width: 60%;
+        margin-left: 22%;
+    }
+
+    .description-1, .advantages {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: -3%;
+    }
+
+    .subtitle-assinador {
+        width: 350px;
+        margin-left: 20%;
+    }
+
+    .img-pdv-2 {
+        width: 28%;
+        margin-left: -30%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 25%;
+        margin-right: 34%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -20%;
+    }
+
+    .erp .title-3 {
+        margin-left: 4%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 20%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: -20%;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: -3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: 15%;
+        width: 410px;
+    }
+
+    .descriptionKapti {
+        width: 62%;
+        font-size: 18px;
+        margin-left: 20%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 38%;
+        margin-left: -27%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: -55%;
+    }
+
+    .img-section1 img {
+        width: 68%;
+        margin-left: 15%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
         flex-direction: column-reverse;
     }
 
     .slogan .sloganTitle {
-        font-size: 20px;
-        margin-left: -2%;
-        order: 1;
-        margin-top: 15px;
-        width: 450px;
+        font-size: 25px;
+        margin-left: -35%;
     }
 
-    .sloganTitle br {
-        display: none;
-      }
+    .slogan .sloganTitle {
+        font-size: 25px;
+        margin-left: -55%;
+    }
 
     .slogan .hr {
-        width: 72%;
-        color: #fff;
-        order: 2;
+        width: 53%; /* ajuste a largura para 60% */
     }
-
+  
     .buttons-container {
-        margin-top: 20px;
-        display: flex;
-        margin-left: -48%;
-        width: 450px;
-        font-size: 12px;
-        order: 4;
-        text-align: center;
+        width: 300px;
+        margin-left: -80%;
+    }
+}
+@media (min-width: 725px) and (max-width: 741px) {
+    .hideOnMobile {
+        display: none;
     }
 
-    .menu-teste-slogan, .fale-conosco {
-        width: 160px;
+    .menu-btn {
+        display: block;
+    }
+
+    .slogan .sloganTitle {
+        font-size: 25px;
+        margin-left: -35%;
+    }
+
+    .slogan .hr {
+        width: 53%; /* ajuste a largura para 60% */
+    }
+  
+    .buttons-container {
+        margin-left: -72%;
     }
 
     .slogan-img {
-        width: 75%;
-        margin-left: 18%;
-        order: 3;
+        width: 50%;
+        margin-left: -90%;
+        margin-right: 2%;
+    }
+
+    .slogan .hr {
+        max-width: 85%;
+        color: #fff;
+    }
+
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
     }
 
     ul {
@@ -2104,11 +2771,6 @@ footer .copyright {
         max-width: 80%;
     }
 
-    #pdv {
-        max-width: 70%;
-        margin-left: 13%;
-    }
-
     .item {
         display: flex; 
         align-items: center; 
@@ -2124,8 +2786,8 @@ footer .copyright {
     
     .image-container {
         max-width: 550px;
-        width: 530px;
-        height: 300px; 
+        width: 630px;
+        height: 320px; 
         overflow: hidden; 
         border-radius: 8px;
         margin:auto
@@ -2142,36 +2804,155 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    .main-container {
-        display: flex;
-        flex-direction: column;
-
-    }
-
     .map-container {
         margin: 0;
-        margin-top: 80px;
-        width: 80%;
         margin-left: 20px;
     }
 
     .info-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
         margin: 0;
         margin-right: 20px;
     }
 
-    .whatsapp-button {
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        margin-right: -30px;
-        text-align: center;
-        box-shadow: 1px 1px 2px #888;
-        z-index: 1000;
-        transition: all 0.3s ease;
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .description-container {
+        width: 70% !important;
+    }
+
+    .description-pdv {
+        width: 110%;
+        margin-left: 32%;
+    }
+
+    .description-2 {
+        width: 80%;
+    }
+
+    .description-3 {
+        width: 60%;
+        margin-left: 22%;
+    }
+
+    .description-1, .advantages {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: -3%;
+    }
+
+    .subtitle-assinador {
+        width: 300px;
+        margin-left: 16%;
+    }
+
+    .img-pdv-2 {
+        width: 28%;
+        margin-left: -30%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 25%;
+        margin-right: 34%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -18%;
+    }
+
+    .erp .title-3 {
+        margin-left: 4%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 15%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: 0%;
+        width: 300px;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: -3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: 6%;
+        width: 410px;
+    }
+
+    .descriptionKapti {
+        width: 62%;
+        font-size: 18px;
+        margin-left: 20%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 35%;
+        margin-left: -32%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: -55%;
+    }
+
+    .img-section1 img {
+        width: 68%;
+        margin-left: 15%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
     }
 }
 
@@ -2202,9 +2983,14 @@ footer .copyright {
       }
 
     .slogan .hr {
-        width: 72%;
+        width: 77%;
         color: #fff;
         order: 2;
+    }
+    
+    .slogan-img {
+        width: 70%;
+        margin-left: 18%;
     }
 
     .buttons-container {
@@ -2220,11 +3006,9 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
-
-    .slogan-img {
-        width: 75%;
-        margin-left: 18%;
-        order: 3;
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
     }
 
     ul {
@@ -2257,11 +3041,6 @@ footer .copyright {
         max-width: 80%;
     }
 
-    #pdv {
-        max-width: 70%;
-        margin-left: 13%;
-    }
-
     .item {
         display: flex; 
         align-items: center; 
@@ -2277,8 +3056,8 @@ footer .copyright {
     
     .image-container {
         max-width: 550px;
-        width: 530px;
-        height: 300px; 
+        width: 630px;
+        height: 320px; 
         overflow: hidden; 
         border-radius: 8px;
         margin:auto
@@ -2295,53 +3074,163 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    .main-container {
-        display: flex;
-        flex-direction: column;
-
-    }
-
     .map-container {
         margin: 0;
-        margin-top: 80px;
-        width: 80%;
         margin-left: 20px;
     }
 
     .info-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
         margin: 0;
         margin-right: 20px;
     }
 
-    .whatsapp-button {
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        margin-right: -30px;
-        text-align: center;
-        box-shadow: 1px 1px 2px #888;
-        z-index: 1000;
-        transition: all 0.3s ease;
+    .description-container {
+        width: 70% !important;
     }
-}
 
-@media (min-width: 691px) and (max-width: 710px) {
+    .description-pdv {
+        width: 110%;
+        margin-left: 32%;
+    }
+
+    .description-2 {
+        width: 80%;
+    }
+
+    .description-3 {
+        width: 60%;
+        margin-left: 22%;
+    }
+
+    .description-1, .advantages {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: -3%;
+    }
+
+    .subtitle-assinador {
+        width: 300px;
+        margin-left: 16%;
+    }
+
+    .img-pdv-2 {
+        width: 28%;
+        margin-left: -25%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 25%;
+        margin-right: 28%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -18%;
+    }
+
+    .erp .title-3 {
+        margin-left: 4%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 15%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: 0%;
+        width: 300px;
+    }
     
-    .hideOnMobile {
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: -3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: 6%;
+        width: 410px;
+    }
+
+    .descriptionKapti {
+        width: 62%;
+        font-size: 18px;
+        margin-left: 20%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 35%;
+        margin-left: -32%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
         display: none;
     }
 
-    .menu-btn {
-        display: block;
+    .img-section4 img {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: -55%;
+    }
+
+    .img-section1 img {
+        width: 68%;
+        margin-left: 15%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
     }
 
     .logo {
         width: 190px;
         height: 46px;
         margin-left: 8px;
+    }
+}
+
+@media (min-width: 691px) and (max-width: 710px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
     }
 
     .slogan {
@@ -2366,6 +3255,11 @@ footer .copyright {
         color: #fff;
         order: 2;
     }
+    
+    .slogan-img {
+        width: 70%;
+        margin-left: 18%;
+    }
 
     .buttons-container {
         margin-top: 20px;
@@ -2380,62 +3274,14 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
-
-    .slogan-img {
-        width: 75%;
-        margin-left: 18%;
-        order: 3;
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
     }
 
     ul {
         justify-content: space-evenly;
         gap: 20px;
-    }
-
-    #pdv {
-        max-width: 70%;
-        margin-left: 15%;
-    }
-
-    .title, .title-2, .title-3, .titleKapti, .title-assinador {
-        font-size: 28px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 22px;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    .description-1, .description-3, .subheading, .advantages {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
     }
 
     #sobreNos {
@@ -2472,25 +3318,14 @@ footer .copyright {
         padding: 20px;
     }
 
-    .item > div > p {
+    .item div {
         margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > h3 {
-        margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > .button-wrapper > .button {
-        margin: auto;
-        margin-top: 12px;
     }
     
     .image-container {
-        max-width: 380px;
-        width: 330px;
-        height: 300px; 
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
         overflow: hidden; 
         border-radius: 8px;
         margin:auto
@@ -2507,84 +3342,164 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    .main-container {
-        display: flex;
-        flex-direction: column;
-
-    }
-
     .map-container {
         margin: 0;
-        margin-top: 80px;
-        width: 80%;
         margin-left: 20px;
     }
 
     .info-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
         margin: 0;
         margin-right: 20px;
     }
 
-    .whatsapp-button {
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        margin-right: -30px;
-        text-align: center;
-        box-shadow: 1px 1px 2px #888;
-        z-index: 1000;
-        transition: all 0.3s ease;
+    .description-container {
+        width: 70% !important;
     }
 
-    .testimonial p{
-        max-width: 35%;
-        width: 35%;
-        font-size: 16px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
+    .description-pdv {
+        width: 110%;
+        margin-left: 32%;
     }
 
-    .testimonial h3 {
-        font-size: 22px; 
+    .description-2 {
+        width: 80%;
     }
 
-    .testimonial .img {
-        margin-left: 0;
-        width: 18px;
-        height: 18px;
+    .description-3 {
+        width: 60%;
+        margin-left: 22%;
     }
 
-    #titleForm {
+    .description-1, .advantages {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: -3%;
+    }
+
+    .subtitle-assinador {
+        width: 300px;
+        margin-left: 16%;
+    }
+
+    .img-pdv-2 {
+        width: 28%;
+        margin-left: -26%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 25%;
+        margin-right: 26%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -18%;
+    }
+
+    .erp .title-3 {
+        margin-left: 4%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 15%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: 0%;
+        width: 300px;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: -3%;
+    }
+
+    .subtitleKapti {
         font-size: 18px;
+        margin-left: 6%;
+        width: 410px;
     }
 
-    footer .copyright{
-        font-size: 20px;
+    .descriptionKapti {
+        width: 62%;
+        font-size: 18px;
+        margin-left: 20%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 35%;
+        margin-left: -32%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: -55%;
+    }
+
+    .img-section1 img {
+        width: 68%;
+        margin-left: 15%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
+    }
+
+    .logo {
+        width: 190px;
+        height: 46px;
+        margin-left: 8px;
     }
     
 }
 
 @media (min-width: 650px) and (max-width: 690px) {
-    
     .hideOnMobile {
         display: none;
     }
 
     .menu-btn {
         display: block;
-    }
-
-    .logo {
-        width: 190px;
-        height: 46px;
-        margin-left: 8px;
     }
 
     .slogan {
@@ -2594,25 +3509,33 @@ footer .copyright {
 
     .slogan .sloganTitle {
         font-size: 20px;
-        margin-left: 25%;
+        margin-left: -18%;
         order: 1;
-        margin-top: -350px;
+        margin-top: 15px;
         width: 450px;
-        margin-bottom: 300px;
     }
 
+    .sloganTitle br {
+        display: none;
+      }
+
     .slogan .hr {
-        width: 40%;
+        width: 75%;
         color: #fff;
         order: 2;
     }
+    
+    .slogan-img {
+        width: 80%;
+        margin-left: 14%;
+    }
 
     .buttons-container {
-        margin-top: 30px;
+        margin-top: 20px;
         display: flex;
-        margin-left: 12%;
-        width: 220px;
-        font-size: 8px;
+        margin-left: -72%;
+        width: 450px;
+        font-size: 12px;
         order: 4;
         text-align: center;
     }
@@ -2620,63 +3543,14 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
-
-    .slogan-img {
-        width: 85%;
-        margin-left: 18%;
-        margin-top: 10%;
-        order: 3;
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
     }
 
     ul {
         justify-content: space-evenly;
         gap: 20px;
-    }
-
-    #pdv {
-        max-width: 70%;
-        margin-left: 15%;
-    }
-
-    .title, .title-2, .title-3, .titleKapti, .title-assinador {
-        font-size: 28px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 22px;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    .description-1, .description-3, .subheading, .advantages {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
     }
 
     #sobreNos {
@@ -2713,25 +3587,14 @@ footer .copyright {
         padding: 20px;
     }
 
-    .item > div > p {
+    .item div {
         margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > h3 {
-        margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > .button-wrapper > .button {
-        margin: auto;
-        margin-top: 12px;
     }
     
     .image-container {
-        max-width: 380px;
-        width: 330px;
-        height: 300px; 
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
         overflow: hidden; 
         border-radius: 8px;
         margin:auto
@@ -2748,84 +3611,166 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    .main-container {
-        display: flex;
-        flex-direction: column;
-
-    }
-
     .map-container {
         margin: 0;
-        margin-top: 80px;
-        width: 80%;
         margin-left: 20px;
     }
 
     .info-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
         margin: 0;
         margin-right: 20px;
     }
 
-    .whatsapp-button {
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        margin-right: -30px;
-        text-align: center;
-        box-shadow: 1px 1px 2px #888;
-        z-index: 1000;
-        transition: all 0.3s ease;
+    .description-container {
+        width: 70% !important;
     }
 
-    .testimonial p{
-        max-width: 35%;
-        width: 35%;
-        font-size: 16px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
+    .description-pdv {
+        width: 150%;
+        margin-left: 20%;
     }
 
-    .testimonial h3 {
-        font-size: 22px; 
+    .description-2 {
+        width: 110%;
+        margin-left: -10%;
     }
 
-    .testimonial .img {
-        margin-left: 0;
-        width: 18px;
-        height: 18px;
+    .description-3 {
+        width: 90%;
+        margin-left: 12%;
     }
 
-    #titleForm {
-        font-size: 18px;
+    .description-1, .advantages {
+        width: 90%;
+        margin-left: 8%;
     }
 
-    footer .copyright{
-        font-size: 20px;
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: 3%;
+    }
+
+    .subtitle-assinador {
+        width: 300px;
+        margin-left: 16%;
+    }
+
+    .img-pdv-2 {
+        width: 45%;
+        margin-left: -42%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 40%;
+        margin-right: 48%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -10%;
+    }
+
+    .erp .title-3 {
+        margin-left: 8%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 15%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: 0%;
+        width: 300px;
     }
     
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: -3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: 0%;
+        width: 420px;
+    }
+
+    .descriptionKapti {
+        width: 90%;
+        font-size: 18px;
+        margin-left: 8%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 60%;
+        margin-left: -52%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 115%;
+        margin-left: -5%;
+        margin-top: -30%;
+        border-radius: 8px;
+    }
+
+    .img-section1 img {
+        width: 110%;
+        margin-top: 3%;
+        margin-left: -5%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
+    }
+
+    .logo {
+        width: 190px;
+        height: 46px;
+        margin-left: 8px;
+    }
 }
 
 @media (min-width: 610px) and (max-width: 650px) {
-    
     .hideOnMobile {
         display: none;
     }
 
     .menu-btn {
         display: block;
-    }
-
-    .logo {
-        width: 190px;
-        height: 46px;
-        margin-left: 8px;
     }
 
     .slogan {
@@ -2835,25 +3780,33 @@ footer .copyright {
 
     .slogan .sloganTitle {
         font-size: 20px;
-        margin-left: 25%;
+        margin-left: -18%;
         order: 1;
-        margin-top: -330px;
+        margin-top: 15px;
         width: 450px;
-        margin-bottom: 280px;
     }
 
+    .sloganTitle br {
+        display: none;
+      }
+
     .slogan .hr {
-        width: 40%;
+        width: 75%;
         color: #fff;
         order: 2;
     }
+    
+    .slogan-img {
+        width: 80%;
+        margin-left: 14%;
+    }
 
     .buttons-container {
-        margin-top: 30px;
+        margin-top: 20px;
         display: flex;
-        margin-left: 12%;
-        width: 220px;
-        font-size: 8px;
+        margin-left: -75%;
+        width: 450px;
+        font-size: 12px;
         order: 4;
         text-align: center;
     }
@@ -2861,63 +3814,14 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
-
-    .slogan-img {
-        width: 85%;
-        margin-left: 18%;
-        margin-top: 10%;
-        order: 3;
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
     }
 
     ul {
         justify-content: space-evenly;
         gap: 20px;
-    }
-
-    #pdv {
-        max-width: 70%;
-        margin-left: 15%;
-    }
-
-    .title, .title-2, .title-3, .titleKapti, .title-assinador {
-        font-size: 28px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 22px;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    .description-1, .description-3, .subheading, .advantages {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
     }
 
     #sobreNos {
@@ -2954,25 +3858,14 @@ footer .copyright {
         padding: 20px;
     }
 
-    .item > div > p {
+    .item div {
         margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > h3 {
-        margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > .button-wrapper > .button {
-        margin: auto;
-        margin-top: 12px;
     }
     
     .image-container {
-        max-width: 380px;
-        width: 330px;
-        height: 300px; 
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
         overflow: hidden; 
         border-radius: 8px;
         margin:auto
@@ -2989,84 +3882,166 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    .main-container {
-        display: flex;
-        flex-direction: column;
-
-    }
-
     .map-container {
         margin: 0;
-        margin-top: 80px;
-        width: 80%;
         margin-left: 20px;
     }
 
     .info-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
         margin: 0;
         margin-right: 20px;
     }
 
-    .whatsapp-button {
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        margin-right: -30px;
-        text-align: center;
-        box-shadow: 1px 1px 2px #888;
-        z-index: 1000;
-        transition: all 0.3s ease;
+    .description-container {
+        width: 70% !important;
     }
 
-    .testimonial p{
-        max-width: 35%;
-        width: 35%;
-        font-size: 16px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
+    .description-pdv {
+        width: 150%;
+        margin-left: 20%;
     }
 
-    .testimonial h3 {
-        font-size: 22px; 
+    .description-2 {
+        width: 110%;
+        margin-left: -10%;
     }
 
-    .testimonial .img {
-        margin-left: 0;
-        width: 18px;
-        height: 18px;
+    .description-3 {
+        width: 90%;
+        margin-left: 12%;
     }
 
-    #titleForm {
-        font-size: 18px;
+    .description-1, .advantages {
+        width: 90%;
+        margin-left: 8%;
     }
 
-    footer .copyright{
-        font-size: 20px;
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: 3%;
+    }
+
+    .subtitle-assinador {
+        width: 300px;
+        margin-left: 16%;
+    }
+
+    .img-pdv-2 {
+        width: 45%;
+        margin-left: -42%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 40%;
+        margin-right: 48%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -10%;
+    }
+
+    .erp .title-3 {
+        margin-left: 8%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 15%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: 0%;
+        width: 300px;
     }
     
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: -3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: 0%;
+        width: 420px;
+    }
+
+    .descriptionKapti {
+        width: 90%;
+        font-size: 18px;
+        margin-left: 8%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 60%;
+        margin-left: -52%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 115%;
+        margin-left: -5%;
+        margin-top: -30%;
+        border-radius: 8px;
+    }
+
+    .img-section1 img {
+        width: 110%;
+        margin-top: 3%;
+        margin-left: -5%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
+    }
+
+    .logo {
+        width: 190px;
+        height: 46px;
+        margin-left: 8px;
+    }
 }
 
 @media (min-width: 580px) and (max-width: 610px) {
-    
     .hideOnMobile {
         display: none;
     }
 
     .menu-btn {
         display: block;
-    }
-
-    .logo {
-        width: 190px;
-        height: 46px;
-        margin-left: 8px;
     }
 
     .slogan {
@@ -3076,24 +4051,35 @@ footer .copyright {
 
     .slogan .sloganTitle {
         font-size: 20px;
-        margin-left: 18%;
+        margin-left: -32%;
         order: 1;
-        margin-top: -300px;
-        width: 450px;
+        margin-top: 15px;
+        width: 350px;
     }
 
+    .sloganTitle br {
+        display: none;
+      }
+
     .slogan .hr {
-        width: 40%;
+        width: 320px;
+        margin: 0 auto;
+        margin-left: 0%; 
         color: #fff;
         order: 2;
     }
+    
+    .slogan-img {
+        width: 100%;
+        margin-left: 4%;
+    }
 
     .buttons-container {
-        margin-top: 250px;
+        margin-top: 20px;
         display: flex;
-        margin-left: 5%;
-        width: 220px;
-        font-size: 8px;
+        margin-left: -30%;
+        width: 300px;
+        font-size: 12px;
         order: 4;
         text-align: center;
     }
@@ -3101,63 +4087,14 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
-
-    .slogan-img {
-        width: 85%;
-        margin-left: 18%;
-        margin-top: 10%;
-        order: 3;
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
     }
 
     ul {
         justify-content: space-evenly;
         gap: 20px;
-    }
-
-    #pdv {
-        max-width: 70%;
-        margin-left: 15%;
-    }
-
-    .title, .title-2, .title-3, .titleKapti, .title-assinador {
-        font-size: 28px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 22px;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    .description-1, .description-3, .subheading, .advantages {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
     }
 
     #sobreNos {
@@ -3194,25 +4131,14 @@ footer .copyright {
         padding: 20px;
     }
 
-    .item > div > p {
+    .item div {
         margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > h3 {
-        margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > .button-wrapper > .button {
-        margin: auto;
-        margin-top: 12px;
     }
     
     .image-container {
-        max-width: 380px;
-        width: 330px;
-        height: 300px; 
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
         overflow: hidden; 
         border-radius: 8px;
         margin:auto
@@ -3229,354 +4155,205 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    .main-container {
-        display: flex;
-        flex-direction: column;
-
-    }
-
     .map-container {
         margin: 0;
-        margin-top: 80px;
-        width: 80%;
         margin-left: 20px;
     }
 
     .info-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
         margin: 0;
         margin-right: 20px;
     }
 
-    .whatsapp-button {
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        margin-right: -30px;
-        text-align: center;
-        box-shadow: 1px 1px 2px #888;
-        z-index: 1000;
-        transition: all 0.3s ease;
+    .description-container {
+        width: 70% !important;
     }
 
-    .testimonial p{
-        max-width: 35%;
-        width: 35%;
-        font-size: 16px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
-    }
-
-    .testimonial h3 {
-        font-size: 22px; 
-    }
-
-    .testimonial .img {
-        margin-left: 0;
-        width: 18px;
-        height: 18px;
-    }
-
-    #titleForm {
-        font-size: 18px;
-    }
-
-    footer .copyright{
-        font-size: 20px;
-    }
-    
-}
-
-@media (min-width: 550px) and (max-width: 580px) {
-    
-    .hideOnMobile {
-        display: none;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .logo {
-        width: 190px;
-        height: 46px;
-        margin-left: 8px;
-    }
-
-    .slogan {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .slogan .sloganTitle {
-        font-size: 20px;
-        margin-left: 18%;
-        order: 1;
-        margin-top: -280px;
-        width: 450px;
-        margin-bottom: 230px;
-    }
-
-    .slogan .hr {
-        width: 40%;
-        color: #fff;
-        order: 2;
-    }
-
-    .buttons-container {
-        margin-top: 20px;
-        display: flex;
-        margin-left: 0%;
-        width: 220px;
-        font-size: 8px;
-        order: 4;
-        text-align: center;
-    }
-
-    .menu-teste-slogan, .fale-conosco {
-        width: 160px;
-    }
-
-    .slogan-img {
-        width: 85%;
-        margin-left: 18%;
-        margin-top: 10%;
-        order: 3;
-    }
-
-    ul {
-        justify-content: space-evenly;
-        gap: 20px;
-    }
-
-    #pdv {
-        max-width: 70%;
-        margin-left: 15%;
-    }
-
-    .title, .title-2, .title-3, .titleKapti, .title-assinador {
-        font-size: 28px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 22px;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    .description-1, .description-3, .subheading, .advantages {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
+    .description-pdv {
+        width: 150%;
+        margin-left: 20%;
     }
 
     .description-2 {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-    }
-
-    #sobreNos {
-        width: 100%;
-        background: #1574A8;
-        padding: 15px 50px 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: left;
-    }
-    
-    .titleSobreNos {
-        color: white;
-        font-size: 38px;
-        margin: 0 auto;
-    }
-    
-    .descriptionSobreNos {
-        color: white;
-        font-size: 22px;
-        line-height: 1.2;
-        text-align: justify;
-        padding: 0;
-        max-width: 80%;
-    }
-
-    .item {
-        display: flex; 
-        align-items: center; 
-        flex-wrap: wrap;
-        flex-direction: column;
-        background: #fff;
-        padding: 20px;
-    }
-
-    .item > div > p {
-        margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > h3 {
-        margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > .button-wrapper > .button {
-        margin: auto;
-        margin-top: 12px;
-    }
-    
-    .image-container {
-        max-width: 380px;
-        width: 330px;
-        height: 300px; 
-        overflow: hidden; 
-        border-radius: 8px;
-        margin:auto
-    }
-    
-    .image-container img {
-        width: 100%;
-        height: 100%; 
-        border-radius: 8px;
-        object-fit: cover; 
-    }
-
-    .button-wrapper {
-        margin: 0 auto;
-    }
-
-    .main-container {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .map-container {
-        margin: 0;
-        margin-top: 80px;
-        width: 80%;
-        margin-left: 20px;
-    }
-
-    .info-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        margin: 0;
-        margin-right: 20px;
-    }
-
-    .whatsapp-button {
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        margin-right: -30px;
-        text-align: center;
-        box-shadow: 1px 1px 2px #888;
-        z-index: 1000;
-        transition: all 0.3s ease;
-    }
-
-    .testimonial p{
-        max-width: 35%;
-        width: 35%;
-        font-size: 16px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
-    }
-
-    .testimonial h3 {
-        font-size: 22px; 
-    }
-
-    .testimonial .img {
-        margin-left: 0;
-        width: 18px;
-        height: 18px;
-    }
-
-    #titleForm {
-        font-size: 18px;
-    }
-
-    footer .copyright{
-        font-size: 20px;
-    }
-    
-}
-
-@media (min-width: 500px) and (max-width: 550px) {
-    
-    .hideOnMobile {
-        display: none;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .logo {
-        width: 190px;
-        height: 46px;
-        margin-left: 8px;
-    }
-
-    .slogan {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .slogan .sloganTitle {
-        font-size: 18px;
-        margin-left: 10%;
-        margin: auto;
-        order: 1;
-        margin-top: -260px;
-        width: 450px;
-        margin-bottom: 220px;
-    }
-
-    .slogan .hr {
-        width: 38%;
-        color: #fff;
-        order: 2;
-    }
-
-    .buttons-container {
-        margin-top: 20px;
-        display: flex;
+        width: 110%;
         margin-left: -10%;
-        width: 220px;
-        font-size: 8px;
+    }
+
+    .description-3 {
+        width: 90%;
+        margin-left: 12%;
+    }
+
+    .description-1, .advantages {
+        width: 90%;
+        margin-left: 8%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: 3%;
+    }
+
+    .subtitle-assinador {
+        width: 300px;
+        margin-left: 16%;
+    }
+
+    .img-pdv-2 {
+        width: 45%;
+        margin-left: -42%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 40%;
+        margin-right: 48%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -10%;
+    }
+
+    .erp .title-3 {
+        margin-left: 8%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 15%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: 0%;
+        width: 300px;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: -3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: 0%;
+        width: 420px;
+    }
+
+    .descriptionKapti {
+        width: 90%;
+        font-size: 18px;
+        margin-left: 8%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 60%;
+        margin-left: -52%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 115%;
+        margin-left: -5%;
+        margin-top: -30%;
+        border-radius: 8px;
+    }
+
+    .img-section1 img {
+        width: 110%;
+        margin-top: 3%;
+        margin-left: -5%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
+    }
+
+    .logo {
+        width: 190px;
+        height: 46px;
+        margin-left: 8px;
+    }
+    
+}
+
+@media (min-width: 500px) and (max-width: 580px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .slogan {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .slogan .sloganTitle {
+        font-size: 20px;
+        margin-left: -32%;
+        order: 1;
+        margin-top: 15px;
+        width: 350px;
+    }
+
+    .sloganTitle br {
+        display: none;
+      }
+
+    .slogan .hr {
+        width: 320px;
+        margin: 0 auto;
+        margin-left: 0%; 
+        color: #fff;
+        order: 2;
+    }
+    
+    .slogan-img {
+        width: 100%;
+        margin-left: 4%;
+    }
+
+    .buttons-container {
+        margin-top: 20px;
+        display: flex;
+        margin-left: -30%;
+        width: 300px;
+        font-size: 12px;
         order: 4;
         text-align: center;
     }
@@ -3584,63 +4361,14 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
-
-    .slogan-img {
-        width: 85%;
-        margin-left: 18%;
-        margin-top: 10%;
-        order: 3;
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
     }
 
     ul {
         justify-content: space-evenly;
         gap: 20px;
-    }
-
-    #pdv {
-        max-width: 70%;
-        margin-left: 15%;
-    }
-
-    .title, .title-2, .title-3, .titleKapti, .title-assinador {
-        font-size: 28px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 22px;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    .description-1, .description-3, .subheading, .advantages {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
     }
 
     #sobreNos {
@@ -3677,25 +4405,14 @@ footer .copyright {
         padding: 20px;
     }
 
-    .item > div > p {
+    .item div {
         margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > h3 {
-        margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > .button-wrapper > .button {
-        margin: auto;
-        margin-top: 12px;
     }
     
     .image-container {
-        max-width: 380px;
-        width: 330px;
-        height: 300px; 
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
         overflow: hidden; 
         border-radius: 8px;
         margin:auto
@@ -3712,17 +4429,150 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    .main-container {
-        display: flex;
-        flex-direction: column;
-
-    }
-
     .map-container {
         margin: 0;
-        margin-top: 80px;
-        width: 80%;
         margin-left: 20px;
+    }
+
+    .info-container {
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .description-container {
+        width: 70% !important;
+    }
+
+    .description-pdv {
+        width: 150%;
+        margin-left: 20%;
+    }
+
+    .description-2 {
+        width: 110%;
+        margin-left: -10%;
+    }
+
+    .description-3 {
+        width: 90%;
+        margin-left: 12%;
+    }
+
+    .description-1, .advantages {
+        width: 90%;
+        margin-left: 8%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: 3%;
+    }
+
+    .subtitle-assinador {
+        width: 300px;
+        margin-left: 8%;
+    }
+
+    .img-pdv-2 {
+        width: 45%;
+        margin-left: -42%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 40%;
+        margin-right: 43%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -10%;
+    }
+
+    .erp .title-3 {
+        margin-left: 10%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 8%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: -8%;
+        width: 300px;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: 3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: -8%;
+        width: 420px;
+    }
+
+    .descriptionKapti {
+        width: 90%;
+        font-size: 18px;
+        margin-left: 8%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 60%;
+        margin-left: -52%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 115%;
+        margin-left: -5%;
+        margin-top: -30%;
+        border-radius: 8px;
+    }
+
+    .img-section1 img {
+        width: 110%;
+        margin-top: 3%;
+        margin-left: -5%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
     }
 
     .info-container {
@@ -3733,53 +4583,29 @@ footer .copyright {
         margin-right: 20px;
     }
 
-    .whatsapp-button {
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        margin-right: -30px;
-        text-align: center;
-        box-shadow: 1px 1px 2px #888;
-        z-index: 1000;
-        transition: all 0.3s ease;
+    .logo {
+        width: 190px;
+        height: 46px;
+        margin-left: 8px;
     }
 
-    .testimonial p{
-        max-width: 35%;
-        width: 35%;
-        font-size: 16px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
+    .main-container {
+        margin-top: 50px;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        align-items: center;
     }
 
-    .testimonial h3 {
-        font-size: 22px; 
+    .map-container {
+        width: 80%;
+        height: 100%;
     }
-
-    .testimonial .img {
-        margin-left: 0;
-        width: 18px;
-        height: 18px;
-    }
-
-    #titleForm {
-        font-size: 18px;
-    }
-
-    footer .copyright{
-        font-size: 20px;
-    }
-
-    
-    
 }
 
 @media (min-width: 450px) and (max-width: 500px) {
-    
     .hideOnMobile {
         display: none;
     }
@@ -3788,38 +4614,42 @@ footer .copyright {
         display: block;
     }
 
-    .logo {
-        width: 190px;
-        height: 46px;
-        margin-left: 8px;
-    }
-
     .slogan {
         display: flex;
         flex-direction: column-reverse;
     }
 
     .slogan .sloganTitle {
-        font-size: 18px;
-        margin-left: 5%;
+        font-size: 20px;
+        margin-left: -32%;
         order: 1;
-        margin-top: -230px;
-        width: 450px;
-        margin-bottom: 200px;
+        margin-top: 15px;
+        width: 350px;
     }
 
+    .sloganTitle br {
+        display: none;
+      }
+
     .slogan .hr {
-        width: 38%;
+        width: 320px;
+        margin: 0 auto;
+        margin-left: 0%; 
         color: #fff;
         order: 2;
+    }
+    
+    .slogan-img {
+        width: 100%;
+        margin-left: 4%;
     }
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -20%;
-        width: 220px;
-        font-size: 8px;
+        margin-left: -30%;
+        width: 300px;
+        font-size: 12px;
         order: 4;
         text-align: center;
     }
@@ -3827,63 +4657,14 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
-
-    .slogan-img {
-        width: 85%;
-        margin-left: 18%;
-        margin-top: 10%;
-        order: 3;
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
     }
 
     ul {
         justify-content: space-evenly;
         gap: 20px;
-    }
-
-    #pdv {
-        max-width: 70%;
-        margin-left: 15%;
-    }
-
-    .title, .title-2, .title-3, .titleKapti, .title-assinador {
-        font-size: 28px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 22px;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    .description-1, .description-3, .subheading, .advantages {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
     }
 
     #sobreNos {
@@ -3920,25 +4701,14 @@ footer .copyright {
         padding: 20px;
     }
 
-    .item > div > p {
+    .item div {
         margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > h3 {
-        margin-top: 30px;
-        width: 250px;
-    }
-
-    .item > div > .button-wrapper > .button {
-        margin: auto;
-        margin-top: 12px;
     }
     
     .image-container {
-        max-width: 380px;
-        width: 330px;
-        height: 300px; 
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
         overflow: hidden; 
         border-radius: 8px;
         margin:auto
@@ -3955,17 +4725,150 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    .main-container {
-        display: flex;
-        flex-direction: column;
-
-    }
-
     .map-container {
         margin: 0;
-        margin-top: 80px;
-        width: 80%;
         margin-left: 20px;
+    }
+
+    .info-container {
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .description-container {
+        width: 70% !important;
+    }
+
+    .description-pdv {
+        width: 150%;
+        margin-left: 20%;
+    }
+
+    .description-2 {
+        width: 110%;
+        margin-left: -10%;
+    }
+
+    .description-3 {
+        width: 90%;
+        margin-left: 12%;
+    }
+
+    .description-1, .advantages {
+        width: 90%;
+        margin-left: 8%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: 3%;
+    }
+
+    .subtitle-assinador {
+        width: 300px;
+        margin-left: 8%;
+    }
+
+    .img-pdv-2 {
+        width: 45%;
+        margin-left: -42%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 40%;
+        margin-right: 43%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -10%;
+    }
+
+    .erp .title-3 {
+        margin-left: 10%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 8%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: -8%;
+        width: 300px;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: 3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: -8%;
+        width: 420px;
+    }
+
+    .descriptionKapti {
+        width: 90%;
+        font-size: 18px;
+        margin-left: 8%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 60%;
+        margin-left: -52%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 115%;
+        margin-left: -5%;
+        margin-top: -30%;
+        border-radius: 8px;
+    }
+
+    .img-section1 img {
+        width: 110%;
+        margin-top: 3%;
+        margin-left: -5%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
     }
 
     .info-container {
@@ -3976,49 +4879,42 @@ footer .copyright {
         margin-right: 20px;
     }
 
-    .whatsapp-button {
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        margin-right: -30px;
-        text-align: center;
-        box-shadow: 1px 1px 2px #888;
-        z-index: 1000;
-        transition: all 0.3s ease;
+    .logo {
+        width: 190px;
+        height: 46px;
+        margin-left: 8px;
     }
 
-    .testimonial p{
-        max-width: 35%;
-        width: 35%;
-        font-size: 16px;
-        text-wrap: wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow: visible;
-        white-space: normal;
-        line-height: 1.4;
+    .main-container {
+        margin-top: 50px;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        align-items: center;
     }
 
-    .testimonial h3 {
-        font-size: 22px; 
+    .map-container {
+        width: 80%;
+        height: 100%;
     }
 
-    .testimonial .img {
-        margin-left: 0;
-        width: 18px;
-        height: 18px;
-    }
-
-    #titleForm {
-        font-size: 18px;
-    }
-
-    footer .copyright{
-        font-size: 20px;
-    }
-
-    
-    
+    .image-container {
+        max-width: 100%;
+        width: 100%;
+        height: 320px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+      }
+      
+      .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+      }
 }
 
 @media (min-width: 350px) and (max-width: 450px) {
@@ -4031,38 +4927,42 @@ footer .copyright {
         display: block;
     }
 
-    .logo {
-        width: 190px;
-        height: 46px;
-        margin-left: 8px;
-    }
-
     .slogan {
         display: flex;
         flex-direction: column-reverse;
     }
 
     .slogan .sloganTitle {
-        font-size: 16px;
-        margin-left: -5%;
+        font-size: 20px;
+        margin-left: -32%;
         order: 1;
-        margin-top: -220px;
-        width: 450px;
-        margin-bottom: 200px;
+        margin-top: 15px;
+        width: 350px;
     }
 
+    .sloganTitle br {
+        display: none;
+      }
+
     .slogan .hr {
-        width: 33%;
+        width: 320px;
+        margin: 0 auto;
+        margin-left: 0%; 
         color: #fff;
         order: 2;
+    }
+    
+    .slogan-img {
+        width: 100%;
+        margin-left: 4%;
     }
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -38%;
-        width: 220px;
-        font-size: 8px;
+        margin-left: -30%;
+        width: 300px;
+        font-size: 12px;
         order: 4;
         text-align: center;
     }
@@ -4070,63 +4970,14 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
-
-    .slogan-img {
-        width: 85%;
-        margin-left: 18%;
-        margin-top: 10%;
-        order: 3;
+    #pdv {
+        max-width: 70%;
+        margin-left: 13%;
     }
 
     ul {
         justify-content: space-evenly;
         gap: 20px;
-    }
-
-    #pdv {
-        max-width: 70%;
-        margin-left: 15%;
-    }
-
-    .title, .title-2, .title-3, .titleKapti, .title-assinador {
-        font-size: 28px;
-        color: #1C244B;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .subtitle, .subtitle-2, .subtitleKapti {
-        font-size: 22px;
-        font-weight: 500;
-        color: #1C244B;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-
-    .description-1, .description-3, .subheading, .advantages {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 5%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .description-2 {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .descriptionKapti {
-        font-size: 18px;
-        color: rgba(50, 74, 109, 0.80);
-        margin-bottom: 20px;
-        margin-left: 8%;
-        text-align: left;
     }
 
     #sobreNos {
@@ -4139,6 +4990,244 @@ footer .copyright {
         text-align: left;
     }
     
+    .titleSobreNos {
+        color: white;
+        font-size: 38px;
+        margin: 0 auto;
+    }
+    
+    .descriptionSobreNos {
+        color: white;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .item {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item div {
+        margin-top: 30px;
+    }
+    
+    .image-container {
+        max-width: 550px;
+        width: 630px;
+        height: 320px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+    }
+
+    .map-container {
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    .info-container {
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .description-container {
+        width: 70% !important;
+    }
+
+    .description-pdv {
+        width: 150%;
+        margin-left: 20%;
+    }
+
+    .description-2 {
+        width: 110%;
+        margin-left: -10%;
+    }
+
+    .description-3 {
+        width: 90%;
+        margin-left: 12%;
+    }
+
+    .description-1, .advantages {
+        width: 90%;
+        margin-left: 8%;
+    }
+
+    .title-pdv {
+        margin-left: 68%;
+    }
+
+    .title-assinador {
+        margin-left: 3%;
+    }
+
+    .subtitle-assinador {
+        width: 300px;
+        margin-left: 8%;
+    }
+
+    .img-pdv-2 {
+        width: 45%;
+        margin-left: -42%; 
+        order: 2;
+    }
+
+    .img-erp img {
+        width: 180%;
+        margin-left: 70px;
+        height: auto;
+    }
+
+    .img-section2 {
+        width: 40%;
+        margin-right: 43%; 
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .title-2 {
+        margin-left: -10%;
+    }
+
+    .erp .title-3 {
+        margin-left: 10%;
+    }
+
+    .subtitle {
+        width: 350px;
+        margin-left: 8%;
+    }
+
+    .subtitle-2 {
+        font-size: 22px;
+        margin-left: -8%;
+        width: 300px;
+    }
+    
+    .kapti {
+        margin-left: 10%;
+    }
+
+    .titleKapti {
+        margin-left: 3%;
+    }
+
+    .subtitleKapti {
+        font-size: 18px;
+        margin-left: -8%;
+        width: 420px;
+    }
+
+    .descriptionKapti {
+        width: 90%;
+        font-size: 18px;
+        margin-left: 8%;
+    }
+
+    .erp {
+        width: 130%;
+        margin-left: 7%;
+        font-size: 16px;
+    }
+
+    .img-erp {
+        width: 60%;
+        margin-left: -52%;
+        margin-top: 20px;
+    }
+
+    .zoom-image-egestor, .zoom-image-egestor1 {
+        display: none;
+    }
+
+    .img-section4 img {
+        width: 115%;
+        margin-left: -5%;
+        margin-top: -30%;
+        border-radius: 8px;
+    }
+
+    .img-section1 img {
+        width: 110%;
+        margin-top: 3%;
+        margin-left: -5%;
+    }
+
+    .zoom-image-assinador:nth-child(2) {
+        display: none;
+    }   
+
+    .flex-container, .flex-container-pdv, .background-3, .kapti, .erp, .assina {
+        flex-direction: column;
+    }
+
+    .assina {
+        flex-direction: column-reverse;
+    }
+
+    .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .logo {
+        width: 190px;
+        height: 46px;
+        margin-left: 8px;
+    }
+
+    .main-container {
+        margin-top: 50px;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        align-items: center;
+    }
+
+    .map-container {
+        width: 80%;
+        height: 100%;
+    }
+
+    .image-container {
+        max-width: 100%;
+        width: 100%;
+        height: 320px; 
+        overflow: hidden; 
+        border-radius: 8px;
+        margin:auto
+      }
+      
+      .image-container img {
+        width: 100%;
+        height: 100%; 
+        border-radius: 8px;
+        object-fit: cover; 
+      }
     .titleSobreNos {
         color: white;
         font-size: 38px;
