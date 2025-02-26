@@ -5377,7 +5377,7 @@ footer .copyright {
 
     .slogan .sloganTitle {
         font-size: 20px;
-        margin-left: -25%;
+        margin-left: -45%;
         order: 1;
         margin-top: 15px;
         width: 220px;
@@ -5395,13 +5395,13 @@ footer .copyright {
         width: 250px;
         height: auto;
         border-radius: 8px;
-        margin-left: -20%;
+        margin-left: -75%;
     }
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -85%;
+        margin-left: -145%;
         width: 280px;
         font-size: 12px;
         order: 4;
