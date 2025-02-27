@@ -201,7 +201,7 @@ nav .sidebar {
     font-weight: 500;
     color: white;
     position: relative;
-    margin-left: -6%;
+    margin-left: -20%;
   }
   
   .buttons-container {
@@ -212,14 +212,21 @@ nav .sidebar {
   }
   
   .slogan-img {
-    width: 55%;
-    margin-right: 18%;
+    width: 85%;
+    margin-right: 10%;
   }
   
   .slogan-img img {
     width: 110%;
     height: auto;
     border-radius: 8px;
+  }
+
+  .attimo-img img {
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 60%;
   }
   
   .slogan .hr {
@@ -296,7 +303,7 @@ nav .sidebar {
 }
 
 .titleKapti {
-    margin-left: -18%;
+    margin-left: -28%;
 }
 
 .title-assinador {
@@ -437,18 +444,26 @@ img {
     transition: transform 0.3s ease; /
 }
 
-.img-section4 {
-    margin-top: 30%;
+.zoom-image-kapti {
+    width: 190%; 
+    height: auto;
+    margin-left: -35%;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /
 }
 
-.img-section4 img{
-    width: 128%;
-    margin-left: 8%;
+.zoom-image-kapti:nth-child(2) {
+    width: 190%; 
+    height: auto;
+    margin-top: 65px;
+    margin-left: -35%;
     border-radius: 8px;
+    transition: transform 0.3s ease; /
 }
 
 .descriptionKapti {
-    width: 85%;
+    width: 70%;
+    margin-left: -5%;
 }
 
 /* Efeito de zoom ao passar o mouse */
@@ -526,6 +541,7 @@ img {
 
 .subtitleKapti {
     font-size: 26px;
+    width: 600px;
     color: #1C244B;
     margin-bottom: 20px;
     text-align: center;
@@ -1197,6 +1213,11 @@ footer .copyright {
         color: #fff;
     }
 
+    .attimo-img {
+        width: 60%;
+        margin-right: 10%;
+    }
+
     #pdv {
         max-width: 70%;
         margin-left: 8%;
@@ -1419,6 +1440,36 @@ footer .copyright {
         margin: 0;
         margin-right: 20px;
     }
+
+    .attimo-img {
+        width: 60%;
+        margin-left: -2%;
+    }
+
+    .slogan .sloganTitle {
+        font-size: 30px;
+        margin-left: -10%;
+    }
+
+    .buttons-container {
+        margin-top: 20px;
+        display: flex;
+        /* justify-content: center; */
+        margin-left: -30%;
+        width: 350px;
+        font-size: 12px;
+    }
+
+    .slogan-img {
+        width: 50%;
+        margin-left: -90%;
+        margin-right: 2%;
+    }
+
+    .slogan .hr {
+        max-width: 38%;
+        color: #fff;
+    }
 }
 
 @media (min-width: 1060px) and (max-width: 1251px) {
@@ -1430,28 +1481,34 @@ footer .copyright {
         display: block;
     }
 
-    .slogan .sloganTitle {
-        font-size: 30px;
-        margin-left: -25%;
+    .attimo-img {
+        width: 60%;
+        margin-left: -20%;
     }
 
-    .slogan .hr {
-        width: 50%;
-        color: #fff;
+    .slogan .sloganTitle {
+        font-size: 30px;
+        margin-left: -10%;
     }
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
         /* justify-content: center; */
-        margin-left: -75%;
-        width: 500px;
+        margin-left: -30%;
+        width: 350px;
+        font-size: 12px;
     }
 
     .slogan-img {
         width: 50%;
         margin-left: -90%;
         margin-right: 2%;
+    }
+
+    .slogan .hr {
+        max-width: 38%;
+        color: #fff;
     }
 }
 
@@ -1525,6 +1582,11 @@ footer .copyright {
         margin-right: 2%;
     }
 
+    .attimo-img {
+        width: 80%;
+        margin-left: -15%;
+    }
+
     .description-container {
         width: 70% !important;
     }
@@ -1594,18 +1656,36 @@ footer .copyright {
     }
 
     .titleKapti {
-        margin-left: -28%;
+        margin-left: -50%;
     }
 
     .subtitleKapti {
         font-size: 18px;
-        margin-left: -28%;
+        margin-left: 2%;
+        width: 300px;
     }
 
+    .zoom-image-kapti, .img-section4 {
+        width: 95%; 
+        height: auto;
+        margin-top: 160px;
+        margin-left: -35%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+    
+    .zoom-image-kapti:nth-child(2) {
+        width: 120%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: 0%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+    
     .descriptionKapti {
-        width: 80%;
-        font-size: 18px;
-        margin-left: -2%;
+        width: 52%;
+        margin-left: -1%;
     }
 
     .erp {
@@ -1854,6 +1934,15 @@ footer .copyright {
         margin-left: 20%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 70%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: 15%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -1873,7 +1962,7 @@ footer .copyright {
     .img-section4 img {
         width: 70%;
         margin-left: 15%;
-        margin-top: -55%;
+        margin-top: 5%;
     }
 
     .img-section1 img {
@@ -1891,6 +1980,11 @@ footer .copyright {
 
     .assina {
         flex-direction: column-reverse;
+    }
+
+    .attimo-img {
+        width: 80%;
+        margin-left: -15%;
     }
 }
 
@@ -1946,6 +2040,11 @@ footer .copyright {
         flex-direction: column;
         align-items: center;
         text-align: left;
+    }
+
+    .attimo-img {
+        width: 80%;
+        margin-left: -15%;
     }
     
     .titleSobreNos {
@@ -2107,6 +2206,15 @@ footer .copyright {
         margin-left: 20%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 70%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: 15%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -2126,7 +2234,7 @@ footer .copyright {
     .img-section4 img {
         width: 70%;
         margin-left: 15%;
-        margin-top: -55%;
+        margin-top: 5%;
     }
 
     .img-section1 img {
@@ -2374,6 +2482,15 @@ footer .copyright {
         margin-left: 20%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 70%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: 15%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -2393,7 +2510,7 @@ footer .copyright {
     .img-section4 img {
         width: 70%;
         margin-left: 15%;
-        margin-top: -55%;
+        margin-top: 15%;
     }
 
     .img-section1 img {
@@ -2645,6 +2762,15 @@ footer .copyright {
         margin-left: 20%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 70%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: 15%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -2664,7 +2790,7 @@ footer .copyright {
     .img-section4 img {
         width: 70%;
         margin-left: 15%;
-        margin-top: -55%;
+        margin-top: 10%;
     }
 
     .img-section1 img {
@@ -2702,6 +2828,11 @@ footer .copyright {
         width: 300px;
         margin-left: -80%;
     }
+
+    .attimo-img {
+        width: 100%;
+        margin-left: -35%;
+    }
 }
 @media (min-width: 725px) and (max-width: 741px) {
     .hideOnMobile {
@@ -2734,6 +2865,11 @@ footer .copyright {
     .slogan .hr {
         max-width: 85%;
         color: #fff;
+    }
+
+    .attimo-img {
+        width: 130%;
+        margin-left: 28%;
     }
 
     #pdv {
@@ -2993,6 +3129,11 @@ footer .copyright {
         margin-left: 18%;
     }
 
+    .attimo-img {
+        width: 130%;
+        margin-left: 28%;
+    }
+
     .buttons-container {
         margin-top: 20px;
         display: flex;
@@ -3178,6 +3319,15 @@ footer .copyright {
         margin-left: 20%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 70%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: 15%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -3197,7 +3347,7 @@ footer .copyright {
     .img-section4 img {
         width: 70%;
         margin-left: 15%;
-        margin-top: -55%;
+        margin-top: 10%;
     }
 
     .img-section1 img {
@@ -3257,8 +3407,8 @@ footer .copyright {
     }
     
     .slogan-img {
-        width: 70%;
-        margin-left: 18%;
+        width: 90%;
+        margin-left: 6%;
     }
 
     .buttons-container {
@@ -3274,6 +3424,12 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
+
+    .attimo-img {
+        width: 130%;
+        margin-left: 28%;
+    }
+
     #pdv {
         max-width: 70%;
         margin-left: 13%;
@@ -3446,6 +3602,15 @@ footer .copyright {
         margin-left: 20%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 70%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: 15%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -3465,7 +3630,7 @@ footer .copyright {
     .img-section4 img {
         width: 70%;
         margin-left: 15%;
-        margin-top: -55%;
+        margin-top: 10%;
     }
 
     .img-section1 img {
@@ -3548,6 +3713,11 @@ footer .copyright {
         margin-left: 13%;
     }
 
+    .attimo-img {
+        width: 180%;
+        margin-left: 25%;
+    }
+
     ul {
         justify-content: space-evenly;
         gap: 20px;
@@ -3716,6 +3886,15 @@ footer .copyright {
         margin-left: 8%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 115%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: -5%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -3735,7 +3914,7 @@ footer .copyright {
     .img-section4 img {
         width: 115%;
         margin-left: -5%;
-        margin-top: -30%;
+        margin-top: 10%;
         border-radius: 8px;
     }
 
@@ -3780,7 +3959,7 @@ footer .copyright {
 
     .slogan .sloganTitle {
         font-size: 20px;
-        margin-left: -18%;
+        margin-left: -22%;
         order: 1;
         margin-top: 15px;
         width: 450px;
@@ -3797,14 +3976,14 @@ footer .copyright {
     }
     
     .slogan-img {
-        width: 80%;
-        margin-left: 14%;
+        width: 100%;
+        margin-left: 2%;
     }
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -75%;
+        margin-left: -80%;
         width: 450px;
         font-size: 12px;
         order: 4;
@@ -3814,6 +3993,12 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
+
+    .attimo-img {
+        width: 180%;
+        margin-left: 20%;
+    }
+
     #pdv {
         max-width: 70%;
         margin-left: 13%;
@@ -3987,6 +4172,15 @@ footer .copyright {
         margin-left: 8%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 115%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: -5%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -4006,7 +4200,7 @@ footer .copyright {
     .img-section4 img {
         width: 115%;
         margin-left: -5%;
-        margin-top: -30%;
+        margin-top: 10%;
         border-radius: 8px;
     }
 
@@ -4051,7 +4245,7 @@ footer .copyright {
 
     .slogan .sloganTitle {
         font-size: 20px;
-        margin-left: -32%;
+        margin-left: -22%;
         order: 1;
         margin-top: 15px;
         width: 350px;
@@ -4062,23 +4256,21 @@ footer .copyright {
       }
 
     .slogan .hr {
-        width: 320px;
-        margin: 0 auto;
-        margin-left: 0%; 
+        width: 90%;
         color: #fff;
         order: 2;
     }
     
     .slogan-img {
         width: 100%;
-        margin-left: 4%;
+        margin-left: 2%;
     }
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -30%;
-        width: 300px;
+        margin-left: -90%;
+        width: 450px;
         font-size: 12px;
         order: 4;
         text-align: center;
@@ -4087,6 +4279,12 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
+
+    .attimo-img {
+        width: 180%;
+        margin-left: 20%;
+    }
+
     #pdv {
         max-width: 70%;
         margin-left: 13%;
@@ -4260,6 +4458,15 @@ footer .copyright {
         margin-left: 8%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 115%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: -5%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -4279,7 +4486,7 @@ footer .copyright {
     .img-section4 img {
         width: 115%;
         margin-left: -5%;
-        margin-top: -30%;
+        margin-top: 10%;
         border-radius: 8px;
     }
 
@@ -4325,7 +4532,7 @@ footer .copyright {
 
     .slogan .sloganTitle {
         font-size: 20px;
-        margin-left: -32%;
+        margin-left: -52%;
         order: 1;
         margin-top: 15px;
         width: 350px;
@@ -4336,23 +4543,21 @@ footer .copyright {
       }
 
     .slogan .hr {
-        width: 320px;
-        margin: 0 auto;
-        margin-left: 0%; 
+        width: 90%;
         color: #fff;
         order: 2;
     }
     
     .slogan-img {
-        width: 100%;
-        margin-left: 4%;
+        width: 120%;
+        margin-left: -6%;
     }
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -30%;
-        width: 300px;
+        margin-left: -140%;
+        width: 450px;
         font-size: 12px;
         order: 4;
         text-align: center;
@@ -4361,6 +4566,12 @@ footer .copyright {
     .menu-teste-slogan, .fale-conosco {
         width: 160px;
     }
+
+    .attimo-img {
+        width: 210%;
+        margin-left: 20%;
+    }
+
     #pdv {
         max-width: 70%;
         margin-left: 13%;
@@ -4534,6 +4745,15 @@ footer .copyright {
         margin-left: 8%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 115%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: -5%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -4553,7 +4773,7 @@ footer .copyright {
     .img-section4 img {
         width: 115%;
         margin-left: -5%;
-        margin-top: -30%;
+        margin-top: 10%;
         border-radius: 8px;
     }
 
@@ -4622,44 +4842,48 @@ footer .copyright {
     }
 
     .slogan .sloganTitle {
-        font-size: 20px;
-        margin-left: -25%;
+        font-size: 18px;
+        margin-left: -58%;
         order: 1;
         margin-top: 15px;
-        width: 220px;
+        width: 350px;
     }
 
-    .sloganTitle br {
-        display: none;
-      }
-
     .slogan .hr {
-        width: 80%;
-        margin: 0 auto;
-        margin-left: -5%; 
+        width: 90%;
         color: #fff;
         order: 2;
     }
+
+
+    .slogan br {
+        display: none;
+    }
     
     .slogan-img {
-        width: 100%;
-        margin-left: 4%;
+        width: 150%;
+        margin-left: -18%;
     }
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -85%;
-        width: 280px;
+        margin-left: -130%;
+        width: 350px;
         font-size: 12px;
         order: 4;
         text-align: center;
     }
 
-
     .menu-teste-slogan, .fale-conosco {
-        width: 160px;
+        width: 120px;
     }
+
+    .attimo-img {
+        width: 230%;
+        margin-left: 20%;
+    }
+
     #pdv {
         max-width: 70%;
         margin-left: 13%;
@@ -4833,6 +5057,15 @@ footer .copyright {
         margin-left: 8%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 115%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: -5%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -4852,7 +5085,7 @@ footer .copyright {
     .img-section4 img {
         width: 115%;
         margin-left: -5%;
-        margin-top: -30%;
+        margin-top: 10%;
         border-radius: 8px;
     }
 
@@ -4936,40 +5169,46 @@ footer .copyright {
     }
 
     .slogan .sloganTitle {
-        font-size: 20px;
-        margin-left: -25%;
+        font-size: 18px;
+        margin-left: -90%;
         order: 1;
         margin-top: 15px;
-        width: 220px;
+        width: 350px;
     }
 
     .slogan .hr {
-        width: 80%;
-        margin: 0 auto;
-        margin-left: -5%; 
+        width: 85%;
         color: #fff;
         order: 2;
     }
+
+
+    .slogan br {
+        display: none;
+    }
     
-    .slogan-img img {
-        width: 300px;
-        height: auto;
-        border-radius: 8px;
-        margin-left: -55%;
+    .slogan-img {
+        width: 150%;
+        margin-left: -18%;
     }
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -85%;
-        width: 280px;
+        margin-left: -160%;
+        width: 350px;
         font-size: 12px;
         order: 4;
         text-align: center;
     }
 
     .menu-teste-slogan, .fale-conosco {
-        width: 160px;
+        width: 120px;
+    }
+
+    .attimo-img {
+        width: 250%;
+        margin-left: 20%;
     }
     
     #pdv {
@@ -5146,6 +5385,15 @@ footer .copyright {
         margin-left: 2%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 150%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: -25%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -5163,9 +5411,9 @@ footer .copyright {
     }
 
     .img-section4 img {
-        width: 155%;
+        width: 150%;
         margin-left: -25%;
-        margin-top: -30%;
+        margin-top: 10%;
         border-radius: 8px;
     }
 
@@ -5377,7 +5625,7 @@ footer .copyright {
 
     .slogan .sloganTitle {
         font-size: 20px;
-        margin-left: -45%;
+        margin-left: -70%;
         order: 1;
         margin-top: 15px;
         width: 220px;
@@ -5391,25 +5639,39 @@ footer .copyright {
         order: 2;
     }
     
-    .slogan-img img {
-        width: 250px;
+    /* .slogan-img img {
+        width: 290px;
         height: auto;
         border-radius: 8px;
-        margin-left: -75%;
+        margin-left: -85%;
+    } */
+
+    .slogan-img {
+        width: 160%;
+        margin-left: -28%;
     }
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -145%;
-        width: 280px;
+        margin-left: -115px;
+        width: 250px;
         font-size: 12px;
         order: 4;
         text-align: center;
     }
 
     .menu-teste-slogan, .fale-conosco {
-        width: 160px;
+        width: 100px;
+    }
+
+    .attimo-img {
+        width: 250px;
+    }
+
+    .attimo-img img {
+        width: 150px;
+        margin-left: -18%;
     }
     
     #pdv {
@@ -5586,6 +5848,15 @@ footer .copyright {
         margin-left: 2%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 150%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: -25%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -5605,7 +5876,7 @@ footer .copyright {
     .img-section4 img {
         width: 155%;
         margin-left: -25%;
-        margin-top: -30%;
+        margin-top: 10%;
         border-radius: 8px;
     }
 
@@ -5824,17 +6095,16 @@ footer .copyright {
         order: 2;
     }
     
-    .slogan-img img {
-        width: 250px;
-        height: auto;
-        border-radius: 8px;
-        margin-left: -105%;
+    .slogan-img {
+        width: 200%;
+        margin-left: -40%;
     }
+
 
     .buttons-container {
         margin-top: 20px;
         display: flex;
-        margin-left: -160%;
+        margin-left: -180%;
         width: 250px;
         font-size: 12px;
         order: 4;
@@ -5842,8 +6112,14 @@ footer .copyright {
     }
 
     .menu-teste-slogan, .fale-conosco {
-        width: 160px;
+        width: 100px;
     }
+
+    .attimo-img {
+        width: 200px;
+        margin-left: -12%;
+    }
+
     #pdv {
         max-width: 70%;
         margin-left: 13%;
@@ -6018,6 +6294,15 @@ footer .copyright {
         margin-left: 2%;
     }
 
+    .zoom-image-kapti:nth-child(2) {
+        width: 165%; 
+        height: auto;
+        margin-top: 65px;
+        margin-left: -28%;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /
+    }
+
     .erp {
         width: 130%;
         margin-left: 7%;
@@ -6037,7 +6322,7 @@ footer .copyright {
     .img-section4 img {
         width: 165%;
         margin-left: -30%;
-        margin-top: -30%;
+        margin-top: 10%;
         border-radius: 8px;
     }
 
