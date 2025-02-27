@@ -258,3 +258,38 @@ window.addEventListener('click', (event) => {
     }
 });
 
+// Seleciona todas as imagens com a classe zoom-image-pdv e zoom-image-assinador
+const zoomImages = document.querySelectorAll('.zoom-image-pdv, .zoom-image-assinador, .zoom-image-nfe, .zoom-image-erp, .zoom-image-egestor, .zoom-image-egestor1, .zoom-image-kapti');
+
+// Seleciona todos os overlays
+const overlays = document.querySelectorAll('.overlay');
+
+// Seleciona todos os botões de fechar
+const closeBtns = document.querySelectorAll('.close-btn');
+
+// Adiciona um evento de clique para cada imagem
+zoomImages.forEach((image, index) => {
+    image.addEventListener('click', (e) => {
+        // Exibe o overlay correspondente
+        overlays[index].style.display = 'flex';
+
+        // Define a imagem ampliada no overlay
+        const overlayContent = overlays[index].querySelector('.overlay-content');
+        overlayContent.src = image.src;
+
+        // Adiciona um evento de clique no documento para fechar a imagem
+        document.addEventListener('click', (e) => {
+            if (e.target !== image && e.target !== overlayContent && e.target !== overlays[index]) {
+                overlays[index].style.display = 'none';
+            }
+        });
+    });
+});
+
+// Adiciona um evento de clique para cada botão de fechar
+closeBtns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        // Oculta o overlay correspondente
+        overlays[index].style.display = 'none';
+    });
+});

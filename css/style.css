@@ -472,6 +472,36 @@ img {
     cursor: zoom-in; 
 }
 
+.overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    z-index: 1000; 
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    max-width: 90%; 
+    max-height: 90%; 
+    border: 5px solid #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .zoom-image-nfe:hover {
     transform: scale(1.2); 
     cursor: zoom-in; 
