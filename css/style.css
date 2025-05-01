@@ -83,12 +83,16 @@ li .menu {
 }
 
 .buttons-container {
-    ddisplay: flex;
     gap: 20px;
-    justify-content: flex-start;  /* Alinha à esquerda */
-    margin-top: -80px;
-    /* Se precisar ajustar a posição horizontal, use margin-left */
-    margin-left: -600px;
+    width: 200px;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.buttons-container a {
+    white-space: nowrap;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 .menu-teste-slogan {
@@ -205,10 +209,8 @@ nav .sidebar {
   }
   
   .buttons-container {
-    margin-top: 20px;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 33%;
+    margin-left: -15%;
   }
   
   .slogan-img {
@@ -222,11 +224,15 @@ nav .sidebar {
     border-radius: 8px;
   }
 
-  .attimo-img img {
+  .attimo-img {
     border-radius: 8px;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    width: 60%;
+    width: 40%;
+  }
+
+  .attimo-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
   }
   
   .slogan .hr {
@@ -6540,16 +6546,81 @@ footer .copyright {
     
 } 
 
+/* slogan */
+.slogan {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 100%;
+}
 
+.slogan-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  align-items: center;
+}
 
+.slogan-content p{
+    max-width: 60%;
+    color: #fff;
+    font-size: 18px;
+  }
 
+.sloganTitle {
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}
 
+.attimo-img {
+  margin: 2rem 0;
+  margin-left: -55%;
+  text-align: center;
+}
 
+.attimo-img img {
+  max-width: 100%;
+  height: auto;
+}
 
+.buttons-container {
+    margin-left: -85%;
+}
 
+.menu-teste-slogan, .fale-conosco {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
 
+.slogan-img {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.slogan-img img {
+  max-width: 100%;
+  height: auto;
+}
 
+.slogan .hr {
+    width: 60%;
+  }
 
-
-
+/* Para telas menores */
+@media (max-width: 768px) {
+  .buttons-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .menu-teste-slogan, .fale-conosco {
+    width: 100%;
+  }
+}

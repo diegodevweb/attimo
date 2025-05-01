@@ -1,37 +1,37 @@
 <?php
-
+header("Access-Control-Allow-Origin: *"); 
+header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
-header("Access-Control-Allow-Methods: POST, GET");
-header("Access-Control-Allow-Origin: *");
-header('Content-Type: application/json');
+header('Content-Type: application/json; charset=utf-8');
 
 $response = array('status' => '', 'message' => '');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'] ?? '';
-    $surname = $_POST['surname'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $message = $_POST['message'] ?? '';
-    $subject = "Novo Contato.";
-
-    $nameSanitize = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
-    $surnameSanitize = htmlspecialchars($surname, ENT_QUOTES, 'UTF-8');
-    $emailSanitize = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
-    $messageSanitize = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $surname = filter_input(INPUT_POST, 'surname', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
 
     $to = "diego.devwebb@gmail.com";
-    $mailHeader = "From: $nameSanitize $surnameSanitize <$emailSanitize>\r\n";
-    $mailHeader .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $subject = "Novo Contato do Site";
+    
+    $body = "Nome: $name $surname\n";
+    $body .= "Email: $email\n";
+    $body .= "Mensagem: $message";
 
-    // Envio do e-mail
-    if (mail($to, $subject, $messageSanitize, $mailHeader)) {
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
+
+    if(mail($to, $subject, $body, $headers)) {
         $response['status'] = 'success';
-        $response['message'] = 'E-mail enviado com sucesso.';
+        $response['message'] = 'Email enviado com sucesso!';
     } else {
         $response['status'] = 'error';
-        $response['message'] = 'Erro ao enviar e-mail.';
+        $response['message'] = 'Falha ao enviar email.';
     }
 
     echo json_encode($response);
+    exit;
 }
 ?>

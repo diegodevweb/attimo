@@ -94,79 +94,7 @@ function validateMessageField(field) {
     return true;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('myForm');
-    const confirmationModal = document.getElementById('confirmationModal');
-    const successModal = document.getElementById('successModal');  // Modal de sucesso
-    const closeModal = document.getElementById('closeModal');
-    const confirmSend = document.getElementById('confirmSend');
-    const cancelSend = document.getElementById('cancelSend');
-    const successClose = successModal.querySelector('.close');  // Fechar modal de sucesso
 
-    // Impede o envio do formulário para mostrar o modal
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();  // Previne o envio padrão para evitar o redirecionamento
-
-        const nameField = document.getElementById('name');
-        const surnameField = document.getElementById('surname');
-        const emailField = document.getElementById('email');
-        const messageField = document.getElementById('message');
-
-        const isNameValid = validateField(nameField, /^[a-zA-ZÀ-ÿ\s]+$/, 'O nome completo não pode conter números ou caracteres especiais.');
-        const isSurnameValid = validateField(surnameField, /^[a-zA-ZÀ-ÿ\s]+$/, 'O sobrenome não pode conter números ou caracteres especiais.');
-        const isEmailValid = validateField(emailField, /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Digite um email válido.');
-        const isMessageValid = validateMessageField(messageField);
-
-        if (isNameValid && isSurnameValid && isEmailValid && isMessageValid) {
-            // Exibe o modal de confirmação
-            confirmationModal.style.display = 'block';
-        }
-    });
-
-    // Fecha o modal de confirmação
-    closeModal.addEventListener('click', function () {
-        confirmationModal.style.display = 'none';
-    });
-
-    cancelSend.addEventListener('click', function () {
-        confirmationModal.style.display = 'none';
-    });
-
-    // Envia o formulário via AJAX após a confirmação
-    confirmSend.addEventListener('click', function () {
-        // Envia via FormSubmit AJAX
-        const formData = new FormData(form);
-        fetch('https://formsubmit.co/ajax/diego.devwebb@gmail.com', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())  // Processa a resposta em JSON
-        .then(data => {
-            if (data.success === "true") {
-                // Exibe o modal de sucesso
-                successModal.style.display = 'block';
-                confirmationModal.style.display = 'none';  // Fecha o modal de confirmação
-            } else {
-                alert('Erro ao enviar a mensagem.');
-            }
-        })
-        .catch(error => {
-            console.error('Erro ao enviar:', error);
-            alert('Erro ao enviar a mensagem. Tente novamente.');
-        });
-
-        // Fecha o modal de confirmação
-        confirmationModal.style.display = 'none';
-    });
-
-    // Fecha o modal de sucesso
-    successClose.addEventListener('click', () => {
-        successModal.style.display = 'none';
-        // Opcional: redireciona para a página inicial (se necessário)
-        window.location.href = '/'; // Descomente se quiser redirecionar para a página inicial
-    });
-
-});
 
 // Funções de validação
 function validateField(field, regex, errorMessage) {
@@ -258,38 +186,308 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// Seleciona todas as imagens com a classe zoom-image-pdv e zoom-image-assinador
+// Funções de validação
+function validateField(field, regex, errorMessage) {
+    const value = field.value.trim();
+    const isValid = regex.test(value);
+    
+    if (!isValid) {
+        alert(errorMessage);
+        field.focus();
+    }
+    
+    return isValid;
+}
+
+// Formspree Integration with Confirmation and Success Modals
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('myForm');
+    const openModalButton = document.getElementById('openModal');
+    const confirmationModal = document.getElementById('confirmationModal');
+    const successModal = document.getElementById('successModal');
+    const closeModal = document.getElementById('closeModal');
+    const confirmSend = document.getElementById('confirmSend');
+    const cancelSend = document.getElementById('cancelSend');
+    const successClose = successModal.querySelector('.close');
+    const okButton = document.getElementById('okButton');
+
+    // Validation functions
+    function validateField(field, regex, errorMessage) {
+        const value = field.value.trim();
+        const isValid = regex.test(value);
+        
+        if (!isValid) {
+            alert(errorMessage);
+            field.focus();
+        }
+        
+        return isValid;
+    }
+
+    function validateMessageField(field) {
+        if (field.value.trim() === '') {
+            field.setCustomValidity('A mensagem não pode estar em branco.');
+            field.reportValidity();
+            return false;
+        }
+        field.setCustomValidity('');
+        return true;
+    }
+
+    // Open confirmation modal on form submission attempt
+    openModalButton.addEventListener('click', function () {
+        const nameField = document.getElementById('name');
+        const surnameField = document.getElementById('surname');
+        const emailField = document.getElementById('email');
+        const messageField = document.getElementById('message');
+
+        const isNameValid = validateField(nameField, /^[a-zA-ZÀ-ÿ\s]+$/, 'O nome completo não pode conter números ou caracteres especiais.');
+        const isSurnameValid = validateField(surnameField, /^[a-zA-ZÀ-ÿ\s]+$/, 'O sobrenome não pode conter números ou caracteres especiais.');
+        const isEmailValid = validateField(emailField, /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Digite um email válido.');
+        const isMessageValid = validateMessageField(messageField);
+        
+        if (isNameValid && isSurnameValid && isEmailValid && isMessageValid) {
+            confirmationModal.style.display = 'block';
+        }
+    });
+
+    // Close confirmation modal
+    function closeConfirmationModal() {
+        confirmationModal.style.display = 'none';
+    }
+
+    closeModal.addEventListener('click', closeConfirmationModal);
+    cancelSend.addEventListener('click', closeConfirmationModal);
+
+    // Send form via Formspree
+    confirmSend.addEventListener('click', function () {
+        const formData = new FormData(form);
+        
+        // Formspree endpoint
+        fetch('https://formspree.io/f/mqakldjz', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro na resposta da rede');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Resposta do servidor:', data);
+            
+            // Check success based on Formspree response structure
+            successModal.style.display = 'block';
+            confirmationModal.style.display = 'none';
+            form.reset();
+        })
+        .catch(error => {
+            console.error('Erro detalhado:', error);
+            alert('Erro ao enviar a mensagem. Verifique o console.');
+        });
+    
+        closeConfirmationModal();
+    });
+
+    // Close success modal
+    function closeSuccessModal() {
+        successModal.style.display = 'none';
+    }
+
+    successClose.addEventListener('click', closeSuccessModal);
+    okButton.addEventListener('click', closeSuccessModal);
+});
 const zoomImages = document.querySelectorAll('.zoom-image-pdv, .zoom-image-assinador, .zoom-image-nfe, .zoom-image-erp, .zoom-image-egestor, .zoom-image-egestor1, .zoom-image-kapti');
 
-// Seleciona todos os overlays
-const overlays = document.querySelectorAll('.overlay');
-
-// Seleciona todos os botões de fechar
-const closeBtns = document.querySelectorAll('.close-btn');
-
-// Adiciona um evento de clique para cada imagem
-zoomImages.forEach((image, index) => {
-    image.addEventListener('click', (e) => {
-        // Exibe o overlay correspondente
-        overlays[index].style.display = 'flex';
-
-        // Define a imagem ampliada no overlay
-        const overlayContent = overlays[index].querySelector('.overlay-content');
-        overlayContent.src = image.src;
-
-        // Adiciona um evento de clique no documento para fechar a imagem
-        document.addEventListener('click', (e) => {
-            if (e.target !== image && e.target !== overlayContent && e.target !== overlays[index]) {
-                overlays[index].style.display = 'none';
-            }
-        });
-    });
+zoomImages.forEach((image) => {
+  image.addEventListener('click', (e) => {
+    const overlay = image.closest('section').querySelector('.overlay');
+    const overlayContent = overlay.querySelector('.overlay-content');
+    
+    overlay.style.display = 'flex';
+    overlayContent.src = image.src;
+    
+    const closeClickHandler = (e) => {
+      if (e.target !== image && e.target !== overlayContent && e.target !== overlay) {
+        overlay.style.display = 'none';
+        document.removeEventListener('click', closeClickHandler);
+      }
+    };
+    
+    document.addEventListener('click', closeClickHandler);
+    
+    const closeBtn = overlay.querySelector('.close-btn');
+    closeBtn.onclick = () => {
+      overlay.style.display = 'none';
+      document.removeEventListener('click', closeClickHandler);
+    };
+  });
 });
 
-// Adiciona um evento de clique para cada botão de fechar
-closeBtns.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        // Oculta o overlay correspondente
-        overlays[index].style.display = 'none';
+// UTM
+
+// Função para capturar parâmetros UTM da URL
+function getUTMParameters() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmParams = {
+        utm_source: urlParams.get('utm_source') || '',
+        utm_medium: urlParams.get('utm_medium') || '',
+        utm_campaign: urlParams.get('utm_campaign') || '',
+        utm_term: urlParams.get('utm_term') || '',
+        utm_content: urlParams.get('utm_content') || ''
+    };
+    return utmParams;
+}
+
+// Função para salvar os parâmetros UTM no localStorage
+function saveUTMParameters() {
+    const utmParams = getUTMParameters();
+    
+    // Só salva no localStorage se houver pelo menos um parâmetro UTM na URL
+    if (utmParams.utm_source || utmParams.utm_medium || utmParams.utm_campaign || utmParams.utm_term || utmParams.utm_content) {
+        localStorage.setItem('utm_params', JSON.stringify(utmParams));
+    }
+}
+
+// Função para preencher os campos UTM no formulário
+function fillUTMFields() {
+    let utmParams;
+    
+    // Primeiro verifica se há parâmetros na URL atual
+    const currentParams = getUTMParameters();
+    
+    // Se não houver na URL atual, tenta pegar do localStorage
+    if (!currentParams.utm_source && !currentParams.utm_medium && !currentParams.utm_campaign && !currentParams.utm_term && !currentParams.utm_content) {
+        const savedParams = localStorage.getItem('utm_params');
+        if (savedParams) {
+            utmParams = JSON.parse(savedParams);
+        } else {
+            utmParams = currentParams; // Usa os valores vazios
+        }
+    } else {
+        utmParams = currentParams;
+    }
+    
+    // Preenche os campos ocultos no formulário
+    document.getElementById('utm_source').value = utmParams.utm_source;
+    document.getElementById('utm_medium').value = utmParams.utm_medium;
+    document.getElementById('utm_campaign').value = utmParams.utm_campaign;
+    document.getElementById('utm_term').value = utmParams.utm_term;
+    document.getElementById('utm_content').value = utmParams.utm_content;
+}
+
+// Executar quando o DOM estiver carregado
+document.addEventListener('DOMContentLoaded', function() {
+    // Salva os parâmetros UTM (se existirem na URL)
+    saveUTMParameters();
+    
+    // Preenche os campos do formulário
+    fillUTMFields();
+    
+    // Certifica-se de que os valores UTM sejam enviados com o formulário
+    const form = document.getElementById('myForm');
+    if (form) {
+        // Quando o botão de envio é clicado, garante que os campos UTM estejam preenchidos
+        document.getElementById('openModal').addEventListener('click', function() {
+            fillUTMFields();
+        });
+        
+        // Também garante que os campos UTM estejam preenchidos quando o formulário for enviado
+        document.getElementById('confirmSend').addEventListener('click', function() {
+            fillUTMFields();
+        });
+    }
+});
+
+// Alterações 28-04
+// Script para exibir o modal de formulário quando a página carregar
+document.addEventListener("DOMContentLoaded", function () {
+  // Exibe o modal do formulário automaticamente após 2 segundos
+  setTimeout(function () {
+    var formModal = new bootstrap.Modal(
+      document.getElementById("formModal")
+    );
+    formModal.show();
+  }, 2000);
+
+  // Manipulação do modal de imagem
+  let imageModal = document.getElementById("imageModal");
+  if (imageModal) {
+    imageModal.addEventListener("show.bs.modal", function (event) {
+      let button = event.relatedTarget;
+      let imgSrc = button.getAttribute("data-img");
+      let modalImg = imageModal.querySelector(".modal-img");
+      modalImg.src = imgSrc;
     });
+  }
+
+  // Botão de voltar ao topo
+  let scrollTopButton = document.getElementById("scrollToTop");
+  if (scrollTopButton) {
+    window.onscroll = function () {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        scrollTopButton.style.display = "block";
+      } else {
+        scrollTopButton.style.display = "none";
+      }
+    };
+
+    scrollTopButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+
+  // Aplicar máscara ao campo de telefone
+  $(".phone-mask").mask("(00) 00000-0000");
+
+  // Validação do formulário
+  const forms = document.querySelectorAll("form");
+  forms.forEach((form) => {
+    form.addEventListener("submit", function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add("was-validated");
+    });
+  });
+
+  // Suaviza o scroll para as âncoras de navegação
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      // Se é o link para abrir o modal, não previne o comportamento padrão
+      if (this.getAttribute("data-bs-toggle") === "modal") {
+        return;
+      }
+
+      e.preventDefault();
+
+      // Fecha o menu mobile se estiver aberto
+      var navbarCollapse = document.querySelector(".navbar-collapse");
+      if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+        bootstrap.Collapse.getInstance(navbarCollapse).hide();
+      }
+
+      const targetId = this.getAttribute("href");
+      if (targetId === "#") return;
+
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 });
