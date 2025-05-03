@@ -34,6 +34,12 @@
       rel="stylesheet"
     />
     <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 150px; 
+        /* Fiz este ajuste para quando clicar 
+        em Saiba mais, ir até o topo do form*/
+      }
       body {
         font-family: "Montserrat", sans-serif;
         text-align: justify;
@@ -286,8 +292,24 @@
       }
 
       .ms-custom {
-        margin-left: 4rem;
+        margin-left: 5rem;
       }
+
+      .ratio-custom {
+        position: relative;
+        width: 160%;
+        padding-top: 60%;
+      }
+
+      .ratio-custom iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
 
       /* Responsividade */
       @media (max-width: 768px) {
@@ -552,7 +574,7 @@
             </div>
             </div>
             
-          <div class="col-lg-6">
+          <div id="form-container" class="col-lg-6">
             <div class="form-container">
               <h4 class="text-center mb-3" style="color: #697386; font-size: 1.3rem;">
                 Disponibilizamos um período de teste grátis para todos nossos
@@ -650,7 +672,7 @@
                   <label class="form-label" style="color: #697386"
                     >Qual sistema tem interesse?*</label
                   >
-                  <div class="form-check" style="color: #697386">
+                  <div class="form-check d-flex align-items-center" style="color: #697386">
                     <input
                       class="form-check-input"
                       type="radio"
@@ -659,11 +681,11 @@
                       value="NF-e Simples"
                       required
                     />
-                    <label class="form-check-label" for="nfesimples2"
+                    <label class="form-check-label ms-2" for="nfesimples2"
                       >NF-e Simples</label
                     >
                   </div>
-                  <div class="form-check" style="color: #697386">
+                  <div class="form-check d-flex align-items-center" style="color: #697386">
                     <input
                       class="form-check-input"
                       type="radio"
@@ -671,9 +693,9 @@
                       id="erp2"
                       value="ERP"
                     />
-                    <label class="form-check-label" for="erp2">ERP</label>
+                    <label class="form-check-label ms-2" for="erp2">ERP</label>
                   </div>
-                  <div class="form-check" style="color: #697386">
+                  <div class="form-check d-flex align-items-center" style="color: #697386">
                     <input
                       class="form-check-input"
                       type="radio"
@@ -681,11 +703,11 @@
                       id="assinador2"
                       value="Assinador"
                     />
-                    <label class="form-check-label" for="assinador2"
+                    <label class="form-check-label ms-2" for="assinador2"
                       >Assinador</label
                     >
                   </div>
-                  <div class="form-check" style="color: #697386">
+                  <div class="form-check d-flex align-items-center" style="color: #697386">
                     <input
                       class="form-check-input"
                       type="radio"
@@ -693,7 +715,7 @@
                       id="outros2"
                       value="Outros"
                     />
-                    <label class="form-check-label" for="outros2">Outros</label>
+                    <label class="form-check-label ms-2" for="outros2">Outros</label>
                   </div>
                 </div>
                 <div class="text-center mt-4">
@@ -727,10 +749,8 @@
                     </p> -->
             <div class="text-center mt-4">
               <a
-                href="#"
+                href="#form-container"
                 class="btn btn-warning btn-lg"
-                data-bs-toggle="modal"
-                data-bs-target="#formModal"
                 >Saiba mais</a
               >
             </div>
@@ -765,12 +785,12 @@
             </p>
             <div class="text-center mt-4">
               <a
-                href="#"
+                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o emissor de NF-e."
                 class="btn btn-warning btn-lg"
-                data-bs-toggle="modal"
-                data-bs-target="#formModal"
-                >Saiba mais</a
-              >
+                target="_blank"
+                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'nfe_saiba_mais', 'destination': 'whatsapp'})"
+                >Saiba mais
+              </a>
             </div>
           </div>
         </div>
@@ -792,12 +812,12 @@
             </p>
             <div class="text-center mt-4">
               <a
-                href="#"
+                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o PDV."
                 class="btn btn-warning btn-lg"
-                data-bs-toggle="modal"
-                data-bs-target="#formModal"
-                >Saiba mais</a
-              >
+                target="_blank"
+                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'pdv_saiba_mais', 'destination': 'whatsapp'})"
+                >Saiba mais
+            </a>
             </div>
           </div>
           <div class="col-lg-5 mb-4 mb-lg-0 order-lg-2 order-1">
@@ -841,12 +861,12 @@
             </p>
             <div class="text-center mt-4">
               <a
-                href="#"
+                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o Attimo Sign."
                 class="btn btn-warning btn-lg"
-                data-bs-toggle="modal"
-                data-bs-target="#formModal"
-                >Saiba mais</a
-              >
+                target="_blank"
+                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'attimo_sign_saiba_mais', 'destination': 'whatsapp'})"
+                >Saiba mais
+              </a>
             </div>
           </div>
         </div>
@@ -854,7 +874,7 @@
     </section>
 
     <!-- Seção de Cards -->
-    <section class="py-5 position-relative">
+    <section class="section-gray position-relative">
       <div class="container">
         <div class="row g-4">
           <div class="col-md-6 col-lg-3">
@@ -873,11 +893,12 @@
                 </p>
                 <div class="mt-auto text-center">
                   <a
-                    href="https://wa.me/551931140809?text=Fale%20conosco"
+                    href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o suporte personalizado."
                     class="btn btn-warning"
                     target="_blank"
-                    >Saiba mais</a
-                  >
+                    onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'suporte_personalizado_saiba_mais', 'destination': 'whatsapp'})"
+                  > Saiba mais
+                  </a>  
                 </div>
               </div>
             </div>
@@ -897,11 +918,12 @@
                 </p>
                 <div class="mt-auto text-center">
                   <a
-                    href="https://wa.me/551931140809?text=Fale%20conosco"
+                    href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o treinamento completo."
                     class="btn btn-warning"
                     target="_blank"
-                    >Saiba mais</a
-                  >
+                    onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'treinamento_completo_saiba_mais', 'destination': 'whatsapp'})"
+                  > Saiba mais
+                  </a>  
                 </div>
               </div>
             </div>
@@ -922,11 +944,12 @@
                 </p>
                 <div class="mt-auto text-center">
                   <a
-                    href="https://wa.me/551931140809?text=Fale%20conosco"
+                    href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre simplicidade e acessibilidade."
                     class="btn btn-warning"
                     target="_blank"
-                    >Saiba mais</a
-                  >
+                    onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'simplicidade_acessibilidade_saiba_mais', 'destination': 'whatsapp'})"
+                  > Saiba mais
+                  </a>  
                 </div>
               </div>
             </div>
@@ -947,11 +970,12 @@
                 </p>
                 <div class="mt-auto text-center">
                   <a
-                    href="https://wa.me/551931140809?text=Fale%20conosco"
+                    href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre sistemas eficientes."
                     class="btn btn-warning"
                     target="_blank"
-                    >Saiba mais</a
-                  >
+                    onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'sistemas_eficientes_saiba_mais', 'destination': 'whatsapp'})"
+                  > Saiba mais
+                  </a>  
                 </div>
               </div>
             </div>
@@ -1045,12 +1069,12 @@
             </p>
             <div class="text-center mt-4">
               <a
-                href="#"
+                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o ERP Attimo."
                 class="btn btn-warning btn-lg"
-                data-bs-toggle="modal"
-                data-bs-target="#formModal"
-                >Saiba mais</a
-              >
+                target="_blank"
+                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'erp_attimo_saiba_mais', 'destination': 'whatsapp'})"
+                >Saiba mais
+              </a>
             </div>
           </div>
         </div>
@@ -1072,12 +1096,12 @@
             </p>
             <div class="text-center mt-4">
               <a
-                href="#"
+                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o Kapti."
                 class="btn btn-warning btn-lg"
-                data-bs-toggle="modal"
-                data-bs-target="#formModal"
-                >Saiba mais</a
-              >
+                target="_blank"
+                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'kapti_saiba_mais', 'destination': 'whatsapp'})"
+                >Saiba mais
+              </a>
             </div>
           </div>
           <div class="col-lg-5 mb-4 mb-lg-0 order-lg-2 order-1">
@@ -1110,12 +1134,12 @@
             </p>
             <div class="text-center mt-4">
               <a
-                href="#"
+                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o Chatbot."
                 class="btn btn-warning btn-lg"
-                data-bs-toggle="modal"
-                data-bs-target="#formModal"
-                >Saiba mais</a
-              >
+                target="_blank"
+                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'chatbot_sign_saiba_mais', 'destination': 'whatsapp'})"
+                >Saiba mais
+              </a>
             </div>
           </div>
           <div class="col-lg-5 mb-4 mb-lg-0 order-lg-2 order-1">
@@ -1133,33 +1157,50 @@
     </section>
 
     <!-- Seção Contato -->
-    <section id="contato" class="py-5 position-relative">
+    <section id="contato" class="section-gray position-relative">
       <div class="bg-image-container"></div>
-      <div class="container content-container">
+      <div class="container">
         <div class="row">
-          <div class="col-lg-6">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117689.77904572227!2d-47.26293989300841!3d-22.809666303245614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c15c91fb7f59%3A0x542f89c478dfdeeb!2sBar%C3%A3o%20Geraldo%2C%20Campinas%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1725511236936!5m2!1spt-BR!2sbr"
-              width="120%"
-              height="400"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              class="rounded"
-            ></iframe>
+          <div class="col-lg-6 px-0 px-lg-3">
+            <div class="w-100 position-relative overflow-hidden">
+            <!-- Para telas grandes -->
+            <div class="d-none d-lg-block">
+              <div class="ratio-custom">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117689.77904572227!2d-47.26293989300841!3d-22.809666303245614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c15c91fb7f59%3A0x542f89c478dfdeeb!2sBar%C3%A3o%20Geraldo%2C%20Campinas%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1725511236936!5m2!1spt-BR!2sbr"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="rounded"
+                  style="border: 0; max-width: 100%;"
+                ></iframe>
+              </div>
+            </div>
+            
+            <!-- Telas p e m -->
+            <div class="d-block d-lg-none">
+              <div class="ratio ratio-21x9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117689.77904572227!2d-47.26293989300841!3d-22.809666303245614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c15c91fb7f59%3A0x542f89c478dfdeeb!2sBar%C3%A3o%20Geraldo%2C%20Campinas%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1725511236936!5m2!1spt-BR!2sbr"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="rounded"
+                  style="border: 0; max-width: 100%;"
+                ></iframe>
+              </div>
+            </div>
+            </div>
           </div>
           <div class="col-lg-6">
-            <div
-              class="p-4 h-100 d-flex flex-column align-items-center justify-content-center"
-            >
+            <div class="p-4 h-100 d-flex flex-column align-items-center justify-content-center">
               <img
-                src="assets/logo.png"
+                src="assets/logo-removebg-preview.png"
                 alt="Logo Attimo soluções"
-                class="mb-4"
+                class="mb-4 rounded"
                 width="220"
               />
-              <div class="contact-info mb-3 ms-custom">
+              <div class="contact-info mb-3 d-inline-block ms-custom">
                 <p class="mb-2">
                   <i class="fas fa-phone-alt me-2"></i> (19) 3234-2221
                 </p>
@@ -1201,7 +1242,7 @@
 
     <!-- WhatsApp Button -->
     <a
-      href="https://wa.me/551931140809?text=Fale%20conosco"
+      href="https://wa.me/551931140809?text=Fale%20conosco(via_btn_whatsapp_flutuante)"
       class="whatsapp-float"
       target="_blank"
     >
