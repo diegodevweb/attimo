@@ -107,6 +107,10 @@
         color: white;
       }
 
+      .btn-send-custom {
+        color: #1574a8;
+      }
+
       .slogan {
         background-color: #1574a8;
         color: white;
@@ -575,7 +579,7 @@
               <hr class="w-100 mb-4" />
               <p class="mb-4 fs-4">
                 Soluções intuitivas e eficientes para emissão de notas fiscais,
-                gestão financeira e muito mais. Experimente grátis por 10 dias!
+                gestão financeira e muito mais. Experimente grátis!
               </p>
             </div>
             </div>
@@ -724,7 +728,7 @@
                   </div>
                 </div>
                 <div class="text-center mt-4">
-                  <button type="submit" class="btn btn-warning btn-lg">
+                  <button type="submit" class="btn btn-primary btn-lg">
                     Enviar
                   </button>
                 </div>
@@ -736,7 +740,7 @@
     </section>
 
     <!-- Seção Sobre Nós -->
-    <section id="sobre" class="section-gray py-3">
+    <section id="sobre" class="py-3">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-justify">
@@ -765,7 +769,7 @@
     </section>
 
     <!-- Seção NF-e Simples -->
-    <section id="nfe-simples" class="py-5 position-relative">
+    <section id="nfe-simples" class="section-gray py-5 position-relative">
       <div class="bg-image-container"></div>
       <div class="container content-container">
         <div class="row align-items-center">
@@ -790,10 +794,49 @@
             </p>
             <div class="text-center mt-4">
               <a
-                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o emissor de NF-e."
+                href="#"
                 class="btn btn-warning btn-lg"
-                target="_blank"
-                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'nfe_saiba_mais', 'destination': 'whatsapp'})"
+                data-bs-toggle="modal"
+                data-bs-target="#formModal"
+                >Saiba mais
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção ERP ATTIMO -->
+    <section id="erp-attimo" class="py-5 position-relative">
+      <div class="bg-image-container"></div>
+      <div class="container content-container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <img
+              src="assets/ERP 2.png"
+              alt="ERP Attimo"
+              class="img-fluid rounded zoom-img"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-img="assets/ERP 2.png"
+            />
+          </div>
+          <div class="col-lg-7">
+            <h2 class="section-title text-center">ERP ATTIMO</h2>
+            <p class="w-75 mx-auto fs-5">
+              Simplifique sua gestão com um ERP que realmente funciona. Nossa
+              solução é fácil de usar, rápida de implantar e oferece suporte
+              ágil. Integra setores como vendas, estoque e financeiro, evitando
+              erros e retrabalho. Com relatórios inteligentes e interface
+              intuitiva, você ganha controle total e eficiência no dia a dia da
+              sua empresa.
+            </p>
+            <div class="text-center mt-4">
+              <a
+                href="#"
+                class="btn btn-warning btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#formModal"
                 >Saiba mais
               </a>
             </div>
@@ -803,80 +846,153 @@
     </section>
 
     <!-- Seção PDV -->
-    <section id="pdv" class="section-gray py-5 position-relative">
-      <div class="bg-image-container"></div>
-      <div class="container content-container">
-        <div class="row align-items-center">
-          <div class="col-lg-7 order-lg-1 order-2">
-            <h2 class="section-title text-center">PDV</h2>
-            <p class="w-75 mx-auto fs-5">
-              Seu PDV não pode parar. Nosso sistema é estável, fácil de usar e
-              com suporte ágil sempre que você precisar. Integra com estoque em
-              tempo real e evita erros na venda. Simples, confiável e eficiente
-              para o dia a dia do seu negócio.
-            </p>
-            <div class="text-center mt-4">
-              <a
-                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o PDV."
-                class="btn btn-warning btn-lg"
-                target="_blank"
-                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'pdv_saiba_mais', 'destination': 'whatsapp'})"
-                >Saiba mais
-            </a>
-            </div>
-          </div>
-          <div class="col-lg-5 mb-4 mb-lg-0 order-lg-2 order-1">
-            <div class="mb-4">
-              <img
-                src="assets/PDV.png"
-                alt="Sistema Kapti"
-                class="img-fluid rounded zoom-img"
-                data-bs-toggle="modal"
-                data-bs-target="#imageModal"
-                data-img="assets/PDV.png"
-              />
-            </div>
-          </div>
+  <section id="pdv" class="section-gray py-5 position-relative">
+    <div class="bg-image-container"></div>
+    <div class="container content-container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <img
+            src="assets/PDV.png"
+            alt="Sistema PDV"
+            class="img-fluid rounded zoom-img"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="assets/PDV.png"
+          />
         </div>
-      </div>
-    </section>
-
-    <!-- Seção Attimo Sign -->
-    <section id="attimo-sign" class="py-5 position-relative">
-      <div class="bg-image-container"></div>
-      <div class="container content-container">
-        <div class="row align-items-center">
-          <div class="col-lg-5 mb-4 mb-lg-0">
-            <img
-              src="assets/Assinador.png"
-              alt="Attimo Sign"
-              class="img-fluid rounded zoom-img"
+        <div class="col-lg-7">
+          <h2 class="section-title text-center">PDV</h2>
+          <p class="w-75 mx-auto fs-5">
+            Seu PDV não pode parar. Nosso sistema é estável, fácil de usar e
+            com suporte ágil sempre que você precisar. Integra com estoque em
+            tempo real e evita erros na venda. Simples, confiável e eficiente
+            para o dia a dia do seu negócio.
+          </p>
+          <div class="text-center mt-4">
+            <a
+              href="#"
+              class="btn btn-warning btn-lg"
               data-bs-toggle="modal"
-              data-bs-target="#imageModal"
-              data-img="assets/assinador.jpeg"
-            />
-          </div>
-          <div class="col-lg-7">
-            <h2 class="section-title text-center">Attimo Sign</h2>
-            <p class="w-75 mx-auto fs-5">
-              Assine e gerencie documentos com agilidade, segurança e validade
-              jurídica. Reduza custos, elimine o papel, assine de qualquer lugar
-              e centralize tudo em um só sistema. Ideal para empresas que buscam
-              eficiência, mobilidade e conformidade com a lei.
-            </p>
-            <div class="text-center mt-4">
-              <a
-                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o Attimo Sign."
-                class="btn btn-warning btn-lg"
-                target="_blank"
-                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'attimo_sign_saiba_mais', 'destination': 'whatsapp'})"
-                >Saiba mais
-              </a>
-            </div>
+              data-bs-target="#formModal"
+              >Saiba mais
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- Seção Kapti -->
+  <section id="kapti" class="py-5 position-relative">
+    <div class="bg-image-container"></div>
+    <div class="container content-container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <img
+            src="assets/KAPTI 2.png"
+            alt="imagem do sistema kapti"
+            class="img-fluid rounded zoom-img"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="assets/KAPTI 2.png"
+          />
+        </div>
+        <div class="col-lg-7">
+          <h2 class="section-title text-center">Kapti</h2>
+          <p class="w-75 mx-auto fs-5">
+            Tenha controle total dos seus recebíveis com cartão. Nosso sistema
+            concilia vendas, verifica a conciliação bancária dos recebimentos,
+            identifica taxas indevidas e organiza os prazos de repasse. Mais
+            segurança, precisão e eficiência para o seu financeiro.
+          </p>
+          <div class="text-center mt-4">
+            <a
+              href="#"
+              class="btn btn-warning btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#formModal"
+              >Saiba mais
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Attimo Sign -->
+  <section id="attimo-sign" class="section-gray py-5 position-relative">
+    <div class="bg-image-container"></div>
+    <div class="container content-container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <img
+            src="assets/Assinador.png"
+            alt="Attimo Sign"
+            class="img-fluid rounded zoom-img"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="assets/assinador.jpeg"
+          />
+        </div>
+        <div class="col-lg-7">
+          <h2 class="section-title text-center">Attimo Sign</h2>
+          <p class="w-75 mx-auto fs-5">
+            Assine e gerencie documentos com agilidade, segurança e validade
+            jurídica. Reduza custos, elimine o papel, assine de qualquer lugar
+            e centralize tudo em um só sistema. Ideal para empresas que buscam
+            eficiência, mobilidade e conformidade com a lei.
+          </p>
+          <div class="text-center mt-4">
+            <a
+              href="#"
+              class="btn btn-warning btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#formModal"
+              >Saiba mais
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Attimo Chat -->
+  <section id="chatbot" class="section-white py-5 position-relative">
+    <div class="bg-image-container"></div>
+    <div class="container content-container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <img
+            src="assets/Arte ChatBot 01.png"
+            alt="imagem do sistema chatbot"
+            class="img-fluid rounded zoom-img"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="assets/Arte ChatBot 01.png"
+          />
+        </div>
+        <div class="col-lg-7">
+          <h2 class="section-title text-center">Attimo Chat</h2>
+          <p class="w-75 mx-auto fs-5">
+            Atenda seus clientes via WhatsApp com organização, agilidade e
+            controle. Nosso sistema centraliza conversas, permite múltiplos
+            atendentes, oferece histórico, métricas, automação, disparo de
+            mensagens em massa e total segurança. Profissionalize seu
+            atendimento e ganhe eficiência.
+          </p>
+          <div class="text-center mt-4">
+            <a
+              href="#"
+              class="btn btn-warning btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#formModal"
+              >Saiba mais
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <!-- Seção de Cards -->
     <section class="section-gray position-relative">
@@ -992,7 +1108,7 @@
     <!-- Seção de Depoimentos -->
     <section class="testimonial-section py-5">
       <div class="container">
-        <h2 class="text-center text-white mb-5 fs-3">
+        <h2 class="text-center text-gray mb-5 fs-3">
           A satisfação dos nossos clientes é nosso foco, confira o que eles
           dizem sobre nós:
         </h2>
@@ -1047,122 +1163,8 @@
       </div>
     </section>
 
-    <!-- Seção ERP ATTIMO -->
-    <section id="erp-attimo" class="py-5 position-relative">
-      <div class="bg-image-container"></div>
-      <div class="container content-container">
-        <div class="row align-items-center">
-          <div class="col-lg-5 mb-4 mb-lg-0">
-            <img
-              src="assets/ERP 2.png"
-              alt="ERP Attimo"
-              class="img-fluid rounded zoom-img"
-              data-bs-toggle="modal"
-              data-bs-target="#imageModal"
-              data-img="assets/ERP 2.png"
-            />
-          </div>
-          <div class="col-lg-7">
-            <h2 class="section-title text-center">ERP ATTIMO</h2>
-            <p class="w-75 mx-auto fs-5">
-              Simplifique sua gestão com um ERP que realmente funciona. Nossa
-              solução é fácil de usar, rápida de implantar e oferece suporte
-              ágil. Integra setores como vendas, estoque e financeiro, evitando
-              erros e retrabalho. Com relatórios inteligentes e interface
-              intuitiva, você ganha controle total e eficiência no dia a dia da
-              sua empresa.
-            </p>
-            <div class="text-center mt-4">
-              <a
-                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o ERP Attimo."
-                class="btn btn-warning btn-lg"
-                target="_blank"
-                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'erp_attimo_saiba_mais', 'destination': 'whatsapp'})"
-                >Saiba mais
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção Kapti -->
-    <section id="kapti" class="section-gray py-5 position-relative">
-      <div class="bg-image-container"></div>
-      <div class="container content-container">
-        <div class="row align-items-center">
-          <div class="col-lg-7 order-lg-1 order-2">
-            <h2 class="section-title text-center">Kapti</h2>
-            <p class="w-75 mx-auto fs-5">
-              Tenha controle total dos seus recebíveis com cartão. Nosso sistema
-              concilia vendas, verifica a conciliação bancária dos recebimentos,
-              identifica taxas indevidas e organiza os prazos de repasse. Mais
-              segurança, precisão e eficiência para o seu financeiro.
-            </p>
-            <div class="text-center mt-4">
-              <a
-                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o Kapti."
-                class="btn btn-warning btn-lg"
-                target="_blank"
-                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'kapti_saiba_mais', 'destination': 'whatsapp'})"
-                >Saiba mais
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-5 mb-4 mb-lg-0 order-lg-2 order-1">
-            <img
-              src="assets/KAPTI 2.png"
-              alt="imagem do sistema kapti"
-              class="img-fluid rounded zoom-img"
-              data-bs-toggle="modal"
-              data-bs-target="#imageModal"
-              data-img="assets/PDV.png"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção Chatbot -->
-    <section id="chatbot" class="section-white py-5 position-relative">
-      <div class="bg-image-container"></div>
-      <div class="container content-container">
-        <div class="row align-items-center">
-          <div class="col-lg-7 order-lg-1 order-2">
-            <h2 class="section-title text-center">Attimo Chat</h2>
-            <p class="w-75 mx-auto fs-5">
-              Atenda seus clientes via WhatsApp com organização, agilidade e
-              controle. Nosso sistema centraliza conversas, permite múltiplos
-              atendentes, oferece histórico, métricas, automação, disparo de
-              mensagens em massa e total segurança. Profissionalize seu
-              atendimento e ganhe eficiência.
-            </p>
-            <div class="text-center mt-4">
-              <a
-                href="https://wa.me/551931140809?text=Olá, gostaria de mais informações sobre o Chatbot."
-                class="btn btn-warning btn-lg"
-                target="_blank"
-                onclick="dataLayer.push({'event': 'cta_click', 'button_type': 'chatbot_sign_saiba_mais', 'destination': 'whatsapp'})"
-                >Saiba mais
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-5 mb-4 mb-lg-0 order-lg-2 order-1">
-            <img
-              src="assets/Arte ChatBot 01.png"
-              alt="imagem do sistema chatbot"
-              class="img-fluid rounded zoom-img"
-              data-bs-toggle="modal"
-              data-bs-target="#imageModal"
-              data-img="assets/Arte ChatBot 01.png"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Seção Contato -->
-    <section id="contato" class="section-gray position-relative">
+    <section id="contato" class="position-relative">
       <div class="bg-image-container"></div>
       <div class="container">
         <div class="row">
