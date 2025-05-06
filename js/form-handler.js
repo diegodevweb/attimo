@@ -115,12 +115,16 @@ document.addEventListener('DOMContentLoaded', function() {
               
         // Limpa o formulário
         event.target.reset();
+
+        window.location.href = "../agradecimento.html";
         
         // Fecha o modal, se aplicável
         if (event.target.id === 'contactForm') {
             const modal = bootstrap.Modal.getInstance(document.getElementById('formModal'));
             if (modal) modal.hide();
         }
+
+
     }
     
     // Adiciona os listeners
