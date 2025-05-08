@@ -86,39 +86,23 @@
 Teste: 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Seleciona os dois formulários
     const contactForm = document.getElementById('contactForm');
     const contactFormInline = document.getElementById('contactFormInline');
     
-    // Função para exibir os dados do formulário sem enviá-los
     function handleFormSubmit(event) {
         event.preventDefault();
         
-        // Coleta os dados do formulário
         const formData = new FormData(event.target);
         const formValues = {};
         
-        // Converte FormData para objeto
         for (let [key, value] of formData.entries()) {
             formValues[key] = value;
         }
         
-        // Exibe os dados em um alerta ou console
-        console.log('Dados do formulário:', formValues);
-        alert('Dados do formulário recebidos (teste local):\n' + 
-              'Nome: ' + formValues.nome + '\n' +
-              'Telefone: ' + formValues.telefone + '\n' +
-              'Empresa: ' + formValues.empresa + '\n' +
-              'Email: ' + formValues.email + '\n' +
-              'Colaboradores: ' + formValues.colaboradores + '\n' +
-              'Sistema: ' + formValues.sistema);
-              
-        // Limpa o formulário
         event.target.reset();
 
         window.location.href = "../agradecimento.html";
         
-        // Fecha o modal, se aplicável
         if (event.target.id === 'contactForm') {
             const modal = bootstrap.Modal.getInstance(document.getElementById('formModal'));
             if (modal) modal.hide();
